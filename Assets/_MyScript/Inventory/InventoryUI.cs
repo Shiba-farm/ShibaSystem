@@ -1,9 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Starter Assets
-using StarterAssets;
-
 using Unity.Cinemachine;
 
 #if ENABLE_INPUT_SYSTEM
@@ -56,9 +53,6 @@ public class InventoryMainUI : MonoBehaviour
         {
             var tpc = player.GetComponent<PlayerController>();
             if (tpc) _toDisable.Add(tpc);
-
-            var sai = player.GetComponent<StarterAssetsInputs>();
-            if (sai) _toDisable.Add(sai);
 
 #if ENABLE_INPUT_SYSTEM
             var pi = player.GetComponent<PlayerInput>();
