@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28ed9a6fe097204d9289fe6634a890d, type: 3}
+  m_Name: R_AnimalTrap
+  m_EditorClassIdentifier: 
+  recipeName: Animal Trap
+  description: 111111111111
+  icon: {fileID: 21300000, guid: 78bdceaae3425d143bdf150949b0c39b, type: 3}
+  ingredients:
+  - item: {fileID: 11400000, guid: 5694f4afa4c5b9343bd2766d17e471e7, type: 2}
+    amount: 4
+  - item: {fileID: 11400000, guid: 5a5cd0aac2c030c4b87e664a46df4b3c, type: 2}
+    amount: 2
+  - item: {fileID: 11400000, guid: 46b4db469bf03ab4eb9f42a07c687b36, type: 2}
+    amount: 3
+  resultItem: {fileID: 11400000, guid: d4924244fc1226744ad10ba91d1d6025, type: 2}
+  resultAmount: 1
+  requiresLearning: 0
+  minWorkbenchLevel: 0
+  energyCost: 5

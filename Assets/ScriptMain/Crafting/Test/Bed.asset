@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28ed9a6fe097204d9289fe6634a890d, type: 3}
+  m_Name: Bed
+  m_EditorClassIdentifier: Assembly-CSharp::CraftingRecipeSO
+  recipeName: Bed
+  recipeID: 1
+  category: 2
+  description: Sleep
+  icon: {fileID: 21300000, guid: dee513575896b3d48b969f7c5317b289, type: 3}
+  ingredients:
+  - item: {fileID: 11400000, guid: b752f5711965d244691c412ffdf74212, type: 2}
+    amount: 4
+  - item: {fileID: 11400000, guid: e8140e0fbbb6ae347bc7b08a524f91c5, type: 2}
+    amount: 5
+  - item: {fileID: 11400000, guid: 861c6b75b7aedab46836bee7b45a8fc0, type: 2}
+    amount: 2
+  resultItem: {fileID: 11400000, guid: 27f384cccd7dbb44cb0479f166bf039b, type: 2}
+  resultAmount: 1
+  requiresLearning: 0
+  minWorkbenchLevel: 0
+  energyCost: 5
+  itemPerk: {fileID: 0}
+  itemStat: {fileID: 11400000, guid: a7dc822e2aa87ca4d8332e1d2f22748f, type: 2}

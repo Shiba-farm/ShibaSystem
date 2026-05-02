@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7714167000558666964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 126051813955338666}
+  - component: {fileID: 6944237024717650867}
+  - component: {fileID: 6427314489041823140}
+  - component: {fileID: 7264519158644853285}
+  m_Layer: 0
+  m_Name: GameManagerSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 2800000, guid: 1f6c13fb08855954d9cf0446453b32ec, type: 3}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &126051813955338666
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7714167000558666964}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.93795, y: 4.2457156, z: -59.604046}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6944237024717650867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7714167000558666964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac8913deabe17a0469fb28b4a0f86797, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  inventoryUI: {fileID: 0}
+  hotbarUI: {fileID: 0}
+  playerEnergy: {fileID: 0}
+  calendar: {fileID: 0}
+  timeOfDay: {fileID: 0}
+  itemDatabase: {fileID: 0}
+  allCrops:
+  - {fileID: 11400000, guid: 5f8a98eb434b84948b63feca8cf57195, type: 2}
+  - {fileID: 11400000, guid: d564e6f033e708a4280e4db3abf9a94a, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &6427314489041823140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7714167000558666964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d8774fb9b24e2945844c5644a9eb794, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 1000
+--- !u!114 &7264519158644853285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7714167000558666964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098fdf870d51fe34d99893d69b27875f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  calendar: {fileID: 0}
+  wallet: {fileID: 6427314489041823140}
+  startingDebt: 1000
+  monthlyPayment: 200
+  lateFee: 50
+  dueDay: -1
+  currentDebt: 0

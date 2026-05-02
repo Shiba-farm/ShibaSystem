@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79cfb68f21602e44daa4e394bb48e58d, type: 3}
+  m_Name: SO_AutoSprinkler
+  m_EditorClassIdentifier: 
+  itemName: "\u0E1A\u0E31\u0E27\u0E23\u0E14\u0E19\u0E49\u0E33\u0E2D\u0E31\u0E15\u0E42\u0E19\u0E21\u0E31\u0E15\u0E34"
+  icon: {fileID: 21300000, guid: 42132540c9d222842b93edfb35b875bb, type: 3}
+  equipmentPrefab: {fileID: 919132149155446097, guid: 4b57ecbe0cd89e84dbf2fb0b75496848,
+    type: 3}
+  actionVFX: {fileID: 3568256643738409149, guid: 79786ce1bc1b9b346a8b5d39125f41e8,
+    type: 3}
+  actionSFX: {fileID: 0}
+  sfxDuration: 0
+  pitchRandomMultiplier: 1
+  energyCost: 0
+  isStackable: 0
+  maxStack: 99
+  category: 4
+  toolAction: 0
+  seedCrop: {fileID: 0}
+  farmHelperData: {fileID: 11400000, guid: 5ffeadd0c2c40fe459cd70365d9cc452, type: 2}
+  sellable: 1
+  sellPrice: 500

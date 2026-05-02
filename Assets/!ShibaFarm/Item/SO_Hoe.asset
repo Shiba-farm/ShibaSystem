@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79cfb68f21602e44daa4e394bb48e58d, type: 3}
+  m_Name: SO_Hoe
+  m_EditorClassIdentifier: 
+  itemName: Hoe
+  icon: {fileID: 21300000, guid: 444934963c28be94c9d930bd54961177, type: 3}
+  equipmentPrefab: {fileID: 1677650628920329205, guid: bbe15ff566ff3b74c856022b74a29beb,
+    type: 3}
+  actionVFX: {fileID: 0}
+  actionSFX: {fileID: 0}
+  sfxDuration: 0
+  pitchRandomMultiplier: 1
+  energyCost: 0
+  isStackable: 1
+  maxStack: 99
+  category: 0
+  toolAction: 1
+  seedCrop: {fileID: 0}
+  farmHelperData: {fileID: 0}
+  sellable: 1
+  sellPrice: 10

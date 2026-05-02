@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28ed9a6fe097204d9289fe6634a890d, type: 3}
+  m_Name: R_InsectTrap
+  m_EditorClassIdentifier: 
+  recipeName: Insect Trap
+  description: Insect Trap
+  icon: {fileID: 21300000, guid: 83dc1cb6b7ba7d94998eb5594024bd5a, type: 3}
+  ingredients:
+  - item: {fileID: 11400000, guid: 5694f4afa4c5b9343bd2766d17e471e7, type: 2}
+    amount: 2
+  - item: {fileID: 11400000, guid: 46b4db469bf03ab4eb9f42a07c687b36, type: 2}
+    amount: 2
+  - item: {fileID: 11400000, guid: 194f4b6485a6c294a91013fcb1855b82, type: 2}
+    amount: 1
+  resultItem: {fileID: 11400000, guid: 5f6a4c1fdf84d7843ab1579ac4fe963b, type: 2}
+  resultAmount: 1
+  requiresLearning: 0
+  minWorkbenchLevel: 0
+  energyCost: 5

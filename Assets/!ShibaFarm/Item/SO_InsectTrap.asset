@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79cfb68f21602e44daa4e394bb48e58d, type: 3}
+  m_Name: SO_InsectTrap
+  m_EditorClassIdentifier: 
+  itemName: Insect Trap
+  icon: {fileID: 0}
+  equipmentPrefab: {fileID: 0}
+  actionVFX: {fileID: 0}
+  actionSFX: {fileID: 0}
+  sfxDuration: 0
+  pitchRandomMultiplier: 1
+  energyCost: 0
+  isStackable: 0
+  maxStack: 99
+  category: 4
+  toolAction: 0
+  seedCrop: {fileID: 0}
+  farmHelperData: {fileID: 11400000, guid: cf13c874f510c574d952ae9050851f2c, type: 2}
+  sellable: 1
+  sellPrice: 500

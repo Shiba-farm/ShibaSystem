@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28ed9a6fe097204d9289fe6634a890d, type: 3}
+  m_Name: FriedChicken
+  m_EditorClassIdentifier: Assembly-CSharp::CraftingRecipeSO
+  recipeName: FriedChicken
+  recipeID: 2
+  category: 1
+  description: Eat
+  icon: {fileID: 21300000, guid: 5719b644e6d7eb942bbf1a3456f5b3c3, type: 3}
+  ingredients:
+  - item: {fileID: 11400000, guid: 9625e31cc0e03c441bea9070b13133d8, type: 2}
+    amount: 1
+  resultItem: {fileID: 11400000, guid: 3870a6b370cf05e44a74808c64ba7e52, type: 2}
+  resultAmount: 1
+  requiresLearning: 0
+  minWorkbenchLevel: 0
+  energyCost: 5
+  itemPerk: {fileID: 0}
+  itemStat: {fileID: 11400000, guid: 1f37e526ac5ea284895be38393f8068d, type: 2}

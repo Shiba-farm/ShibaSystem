@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79cfb68f21602e44daa4e394bb48e58d, type: 3}
+  m_Name: Wood
+  m_EditorClassIdentifier: 
+  itemName: Wood
+  icon: {fileID: 21300000, guid: 835edd79042bfff4d8aa26c5f65bbc4d, type: 3}
+  equipmentPrefab: {fileID: 3023776354782025070, guid: e0fb3a3cfa60b794f85a2da34f85de5d, type: 3}
+  actionVFX: {fileID: 0}
+  actionSFX: {fileID: 0}
+  sfxDuration: 0.5
+  pitchRandomMultiplier: 1
+  energyCost: 0
+  isStackable: 1
+  maxStack: 99
+  category: 0
+  toolAction: 0
+  seedCrop: {fileID: 0}
+  sellable: 1
+  sellPrice: 10
