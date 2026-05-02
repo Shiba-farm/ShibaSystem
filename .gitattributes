@@ -1,0 +1,20 @@
+*.cs diff=csharp text
+*.shader text
+*.mat merge=unityyamlmerge eol=lf
+*.anim merge=unityyamlmerge eol=lf
+*.prefab merge=unityyamlmerge eol=lf
+*.unity merge=unityyamlmerge eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.psd binary
+*.asset binary
+*.fbx binary
+*.mp3 binary
+*.wav binary
+*.ogg binary
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+Assets/!ShibaFarm/Prototye_Map.asset filter=lfs diff=lfs merge=lfs -text
+Assets/!ShibaFarm/ShibaScene.asset filter=lfs diff=lfs merge=lfs -text

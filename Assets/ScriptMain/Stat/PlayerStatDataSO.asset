@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbc72e44a0c11d547b87ab361d80a144, type: 3}
+  m_Name: PlayerStatDataSO
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStatDataSO
+  maxHealth: 100
+  moveSpeed: 20
+  maxStamina: 50
+  maxEnergy: 80
+  energyDrainRunning: 2
+  energyDrainNormal: 0
+  staminaDrainRunning: 0
+  staminaRegenNormal: 1

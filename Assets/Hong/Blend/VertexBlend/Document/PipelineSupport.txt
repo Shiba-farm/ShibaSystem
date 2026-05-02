@@ -1,0 +1,5 @@
+..\PipelineSupoort\VertexBlendShaders_BRP.unitypackage
+..\PipelineSupoort\VertexBlendShaders_URP.unitypackage
+..\PipelineSupoort\VertexBlendShaders_HDRP.unitypackage
+
+Import the corresponding package through the rendering pipeline and overwrite it.

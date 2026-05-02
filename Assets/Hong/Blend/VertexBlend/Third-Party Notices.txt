@@ -1,0 +1,7 @@
+This Unity package contains third-party textures.
+
+1. Textures from "Unity Terrain - URP Demo Scene"
+   - License: Unity Companion License (UCL)
+   - Copyright (c) Unity Technologies
+   - Source: Unity Technologies, Unity Terrain Tools / URP Demo Scene
+   - License URL: https://unity.com/legal/licenses/unity-companion-license

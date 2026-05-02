@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ff4aebf022f3914d802947333fc890b, type: 3}
+  m_Name: pumpkin
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  cropName: 
+  icon: {fileID: 0}
+  growthPrefabs:
+  - {fileID: 3802450976719974306, guid: 93f7bca06d705eb45ab88a27029eeac8, type: 3}
+  stageDurations:
+  - 0
+  requiresWaterEachStage: 1
+  harvestItem: {fileID: 0}
+  yieldRange: {x: 1, y: 1}
+  destroyOnHarvest: 1
