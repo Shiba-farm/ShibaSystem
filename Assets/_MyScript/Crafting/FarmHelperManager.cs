@@ -55,13 +55,13 @@ public class FarmHelperManager : MonoBehaviour
     {
         // Subscribe ทุกเช้า
         var cal = FindObjectOfType<CalendarSystem>();
-        if (cal != null) cal.OnDayEnded += OnNewDay;
+        // if (cal != null) cal.OnDayEnded += OnNewDay;
     }
 
     void OnDisable()
     {
         var cal = FindObjectOfType<CalendarSystem>();
-        if (cal != null) cal.OnDayEnded -= OnNewDay;
+        // if (cal != null) cal.OnDayEnded -= OnNewDay;
     }
 
     // ================================================================
