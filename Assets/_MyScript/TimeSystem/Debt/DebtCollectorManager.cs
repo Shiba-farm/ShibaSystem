@@ -48,25 +48,25 @@ public class DebtCollectorManager : MonoBehaviour
     public bool IsDebtPaid => currentDebt <= 0;
 
     /// <summary>วันครบกำหนดจ่ายถัดไป (คำนวณจาก calendar)</summary>
-    public Date NextDueDate
-    {
-        get
-        {
-            if (calendar == null) return new Date(1, 1, 1);
-            var d = calendar.date;
-            int due = (dueDay < 1) ? calendar.daysPerMonth : dueDay;
+    // public Date NextDueDate
+    // {
+    //     get
+    //     {
+    //         if (calendar == null) return new Date(1, 1, 1);
+    //         // var d = calendar.date;
+    //         // int due = (dueDay < 1) ? calendar.daysPerMonth : dueDay;
 
-            // ถ้ายังไม่ถึงวัน due ของเดือนนี้
-            if (d.day < due)
-                return new Date(d.year, d.month, due);
+    //         // ถ้ายังไม่ถึงวัน due ของเดือนนี้
+    //         if (d.day < due)
+    //             return new Date(d.year, d.month, due);
 
-            // ถ้าผ่านวัน due แล้ว → เดือนหน้า
-            int nextMonth = d.month + 1;
-            int nextYear = d.year;
-            if (nextMonth > 12) { nextMonth = 1; nextYear++; }
-            return new Date(nextYear, nextMonth, due);
-        }
-    }
+    //         // ถ้าผ่านวัน due แล้ว → เดือนหน้า
+    //         int nextMonth = d.month + 1;
+    //         int nextYear = d.year;
+    //         if (nextMonth > 12) { nextMonth = 1; nextYear++; }
+    //         return new Date(nextYear, nextMonth, due);
+    //     }
+    // }
 
     // === Events ===
     /// <summary>เจ้าหนี้มาแล้ว! UI ควร subscribe เพื่อเปิดหน้าจ่ายหนี้</summary>
@@ -107,12 +107,12 @@ public class DebtCollectorManager : MonoBehaviour
 
     void OnEnable()
     {
-        if (calendar) calendar.OnDayEnded += OnDayEnded;
+        // if (calendar) calendar.OnDayEnded += OnDayEnded;
     }
 
     void OnDisable()
     {
-        if (calendar) calendar.OnDayEnded -= OnDayEnded;
+        // if (calendar) calendar.OnDayEnded -= OnDayEnded;
     }
 
     // ================================================================
@@ -124,11 +124,11 @@ public class DebtCollectorManager : MonoBehaviour
         if (currentDebt <= 0) return;
         if (collectorVisiting) return; // กำลังคุยอยู่
 
-        bool isDueDay = (dueDay < 1)
-            ? calendar.IsLastDayOfMonth(d.day)
-            : (d.day == dueDay);
+        // bool isDueDay = (dueDay < 1)
+        //     ? calendar.IsLastDayOfMonth(d.day)
+        //     : (d.day == dueDay);
 
-        if (!isDueDay) return;
+        // if (!isDueDay) return;
 
         // เจ้าหนี้มาเก็บเงิน!
         monthsPassed++;

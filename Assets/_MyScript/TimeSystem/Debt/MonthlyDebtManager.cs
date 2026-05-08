@@ -1,7 +1,7 @@
 using UnityEngine;
 
 /// <summary>
-/// ÃÐººË¹ÕéÃÒÂà´×Í¹: ËÑ¡à§Ô¹àÁ×èÍ¶Ö§ÇÑ¹¡ÓË¹´ªÓÃÐ (ÊÔé¹à´×Í¹ËÃ×ÍÇÑ¹µÒÁ·ÕèµÑé§)
+/// ï¿½Ðºï¿½Ë¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¹: ï¿½Ñ¡ï¿½Ô¹ï¿½ï¿½ï¿½ï¿½Í¶Ö§ï¿½Ñ¹ï¿½ï¿½Ë¹ï¿½ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½Í¹ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
 /// </summary>
 public class MonthlyDebtManager : MonoBehaviour
 {
@@ -13,7 +13,7 @@ public class MonthlyDebtManager : MonoBehaviour
     public int startingDebt = 1000;
     public int monthlyPayment = 200;
     public int lateFee = 50;
-    [Tooltip("¡ÓË¹´ÇÑ¹ªÓÃÐ (1..daysPerMonth) ËÃ×Í -1 = ÊÔé¹à´×Í¹")]
+    [Tooltip("ï¿½ï¿½Ë¹ï¿½ï¿½Ñ¹ï¿½ï¿½ï¿½ï¿½ (1..daysPerMonth) ï¿½ï¿½ï¿½ï¿½ -1 = ï¿½ï¿½ï¿½ï¿½ï¿½Í¹")]
     public int dueDay = -1;
 
 
@@ -35,21 +35,21 @@ public class MonthlyDebtManager : MonoBehaviour
 
     void OnEnable()
     {
-        if (calendar) calendar.OnDayEnded += OnDayEnded;
+        // if (calendar) calendar.OnDayEnded += OnDayEnded;
     }
 
     void OnDisable()
     {
-        if (calendar) calendar.OnDayEnded -= OnDayEnded;
+        // if (calendar) calendar.OnDayEnded -= OnDayEnded;
     }
 
     void OnDayEnded(Date d)
     {
         if (currentDebt <= 0) return;
 
-        bool lastDay = (dueDay < 1) ? calendar.IsLastDayOfMonth(d.day)
-                                    : (d.day == dueDay);
-        if (!lastDay) return;
+        // bool lastDay = (dueDay < 1) ? calendar.IsLastDayOfMonth(d.day)
+        //                             : (d.day == dueDay);
+        // if (!lastDay) return;
 
         int needPay = Mathf.Min(monthlyPayment, currentDebt);
         int have = wallet != null ? wallet.Money : 0;
@@ -61,16 +61,16 @@ public class MonthlyDebtManager : MonoBehaviour
         }
         else
         {
-            // à§Ô¹äÁè¾Í: ¨èÒÂà·èÒ·ÕèÁÕ + ¤èÒ»ÃÑº
+            // ï¿½Ô¹ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ + ï¿½ï¿½Ò»ï¿½Ñº
             if (have > 0) wallet.TrySpend(have);
             currentDebt = currentDebt - have + lateFee;
         }
 
-        // (·Ò§àÅ×Í¡) ÅçÍ¡äÇé´Ùã¹ Console
+        // (ï¿½Ò§ï¿½ï¿½ï¿½Í¡) ï¿½ï¿½Í¡ï¿½ï¿½ï¿½ï¿½ï¿½ Console
         Debug.Log($"[Debt] Pay day! paid={Mathf.Min(have, needPay)} left={currentDebt}");
     }
 
-    // ------- ªèÇÂ´ÕºÑ¡ -------
+    // ------- ï¿½ï¿½ï¿½Â´ÕºÑ¡ -------
     [ContextMenu("Debug/Pay All")]
     void DebugPayAll()
     {
