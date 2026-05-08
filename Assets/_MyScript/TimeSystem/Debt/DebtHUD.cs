@@ -54,15 +54,15 @@ public class DebtHUD : MonoBehaviour
         debt = DebtCollectorManager.Instance;
         if (debt == null) debt = FindObjectOfType<DebtCollectorManager>();
 
-        calendar = CalendarSystem.Instance;
+        // calendar = CalendarSystem.Instance;
         if (calendar == null) calendar = FindObjectOfType<CalendarSystem>();
 
         // Subscribe events
         if (debt != null)
             debt.OnDebtChanged += OnDebtChanged;
 
-        if (calendar != null)
-            calendar.OnDateChanged += OnDateChanged;
+        // if (calendar != null)
+        //     calendar.OnDateChanged += OnDateChanged;
 
         // อัปเดตครั้งแรก
         Refresh();
@@ -73,8 +73,8 @@ public class DebtHUD : MonoBehaviour
         if (debt != null)
             debt.OnDebtChanged -= OnDebtChanged;
 
-        if (calendar != null)
-            calendar.OnDateChanged -= OnDateChanged;
+        // if (calendar != null)
+        //     calendar.OnDateChanged -= OnDateChanged;
     }
 
     void OnDebtChanged(int newDebt) => Refresh();
@@ -106,7 +106,7 @@ public class DebtHUD : MonoBehaviour
             else
             {
                 debtValueText.text = $"¥{remaining:N0}";
-                debtValueText.color = IsUrgent() ? urgentColor : normalColor;
+                // debtValueText.color = IsUrgent() ? urgentColor : normalColor;
             }
         }
 
@@ -119,9 +119,9 @@ public class DebtHUD : MonoBehaviour
             }
             else
             {
-                Date due = debt.NextDueDate;
-                deadlineText.text = $"{due.day:00}/{due.month:00} Y{due.year}";
-                deadlineText.color = IsUrgent() ? urgentColor : Color.white;
+                // Date due = debt.NextDueDate;
+                // deadlineText.text = $"{due.day:00}/{due.month:00} Y{due.year}";
+                // deadlineText.color = IsUrgent() ? urgentColor : Color.white;
             }
         }
 
@@ -155,20 +155,20 @@ public class DebtHUD : MonoBehaviour
     }
 
     /// <summary>ใกล้วัน deadline หรือยัง?</summary>
-    bool IsUrgent()
-    {
-        if (calendar == null || debt == null) return false;
+    // bool IsUrgent()
+    // {
+    //     if (calendar == null || debt == null) return false;
 
-        Date now = calendar.date;
-        Date due = debt.NextDueDate;
+    //     Date now = calendar.date;
+    //     Date due = debt.NextDueDate;
 
-        // คำนวณวันที่เหลือ (แบบง่าย เพราะเดือนยาวเท่ากันหมด)
-        int daysLeft;
-        if (due.month == now.month && due.year == now.year)
-            daysLeft = due.day - now.day;
-        else
-            daysLeft = (calendar.daysPerMonth - now.day) + due.day;
+    //     // คำนวณวันที่เหลือ (แบบง่าย เพราะเดือนยาวเท่ากันหมด)
+    //     int daysLeft;
+    //     if (due.month == now.month && due.year == now.year)
+    //         daysLeft = due.day - now.day;
+    //     else
+    //         daysLeft = (calendar.daysPerMonth - now.day) + due.day;
 
-        return daysLeft <= urgentDaysBefore && daysLeft >= 0;
-    }
+    //     return daysLeft <= urgentDaysBefore && daysLeft >= 0;
+    // }
 }
