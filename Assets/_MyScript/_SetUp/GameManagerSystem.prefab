@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac8913deabe17a0469fb28b4a0f86797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeSignal: {fileID: 11400000, guid: accb031eece68af44916f510ca7589a2, type: 2}
   player: {fileID: 0}
   inventoryUI: {fileID: 0}
   hotbarUI: {fileID: 0}
@@ -53,6 +54,8 @@ MonoBehaviour:
   calendar: {fileID: 0}
   timeOfDay: {fileID: 0}
   itemDatabase: {fileID: 0}
+  playerWallet: {fileID: 0}
+  debtManager: {fileID: 0}
   allCrops:
   - {fileID: 11400000, guid: 5f8a98eb434b84948b63feca8cf57195, type: 2}
   - {fileID: 11400000, guid: d564e6f033e708a4280e4db3abf9a94a, type: 2}

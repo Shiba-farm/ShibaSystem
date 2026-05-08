@@ -5,51 +5,51 @@ using System.Collections;
 /// <summary>
 /// DayNightMusicManager
 /// --------------------
-/// ระบบเพลงตามช่วงเวลา: Dawn / Day / Dusk / Night (สลับเพลงแบบ crossfade)
-/// - ผูกกับ TimeOfDaySystem (ฟัง event OnPhaseChanged)
-/// - มี 2 AudioSource สลับกันเพื่อทำ crossfade เนียน ๆ
-/// - รองรับเริ่มเล่นเพลงให้ตรงเฟสปัจจุบันตอน Start
+/// ๏ฟฝะบ๏ฟฝ๏ฟฝลง๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝวง๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ: Dawn / Day / Dusk / Night (๏ฟฝ๏ฟฝับ๏ฟฝลงแบบ crossfade)
+/// - ๏ฟฝูก๏ฟฝับ TimeOfDaySystem (๏ฟฝัง event OnPhaseChanged)
+/// - ๏ฟฝ๏ฟฝ 2 AudioSource ๏ฟฝ๏ฟฝับ๏ฟฝัน๏ฟฝ๏ฟฝ๏ฟฝอท๏ฟฝ crossfade ๏ฟฝ๏ฟฝยน ๏ฟฝ
+/// - ๏ฟฝอง๏ฟฝับ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝลง๏ฟฝ๏ฟฝ๏ฟฝรง๏ฟฝสปัจ๏ฟฝุบัน๏ฟฝอน Start
 ///
-/// วิธีใช้:
-/// 1) วางสคริปต์ไว้ในฉาก (เช่นบน GameManager) แล้วตั้งค่าใน Inspector:
-///    - อ้างอิง TimeOfDaySystem (ถ้าเว้นว่างจะพยายาม FindObjectOfType)
-///    - ใส่คลิปเพลงสำหรับ Dawn/Day/Dusk/Night (เว้นว่างได้ ถ้าไม่ใช้ช่วงนั้น)
-///    - ใส่ AudioMixerGroup (ถ้ามี) และกำหนด fadeDuration, baseVolume
-/// 2) กด Play ระบบจะเลือกเพลงให้ตรงเฟสปัจจุบัน และจะเปลี่ยนเพลงเมื่อเฟสเปลี่ยน
+/// ๏ฟฝิธ๏ฟฝ๏ฟฝ๏ฟฝ:
+/// 1) ๏ฟฝางสค๏ฟฝิป๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝในฉาก (๏ฟฝ่นบ๏ฟฝ GameManager) ๏ฟฝ๏ฟฝ๏ฟฝวต๏ฟฝ้งค๏ฟฝ๏ฟฝ๏ฟฝ Inspector:
+///    - ๏ฟฝ๏ฟฝาง๏ฟฝิง TimeOfDaySystem (๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝาง๏ฟฝะพ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ FindObjectOfType)
+///    - ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝิป๏ฟฝลง๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝับ Dawn/Day/Dusk/Night (๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝาง๏ฟฝ๏ฟฝ ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝวง๏ฟฝ๏ฟฝ๏ฟฝ)
+///    - ๏ฟฝ๏ฟฝ๏ฟฝ AudioMixerGroup (๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ) ๏ฟฝ๏ฟฝะก๏ฟฝหน๏ฟฝ fadeDuration, baseVolume
+/// 2) ๏ฟฝ๏ฟฝ Play ๏ฟฝะบ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอก๏ฟฝลง๏ฟฝ๏ฟฝ๏ฟฝรง๏ฟฝสปัจ๏ฟฝุบัน ๏ฟฝ๏ฟฝะจ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝยน๏ฟฝลง๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝยน
 ///
-/// หมายเหตุ: ถ้าอยากให้เกมมีเพลงแค่ "ตอนเช้า" กับ "ตอนกลางคืน" อย่างเดียว
-///           ก็ใส่คลิปเฉพาะ Day (หรือ Dawn) และ Night ส่วน Dusk ปล่อยว่างได้
+/// ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝหต๏ฟฝ: ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝาก๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝลง๏ฟฝ๏ฟฝ "๏ฟฝอน๏ฟฝ๏ฟฝ๏ฟฝ" ๏ฟฝับ "๏ฟฝอน๏ฟฝ๏ฟฝาง๏ฟฝืน" ๏ฟฝ๏ฟฝ๏ฟฝาง๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ
+///           ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝิปเฉพ๏ฟฝ๏ฟฝ Day (๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ Dawn) ๏ฟฝ๏ฟฝ๏ฟฝ Night ๏ฟฝ๏ฟฝวน Dusk ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝาง๏ฟฝ๏ฟฝ
 /// </summary>
 public class DayNightMusicManager : MonoBehaviour
 {
     [Header("Refs")]
-    public TimeOfDaySystem timeSystem; // จะถูกหาอัตโนมัติถ้าไม่ได้เซ็ต
+    public TimeOfDaySystem timeSystem; // ๏ฟฝะถูก๏ฟฝ๏ฟฝ๏ฟฝัต๏ฟฝ๏ฟฝัติถ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ
 
     [Header("Clips by Phase")]
-    public AudioClip dawnClip; // เพลงยามเช้าตรู่
-    public AudioClip dayClip;  // เพลงกลางวัน
-    public AudioClip duskClip; // เพลงยามเย็น
-    public AudioClip nightClip;// เพลงกลางคืน
+    public AudioClip dawnClip; // ๏ฟฝลง๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝาต๏ฟฝ๏ฟฝ๏ฟฝ
+    public AudioClip dayClip;  // ๏ฟฝลง๏ฟฝ๏ฟฝาง๏ฟฝัน
+    public AudioClip duskClip; // ๏ฟฝลง๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ
+    public AudioClip nightClip;// ๏ฟฝลง๏ฟฝ๏ฟฝาง๏ฟฝืน
 
     [Header("Audio Output")]
-    public AudioMixerGroup outputMixer; // ไม่จำเป็น
+    public AudioMixerGroup outputMixer; // ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ
     [Range(0f, 1f)] public float baseVolume = 0.8f;
 
     [Header("Behavior")]
-    [Tooltip("ให้เริ่มเล่นเพลงให้ตรงเฟสปัจจุบันทันทีตอน Start")] public bool playOnStart = true;
-    [Tooltip("ระยะเวลา crossfade ต่อการเปลี่ยนเพลง")] public float fadeDuration = 1.5f;
+    [Tooltip("๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝลง๏ฟฝ๏ฟฝ๏ฟฝรง๏ฟฝสปัจ๏ฟฝุบัน๏ฟฝัน๏ฟฝีตอน Start")] public bool playOnStart = true;
+    [Tooltip("๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ crossfade ๏ฟฝ๏ฟฝอก๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝยน๏ฟฝลง")] public float fadeDuration = 1.5f;
 
     // runtime
     private AudioSource _a;
     private AudioSource _b;
-    private AudioSource _active;   // ตัวที่กำลังดังอยู่
+    private AudioSource _active;   // ๏ฟฝ๏ฟฝวท๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝัง๏ฟฝัง๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ
     private DayPhase _currentPhase;
 
     void Awake()
     {
         if (!timeSystem) timeSystem = FindObjectOfType<TimeOfDaySystem>();
 
-        // เตรียม 2 AudioSource สำหรับ crossfade
+        // ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ 2 AudioSource ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝับ crossfade
         _a = CreateChildSource("Music_A");
         _b = CreateChildSource("Music_B");
         _active = _a;
@@ -71,7 +71,7 @@ public class DayNightMusicManager : MonoBehaviour
     {
         if (playOnStart)
         {
-            // คำนวณเฟส ณ ตอนเริ่ม และเริ่มเพลงให้ถูกต้อง
+            // ๏ฟฝำนวณ๏ฟฝ๏ฟฝ ๏ฟฝ ๏ฟฝอน๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝลง๏ฟฝ๏ฟฝ๏ฟฝูก๏ฟฝ๏ฟฝอง
             _currentPhase = GetPhaseNow();
             var clip = GetClipForPhase(_currentPhase);
             if (clip)
@@ -88,18 +88,18 @@ public class DayNightMusicManager : MonoBehaviour
         if (phase == _currentPhase) return;
         _currentPhase = phase;
         var newClip = GetClipForPhase(phase);
-        if (newClip == null) return; // ไม่ตั้งอะไรถ้าเฟสนี้ไม่ใช้เพลง
+        if (newClip == null) return; // ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝรถ๏ฟฝ๏ฟฝ๏ฟฝสน๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝลง
         CrossfadeTo(newClip, fadeDuration);
     }
 
     DayPhase GetPhaseNow()
     {
         if (timeSystem == null) return DayPhase.Day;
-        float t = timeSystem.Time01;
-        // เงื่อนไขเดียวกับ TimeOfDaySystem / TimeOfDayUI
-        if (t >= timeSystem.nightStart || t < timeSystem.dawnStart) return DayPhase.Night;
-        if (t >= timeSystem.duskStart) return DayPhase.Dusk;
-        if (t >= timeSystem.dayStart) return DayPhase.Day;
+        // float t = timeSystem.Time01;
+        // // ๏ฟฝ๏ฟฝ๏ฟฝอน๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝวกับ TimeOfDaySystem / TimeOfDayUI
+        // if (t >= timeSystem.nightStart || t < timeSystem.dawnStart) return DayPhase.Night;
+        // if (t >= timeSystem.duskStart) return DayPhase.Dusk;
+        // if (t >= timeSystem.dayStart) return DayPhase.Day;
         return DayPhase.Dawn;
     }
 
@@ -132,7 +132,7 @@ public class DayNightMusicManager : MonoBehaviour
         if (nextClip == null) return;
         var inactive = (_active == _a) ? _b : _a;
 
-        // ถ้าเป็นคลิปเดิมไม่ต้องทำอะไร
+        // ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ็นค๏ฟฝิป๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอง๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ
         if (_active.clip == nextClip) return;
 
         inactive.clip = nextClip;
@@ -142,17 +142,17 @@ public class DayNightMusicManager : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(CoCrossfade(_active, inactive, duration));
 
-        _active = inactive; // หลังเริ่มเฟดให้ inactive กลายเป็น active ใหม่
+        _active = inactive; // ๏ฟฝ๏ฟฝัง๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝเฟด๏ฟฝ๏ฟฝ๏ฟฝ inactive ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ active ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ
     }
 
     IEnumerator CoCrossfade(AudioSource from, AudioSource to, float duration)
     {
         float t = 0f;
         float fromStart = from ? from.volume : 0f;
-        float toStart = to ? to.volume : 0f; // โดยปกติคือ 0
+        float toStart = to ? to.volume : 0f; // ๏ฟฝยป๏ฟฝ๏ฟฝิค๏ฟฝ๏ฟฝ 0
         while (t < duration)
         {
-            t += Time.unscaledDeltaTime; // ใช้ unscaled เพื่อไม่กระทบจาก Time.timeScale
+            t += Time.unscaledDeltaTime; // ๏ฟฝ๏ฟฝ unscaled ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝะท๏ฟฝ๏ฟฝาก Time.timeScale
             float k = duration > 0f ? Mathf.Clamp01(t / duration) : 1f;
             if (from) from.volume = Mathf.Lerp(fromStart, 0f, k);
             if (to) to.volume = Mathf.Lerp(toStart, baseVolume, k);
