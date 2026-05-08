@@ -9,13 +9,13 @@ public class CalendarUI : MonoBehaviour
     void Start()
     {
         if (!calendar) calendar = FindFirstObjectByType<CalendarSystem>();
-        if (calendar) calendar.OnDateChanged += Refresh;
-        Refresh(calendar != null ? calendar.date : new Date(1, 1, 1));
+        // if (calendar) calendar.OnDateChanged += Refresh;
+        // Refresh(calendar != null ? calendar.date : new Date(1, 1, 1));
     }
 
     void OnDestroy()
     {
-        if (calendar) calendar.OnDateChanged -= Refresh;
+        // if (calendar) calendar.OnDateChanged -= Refresh;
     }
 
     void Refresh(Date d)

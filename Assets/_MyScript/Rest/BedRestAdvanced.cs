@@ -14,20 +14,20 @@ public class BedRestAdvanced : MonoBehaviour
     [Header("Prompt")]
     public CanvasGroup promptPanel;         // "Press E to rest"
     public TextMeshProUGUI promptText;
-    [Tooltip("¶éÒµéÍ§¡ÒÃáÂ¡ Text ÊÓËÃÑºáÊ´§¤ÙÅ´ÒÇ¹ì ãËéãÊèµÑÇ¹Õé (äÁèãÊè¡çä´é)")]
+    [Tooltip("ï¿½ï¿½Òµï¿½Í§ï¿½ï¿½ï¿½ï¿½Â¡ Text ï¿½ï¿½ï¿½ï¿½Ñºï¿½Ê´ï¿½ï¿½ï¿½Å´ï¿½Ç¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¹ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)")]
     public TextMeshProUGUI cooldownText;
 
-    [Header("Sleep UI (àÅ×Í¡àÇÅÒµ×è¹)")]
-    public CanvasGroup sleepPanel;          // Panel UI àÅ×Í¡àÇÅÒ
+    [Header("Sleep UI (ï¿½ï¿½ï¿½Í¡ï¿½ï¿½ï¿½Òµï¿½ï¿½)")]
+    public CanvasGroup sleepPanel;          // Panel UI ï¿½ï¿½ï¿½Í¡ï¿½ï¿½ï¿½ï¿½
     public Slider hourSlider;               // 0..23
     public Slider minuteSlider;             // 0..59
-    public int minuteStep = 5;              // ¢ÂÑº·ÕÅÐ¡Õè¹Ò·Õ (1 = ·Ø¡¹Ò·Õ)
-    public TextMeshProUGUI timePreview;     // áÊ´§¼Å hh:mm
+    public int minuteStep = 5;              // ï¿½ï¿½Ñºï¿½ï¿½ï¿½Ð¡ï¿½ï¿½Ò·ï¿½ (1 = ï¿½Ø¡ï¿½Ò·ï¿½)
+    public TextMeshProUGUI timePreview;     // ï¿½Ê´ï¿½ï¿½ï¿½ hh:mm
     public Button confirmButton;
     public Button cancelButton;
 
     [Header("Fade")]
-    public CanvasGroup fadeCanvas;          // ¨Í´Ó
+    public CanvasGroup fadeCanvas;          // ï¿½Í´ï¿½
     public float fadeDuration = 0.35f;
     public float sleepSeconds = 1.5f;
 
@@ -40,7 +40,7 @@ public class BedRestAdvanced : MonoBehaviour
     public float restCooldown = 3f;
     private float lastRestTime = -999f;
 
-    [Header("ËÂØ´¤Í¹â·ÃÅ¢³Ðà»Ô´ UI")]
+    [Header("ï¿½ï¿½Ø´ï¿½Í¹ï¿½ï¿½Å¢ï¿½ï¿½ï¿½Ô´ UI")]
     public MonoBehaviour[] disableWhileUI;
 
     bool inRange;
@@ -99,13 +99,13 @@ public class BedRestAdvanced : MonoBehaviour
                 if (IsOnCooldown)
                 {
                     string cd = $"{CooldownRemaining:0.0}s";
-                    if (cooldownText)            // ÁÕ Text áÂ¡
+                    if (cooldownText)            // ï¿½ï¿½ Text ï¿½Â¡
                     {
                         cooldownText.gameObject.SetActive(true);
                         cooldownText.text = cd;
                         if (promptText) promptText.text = "Rest cooldown";
                     }
-                    else                         // äÁèÁÕ Text áÂ¡ -> âªÇìº¹ prompt
+                    else                         // ï¿½ï¿½ï¿½ï¿½ï¿½ Text ï¿½Â¡ -> ï¿½ï¿½ìº¹ prompt
                     {
                         if (promptText) promptText.text = $"Rest cooldown ({cd})";
                     }
@@ -122,7 +122,7 @@ public class BedRestAdvanced : MonoBehaviour
             }
         }
 
-        // à»Ô´ UI
+        // ï¿½Ô´ UI
         if (inRange && !uiOpen && Input.GetKeyDown(interactKey))
         {
             if (IsOnCooldown) return;
@@ -190,9 +190,9 @@ public class BedRestAdvanced : MonoBehaviour
         var t = TimeOfDaySystem.Instance;
         if (t)
         {
-            int nowH = t.Hour, nowM = t.Minute;
-            bool nextDay = (targetHour < nowH) || (targetHour == nowH && targetMinute <= nowM);
-            t.SetTime(targetHour, targetMinute);
+            // int nowH = t.Hour, nowM = t.Minute;
+            // bool nextDay = (targetHour < nowH) || (targetHour == nowH && targetMinute <= nowM);
+            // t.SetTime(targetHour, targetMinute);
         }
 
         yield return Fade(0f, fadeDuration);

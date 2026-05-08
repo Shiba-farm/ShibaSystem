@@ -29,13 +29,13 @@ public class ShopRestockManager : MonoBehaviour
     void OnEnable()
     {
         var cal = FindObjectOfType<CalendarSystem>();
-        if (cal != null) cal.OnDayEnded += OnNewDay;
+        // if (cal != null) cal.OnDayEnded += OnNewDay;
     }
 
     void OnDisable()
     {
         var cal = FindObjectOfType<CalendarSystem>();
-        if (cal != null) cal.OnDayEnded -= OnNewDay;
+        // if (cal != null) cal.OnDayEnded -= OnNewDay;
     }
 
     void OnNewDay(Date d)
