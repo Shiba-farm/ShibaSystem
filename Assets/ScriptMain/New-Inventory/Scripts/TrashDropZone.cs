@@ -26,7 +26,7 @@ public class TrashDropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, 
         InventoryItems draggedItem = droppedObject.GetComponent<InventoryItems>();
 
         // Ensure we have a valid item and access to the network data
-        if (draggedItem != null && InventoryMainUIs.Instance.activeData != null)
+        if (draggedItem != null)
         {
             // 1. Tell the item it was "caught" so it doesn't ReturnToSource
             draggedItem.wasDroppedSuccessfully = true;
@@ -34,7 +34,8 @@ public class TrashDropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, 
             // 2. Trigger the Network Request to delete the item
             // We can reuse or create a simple Delete RPC
             int slotIdx = draggedItem.sourceSlot.slotIndex;
-            InventoryMainUIs.Instance.activeData.RequestDeleteItemServerRpc(slotIdx);
+            // InventoryMainUIs.Instance.activeData.RequestDeleteItemServerRpc(slotIdx);
+            InventoryNetworkManager.Instance.RequestDeleteItemServerRpc(draggedItem.sourceSlot.inventoryID, slotIdx, draggedItem.amount);
 
             // 3. Visual Animation: Use the sprite from the dragged item
             if (draggedItem.item != null)
@@ -67,7 +68,6 @@ public class TrashDropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, 
     IEnumerator ShrinkAndSwallowAnimation(Sprite sprite, Vector2 screenPos)
     {
         GameObject tempGO = new GameObject("_SwallowIcon");
-        tempGO.transform.SetParent(InventoryMainUIs.Instance.transform, false); // Parent to Canvas
 
         RectTransform rect = tempGO.AddComponent<RectTransform>();
         rect.sizeDelta = new Vector2(50, 50);

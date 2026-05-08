@@ -3,23 +3,23 @@ using UnityEngine;
 public class AutomaticLamp : MonoBehaviour
 {
     [Header("Settings")]
-    public Light lampLight; // ÅÒ¡ Point Light ÁÒãÊèµÃ§¹Õé
+    public Light lampLight; // ï¿½Ò¡ Point Light ï¿½ï¿½ï¿½ï¿½ï¿½Ã§ï¿½ï¿½ï¿½
 
     [Header("Visuals (Optional)")]
-    public MeshRenderer lanternRenderer; // µÑÇâÁà´Åâ¤Áä¿ (¶éÒÍÂÒ¡ãËéà»ÅÕèÂ¹ÊÕÇÑÊ´Ø)
-    public int materialIndex = 0;        // ÇÑÊ´ØªèÍ§äË¹·Õè¨Ðà»ÅÕèÂ¹ (»¡µÔªèÍ§ 1 ¤×ÍÊèÇ¹ËÅÍ´ä¿)
-    public Material lightOnMat;          // ÇÑÊ´ØµÍ¹ä¿µÔ´ (Emission)
-    public Material lightOffMat;         // ÇÑÊ´ØµÍ¹ä¿´Ñº
+    public MeshRenderer lanternRenderer; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½Ò¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¹ï¿½ï¿½ï¿½ï¿½Ê´ï¿½)
+    public int materialIndex = 0;        // ï¿½ï¿½Ê´Øªï¿½Í§ï¿½Ë¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¹ (ï¿½ï¿½ï¿½Ôªï¿½Í§ 1 ï¿½ï¿½ï¿½ï¿½ï¿½Ç¹ï¿½ï¿½Í´ï¿½)
+    public Material lightOnMat;          // ï¿½ï¿½Ê´ØµÍ¹ä¿µÔ´ (Emission)
+    public Material lightOffMat;         // ï¿½ï¿½Ê´ØµÍ¹ä¿´Ñº
 
     void Start()
     {
-        // ÊÁÑ¤ÃÃÑº¢éÍÁÙÅàÇÅÒ¨Ò¡ TimeOfDaySystem
+        // ï¿½ï¿½Ñ¤ï¿½ï¿½Ñºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò¨Ò¡ TimeOfDaySystem
         var timeSystem = TimeOfDaySystem.Instance;
         if (timeSystem != null)
         {
             timeSystem.OnPhaseChanged += UpdateLampState;
 
-            // àªç¤àÇÅÒ»Ñ¨¨ØºÑ¹·Ñ¹·ÕµÍ¹àÃÔèÁà¡Á
+            // ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Ñ¨ï¿½ØºÑ¹ï¿½Ñ¹ï¿½ÕµÍ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             CheckInitialState(timeSystem);
         }
     }
@@ -32,32 +32,32 @@ public class AutomaticLamp : MonoBehaviour
         }
     }
 
-    // ¿Ñ§¡ìªÑ¹àªç¤µÍ¹àÃÔèÁà¡Á (¤Ó¹Ç³àÍ§à¾ÃÒÐ GetPhase à»ç¹ private)
+    // ï¿½Ñ§ï¿½ï¿½Ñ¹ï¿½ç¤µÍ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (ï¿½Ó¹Ç³ï¿½Í§ï¿½ï¿½ï¿½ï¿½ GetPhase ï¿½ï¿½ private)
     void CheckInitialState(TimeOfDaySystem timeSystem)
     {
-        float t = timeSystem.Time01;
-        DayPhase phase = DayPhase.Day; // ¤èÒàÃÔèÁµé¹
+        // float t = timeSystem.Time01;
+        // DayPhase phase = DayPhase.Day; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-        if (t >= timeSystem.nightStart || t < timeSystem.dawnStart) phase = DayPhase.Night;
-        else if (t >= timeSystem.duskStart) phase = DayPhase.Dusk;
-        else if (t >= timeSystem.dayStart) phase = DayPhase.Day;
-        else phase = DayPhase.Dawn;
+        // if (t >= timeSystem.nightStart || t < timeSystem.dawnStart) phase = DayPhase.Night;
+        // else if (t >= timeSystem.duskStart) phase = DayPhase.Dusk;
+        // else if (t >= timeSystem.dayStart) phase = DayPhase.Day;
+        // else phase = DayPhase.Dawn;
 
-        UpdateLampState(phase);
+        // UpdateLampState(phase);
     }
 
     void UpdateLampState(DayPhase phase)
     {
-        // à§×èÍ¹ä¢: à»Ô´ä¿à©¾ÒÐµÍ¹ "àÂç¹" ËÃ×Í "¡ÅÒ§¤×¹"
+        // ï¿½ï¿½ï¿½Í¹ï¿½: ï¿½Ô´ï¿½à©¾ï¿½ÐµÍ¹ "ï¿½ï¿½ï¿½" ï¿½ï¿½ï¿½ï¿½ "ï¿½ï¿½Ò§ï¿½×¹"
         bool isNightTime = (phase == DayPhase.Dusk || phase == DayPhase.Night);
 
-        // 1. ÊÑè§à»Ô´/»Ô´ áÊ§
+        // 1. ï¿½ï¿½ï¿½ï¿½Ô´/ï¿½Ô´ ï¿½Ê§
         if (lampLight != null)
         {
             lampLight.enabled = isNightTime;
         }
 
-        // 2. (á¶Á) à»ÅÕèÂ¹ÇÑÊ´ØãËé´ÙàÃ×Í§áÊ§
+        // 2. (ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½Â¹ï¿½ï¿½Ê´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í§ï¿½Ê§
         if (lanternRenderer != null && lightOnMat != null && lightOffMat != null)
         {
             Material[] mats = lanternRenderer.materials;
