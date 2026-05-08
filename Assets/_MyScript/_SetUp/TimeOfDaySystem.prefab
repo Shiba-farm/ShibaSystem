@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6806827226123387466}
-  - component: {fileID: 8421896718360107897}
+  - component: {fileID: 7796993805267882288}
   m_Layer: 0
   m_Name: TimeOfDaySystem
   m_TagString: Untagged
@@ -25,14 +25,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4715030925144841754}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 24.719238, y: 1.9785767, z: -38.062218}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1214264595455609289}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8421896718360107897
+--- !u!114 &7796993805267882288
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,9 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c07514928042464ebe0037ccd299700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dayLengthInMinutes: 24
-  startHour: 16
-  startMinute: 10
+  timeSignal: {fileID: 11400000, guid: accb031eece68af44916f510ca7589a2, type: 2}
   directionalLight: {fileID: 0}
   sunColor:
     serializedVersion: 2
@@ -306,8 +305,134 @@ MonoBehaviour:
     m_RotationOrder: 4
   skyExposureDay: 1.2
   skyExposureNight: 0.6
-  dawnStart: 0.2
-  dayStart: 0.3
-  duskStart: 0.7
   nightStart: 0.8
-  time01: 0
+  dawnStart: 0.2
+--- !u!1001 &1680781962535136802
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6806827226123387466}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: fe6a3d7881a792045b4c09bfd7edd053,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 147.91176
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe6a3d7881a792045b4c09bfd7edd053,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -571.919
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe6a3d7881a792045b4c09bfd7edd053,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -363.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe6a3d7881a792045b4c09bfd7edd053,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe6a3d7881a792045b4c09bfd7edd053,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe6a3d7881a792045b4c09bfd7edd053,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe6a3d7881a792045b4c09bfd7edd053,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe6a3d7881a792045b4c09bfd7edd053,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe6a3d7881a792045b4c09bfd7edd053,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe6a3d7881a792045b4c09bfd7edd053,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fe6a3d7881a792045b4c09bfd7edd053,
+        type: 3}
+      propertyPath: m_Name
+      value: BED
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fe6a3d7881a792045b4c09bfd7edd053,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fe6a3d7881a792045b4c09bfd7edd053,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8655267241391420686}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fe6a3d7881a792045b4c09bfd7edd053,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 11875182729363726}
+  m_SourcePrefab: {fileID: 100100000, guid: fe6a3d7881a792045b4c09bfd7edd053, type: 3}
+--- !u!4 &1214264595455609289 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fe6a3d7881a792045b4c09bfd7edd053,
+    type: 3}
+  m_PrefabInstance: {fileID: 1680781962535136802}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1986720323961574259 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fe6a3d7881a792045b4c09bfd7edd053,
+    type: 3}
+  m_PrefabInstance: {fileID: 1680781962535136802}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &8655267241391420686
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986720323961574259}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.0826797, y: 1.9012341, z: 2.4122162}
+  m_Center: {x: -0.059158325, y: 0.4506172, z: 0.24633789}
+--- !u!114 &11875182729363726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986720323961574259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 223a87329a296a84dae2f55b3235df89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeSignal: {fileID: 11400000, guid: accb031eece68af44916f510ca7589a2, type: 2}
+  restrictBedtime: 0
+  earlyBedtimeHour: 20

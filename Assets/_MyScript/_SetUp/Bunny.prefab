@@ -59,6 +59,11 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -80,9 +85,11 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &1843878225749782957
 BoxCollider:
@@ -131,17 +138,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: fefe9e137c492054e87209b7a4e17ed6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 106.78025
+      value: 52.18
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fefe9e137c492054e87209b7a4e17ed6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -564.9065
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fefe9e137c492054e87209b7a4e17ed6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -387.06326
+      value: 107.69
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fefe9e137c492054e87209b7a4e17ed6,
         type: 3}
@@ -188,6 +195,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bunny
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fefe9e137c492054e87209b7a4e17ed6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -203,7 +215,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fefe9e137c492054e87209b7a4e17ed6,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4597479519259257142}
+      addedObject: {fileID: 4466016761537330770}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fefe9e137c492054e87209b7a4e17ed6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7800722928880791761}
   m_SourcePrefab: {fileID: 100100000, guid: fefe9e137c492054e87209b7a4e17ed6, type: 3}
 --- !u!1 &4617441238064890797 stripped
 GameObject:
@@ -213,7 +229,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &4515336701414334972
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -227,12 +243,13 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4597479519259257142
+--- !u!114 &4466016761537330770
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -241,14 +258,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 4617441238064890797}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9edd199288426045baf31b02a57f497, type: 3}
+  m_Script: {fileID: 11500000, guid: 98233969306ece746b2aa64e2dffd53a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  characterName: NPC
-  dialogueData: {fileID: 11400000, guid: 92654eb6de47e5049b4b11fcd855bcbe, type: 2}
-  interactRadius: 3
-  interactKey: 101
-  interactIcon: {fileID: 6392931548853956547}
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDebt
+--- !u!65 &7800722928880791761
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4617441238064890797}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2.740128, z: 1}
+  m_Center: {x: 0, y: 1.3753219, z: 0}
 --- !u!4 &5431238878388902167 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fefe9e137c492054e87209b7a4e17ed6,

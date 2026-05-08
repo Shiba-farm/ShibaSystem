@@ -4,24 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-/// <summary>
-/// ระบบสิ้นวัน — ตี 2 จะ:
-/// 1. หยุดเวลา + Lock player
-/// 2. แสดง Summary แบ่งตาม Farming / Fishing / Ore / Other + รายการไอเท็ม
-/// 3. ตัวเลขเงินจะ count-up จาก 0 → ยอดจริง
-/// 4. กด "นอนหลับ" → จ่ายเงินให้ผู้เล่น → ขึ้น Day Banner → วันใหม่ 6:00 AM
-///
-/// ── Prefab ที่ต้องสร้าง 2 ชิ้น ──────────────────────────────────────
-///
-/// [CategoryHeaderPrefab]  (height ~55)
-///   ├── CatLabel  (TMP)  — "Farming"         anchor ซ้าย
-///   └── CatValue  (TMP)  — "¥990"            anchor ขวา
-///
-/// [ItemRowPrefab]  (height ~45)
-///   ├── ItemIcon  (Image)                    anchor ซ้าย, 40x40
-///   ├── ItemLabel (TMP)  — "Onion x99 ..."   anchor stretch ตรงกลาง
-///   └── ItemValue (TMP)  — "¥990"            anchor ขวา
-/// </summary>
 public class DayEndSystem : MonoBehaviour
 {
     public static DayEndSystem Instance { get; private set; }
@@ -125,8 +107,8 @@ public class DayEndSystem : MonoBehaviour
 
         if (sleepButton) sleepButton.onClick.AddListener(OnSleepPressed);
 
-        if (CalendarSystem.Instance != null)
-            CalendarSystem.Instance.OnDayEnded += _ => _triggeredToday = false;
+        // if (CalendarSystem.Instance != null)
+        //     CalendarSystem.Instance.OnDayEnded += _ => _triggeredToday = false;
     }
 
     void Update()
@@ -134,18 +116,18 @@ public class DayEndSystem : MonoBehaviour
         if (_triggeredToday || _isSummaryOpen) return;
         if (TimeOfDaySystem.Instance == null) return;
 
-        if (TimeOfDaySystem.Instance.Hour == bedtimeHour)
-        {
-            _triggeredToday = true;
-            StartCoroutine(TriggerDayEnd());
-        }
+        // if (TimeOfDaySystem.Instance.Hour == bedtimeHour)
+        // {
+        //     _triggeredToday = true;
+        //     StartCoroutine(TriggerDayEnd());
+        // }
     }
 
     // ─── Flow ─────────────────────────────────────────────────────────
 
     IEnumerator TriggerDayEnd()
     {
-        if (TimeOfDaySystem.Instance) TimeOfDaySystem.Instance.IsPaused = true;
+        // if (TimeOfDaySystem.Instance) TimeOfDaySystem.Instance.IsPaused = true;
 
         var player = FindObjectOfType<PlayerController>();
         player?.SetBusy(true);
@@ -199,11 +181,11 @@ public class DayEndSystem : MonoBehaviour
             Destroy(child.gameObject);
 
         // Title
-        if (summaryTitleText && CalendarSystem.Instance != null)
-        {
-            var d = CalendarSystem.Instance.date;
-            summaryTitleText.text = $"Day {d.day}  —  Year {d.year}";
-        }
+        // if (summaryTitleText && CalendarSystem.Instance != null)
+        // {
+        //     var d = CalendarSystem.Instance.date;
+        //     summaryTitleText.text = $"Day {d.day}  —  Year {d.year}";
+        // }
 
         var tracker = DailyEconomyTracker.Instance;
 
@@ -380,13 +362,13 @@ public class DayEndSystem : MonoBehaviour
 
         DailyEconomyTracker.Instance?.ResetDaily();
 
-        if (CalendarSystem.Instance != null)
-            CalendarSystem.Instance.NextDay();
+        // if (CalendarSystem.Instance != null)
+        //     CalendarSystem.Instance.NextDay();
 
-        if (TimeOfDaySystem.Instance)
-            TimeOfDaySystem.Instance.SetTime(wakeHour, wakeMinute);
+        // if (TimeOfDaySystem.Instance)
+        //     TimeOfDaySystem.Instance.SetTime(wakeHour, wakeMinute);
 
-        if (TimeOfDaySystem.Instance) TimeOfDaySystem.Instance.IsPaused = false;
+        // if (TimeOfDaySystem.Instance) TimeOfDaySystem.Instance.IsPaused = false;
 
         // 3. เปิด Morning SFX
         if (audioSource && morningSound) audioSource.PlayOneShot(morningSound);
@@ -406,11 +388,11 @@ public class DayEndSystem : MonoBehaviour
     {
         if (bannerPanel == null || bannerText == null) yield break;
 
-        if (CalendarSystem.Instance != null)
-        {
-            var d = CalendarSystem.Instance.date;
-            bannerText.text = $"Day {d.day}";
-        }
+        // if (CalendarSystem.Instance != null)
+        // {
+        //     var d = CalendarSystem.Instance.date;
+        //     bannerText.text = $"Day {d.day}";
+        // }
 
         bannerPanel.SetActive(true);
 

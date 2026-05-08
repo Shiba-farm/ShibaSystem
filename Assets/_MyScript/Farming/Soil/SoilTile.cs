@@ -132,7 +132,8 @@ public class SoilTile : MonoBehaviour
 
         // [FIX] ใช้ game-time แทน real-time เพื่อให้พืชโต sync กับเวลาในเกม
         if (TimeOfDaySystem.Instance != null)
-            stageTimer += TimeOfDaySystem.Instance.GameHoursDelta;
+            Debug.LogWarning($"[SoilTile] ใช้ game-time แทน real-time เพื่อให้พืชโต sync กับเวลาในเกม");
+            // stageTimer += TimeOfDaySystem.Instance.GameHoursDelta;
         else
             stageTimer += Time.deltaTime;
         float target = crop.stageDurations[Mathf.Clamp(stageIndex, 0, crop.stageDurations.Length - 1)];

@@ -6,6 +6,8 @@ using Sirenix.OdinInspector;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+    [Header("Signal")]
+    [SerializeField] private WorldTimeSignal timeSignal;
 
     [FoldoutGroup("Core Refs"), Required, SerializeField]
     private Transform player;
@@ -92,12 +94,12 @@ public class GameManager : MonoBehaviour
         data.playerZ = pos.z;
         data.playerRotY = player.eulerAngles.y;
 
-        var d = calendar.date;
-        data.year = d.year;
-        data.month = d.month;
-        data.day = d.day;
-        data.hour = timeOfDay.Hour;
-        data.minute = timeOfDay.Minute;
+        // var d = calendar.date;
+        // data.year = d.year;
+        // data.month = d.month;
+        // data.day = d.day;
+        data.hour = timeSignal.CurrentTime.Hour;
+        data.minute = timeSignal.CurrentTime.Minute;
 
         data.currentEnergy = playerEnergy.CurrentEnergy;
 
@@ -180,10 +182,10 @@ public class GameManager : MonoBehaviour
         e.y = data.playerRotY;
         player.eulerAngles = e;
 
-        calendar.SetDate(data.year, data.month, data.day);
-        timeOfDay.SetTime(data.hour, data.minute);
+        // calendar.SetDate(data.year, data.month, data.day);
+        timeSignal.UpdateTime(data.hour, data.minute, data.day, data.month, data.year); 
         float t01 = (data.hour + data.minute / 60f) / 24f;
-        calendar.SetTime01(t01, true);
+        // calendar.SetTime01(t01, true);
 
         playerEnergy.SetEnergy(data.currentEnergy);
 
