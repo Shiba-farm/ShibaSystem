@@ -2,19 +2,31 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using System;
+
+public enum SlotInteractionMode { DragDrop, ClickOnly, None }
 
 public class InventorySlotUIs : MonoBehaviour, IDropHandler
 {
+    public Action<InventorySlotUIs, PointerEventData> OnClickedCallback;
+    [Header("UI details")]
+    [SerializeField] private Image backgroundImage;
+    [SerializeField] private Sprite backgroundSprite;
+    [SerializeField] private GameObject backgroundImageForAmountText;
+    [SerializeField] private Sprite backgroundSpriteForAmountText;
+
     [Header("UI References")]
     [SerializeField] private InventoryItems itemIconPrefab;
 
     [Header("Identification")]
     public int slotIndex;
     public int inventoryID;
-
+    public int inventoryIndex;
     [Header("Runtime Data")]
     public ItemSO currentItem;
     public int amount;
+    [Header("Interaction")]
+    public SlotInteractionMode interactionMode = SlotInteractionMode.DragDrop;
     private InventoryItems currentItemUI;
 
     private void Awake()
@@ -25,6 +37,12 @@ public class InventorySlotUIs : MonoBehaviour, IDropHandler
             currentItemUI.sourceSlot = this;
             amount = currentItemUI.amount;
         }
+    }
+
+    private void Start()
+    {
+        backgroundImage.sprite = backgroundSprite;
+        backgroundImageForAmountText.GetComponent<Image>().sprite = backgroundSpriteForAmountText;
     }
 
     public void RefreshSlot(ItemSO newItem, int newAmount)
@@ -64,12 +82,37 @@ public class InventorySlotUIs : MonoBehaviour, IDropHandler
             currentItemUI = Instantiate(itemIconPrefab, transform);
             currentItemUI.sourceSlot = this;
             currentItemUI.InitializeItem(currentItem, amount);
+
+            SetupInteraction(currentItemUI);
         }
 
         currentItemUI.item = currentItem;
         currentItemUI.amount = amount;
         currentItemUI.RefreshUI();
     }
+
+    private void SetupInteraction(InventoryItems itemUI)
+    {
+        switch (interactionMode)
+        {
+            case SlotInteractionMode.DragDrop:
+                itemUI.gameObject.AddComponent<DraggableItem>();
+                break;
+
+            case SlotInteractionMode.ClickOnly:
+                var clickable = itemUI.gameObject.AddComponent<ClickableItem>();
+                break;
+
+            case SlotInteractionMode.None:
+                break;
+        }
+    }
+
+    public void OnItemClicked(InventoryItems itemUI, PointerEventData eventData)
+    {
+        OnClickedCallback?.Invoke(this, eventData);
+    }
+
     public void OnItemDraggedAway(int amountTaken)
     {
         amount -= amountTaken;
@@ -94,13 +137,12 @@ public class InventorySlotUIs : MonoBehaviour, IDropHandler
 
         InventoryItems draggedItem = droppedObject.GetComponent<InventoryItems>();
 
-        if (draggedItem != null && InventoryMainUIs.Instance.activeData != null)
+        if (draggedItem != null)
         {
             int fromSlot = draggedItem.sourceSlot.slotIndex;
             int toSlot = slotIndex;
-            if (fromSlot == toSlot)
+            if (fromSlot == toSlot && draggedItem.sourceSlot.inventoryID == inventoryID)
             {
-
                 draggedItem.wasDroppedSuccessfully = false;
                 return;
             }
@@ -109,11 +151,14 @@ public class InventorySlotUIs : MonoBehaviour, IDropHandler
 
             if (isPartialStack && isDifferentItem)
             {
-                draggedItem.wasDroppedSuccessfully = false; 
+                draggedItem.wasDroppedSuccessfully = false;
                 return;
             }
-            
-            InventoryMainUIs.Instance.activeData.RequestPutItemServerRpc(fromSlot, toSlot, draggedItem.amount);
+
+            var from = new SlotAddress(draggedItem.sourceSlot.inventoryID, draggedItem.sourceSlot.slotIndex);
+            var to = new SlotAddress(inventoryID, slotIndex);
+
+            InventoryUIRegistry.RequestItemTransfer(from, to, draggedItem.amount);
 
             Destroy(draggedItem.gameObject);
         }
@@ -122,5 +167,17 @@ public class InventorySlotUIs : MonoBehaviour, IDropHandler
     public void LinkItemUI(InventoryItems itemUI)
     {
         currentItemUI = itemUI;
+    }
+}
+
+public struct SlotAddress
+{
+    public int InventoryID;
+    public int SlotIndex;
+
+    public SlotAddress(int inventoryID, int slotIndex)
+    {
+        InventoryID = inventoryID;
+        SlotIndex = slotIndex;
     }
 }
