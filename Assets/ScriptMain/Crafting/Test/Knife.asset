@@ -18,13 +18,13 @@ MonoBehaviour:
   description: Use to cut food and other item
   icon: {fileID: 21300000, guid: 1d4ecf858d38e1d47bc0d020378abb60, type: 3}
   ingredients:
-  - item: {fileID: 11400000, guid: fba18953844cfff40b5204accdff8c23, type: 2}
+  - item: {fileID: 11400000, guid: 640c749e666c8a645bb7b187ec6d0802, type: 2}
     amount: 1
-  - item: {fileID: 11400000, guid: b752f5711965d244691c412ffdf74212, type: 2}
+  - item: {fileID: 11400000, guid: 9043bc6dab0c80b43a659771454f90fd, type: 2}
     amount: 1
-  - item: {fileID: 11400000, guid: 861c6b75b7aedab46836bee7b45a8fc0, type: 2}
+  - item: {fileID: 11400000, guid: 32d79f3900f0cf74b9dd7ae9299dccbf, type: 2}
     amount: 1
-  resultItem: {fileID: 11400000, guid: 6eaf4d3588e2056458588d56c750aff4, type: 2}
+  resultItem: {fileID: 11400000, guid: 43d63f4067cb0984ea87c15714884aaf, type: 2}
   resultAmount: 1
   requiresLearning: 0
   minWorkbenchLevel: 0

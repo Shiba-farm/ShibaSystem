@@ -9,24 +9,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79cfb68f21602e44daa4e394bb48e58d, type: 3}
+  m_Script: {fileID: 11500000, guid: 45b888c691fbaf646a779adadfa6a3e2, type: 3}
   m_Name: Onion
-  m_EditorClassIdentifier: Assembly-CSharp::ItemSO
+  m_EditorClassIdentifier: Assembly-CSharp::FoodItemSO
   itemName: Onion
   itemID: 3
   icon: {fileID: 21300000, guid: b2c4fe614144a79478daf5fc7aaafa3e, type: 3}
-  equipmentPrefab: {fileID: 0}
-  actionVFX: {fileID: 0}
-  actionSFX: {fileID: 0}
-  sfxDuration: 0
-  pitchRandomMultiplier: 1
-  energyCost: 0
   isStackable: 1
   maxStack: 99
-  category: 0
-  toolAction: 0
-  seedCrop: {fileID: 0}
-  farmHelperData: {fileID: 0}
+  equipmentPrefab: {fileID: 2911813514542648740, guid: d2a5b260f69ce4041892120176d2c0c6,
+    type: 3}
+  worldItemPrefab: {fileID: 2911813514542648740, guid: 4368901f4691877459407dfa06447711,
+    type: 3}
+  holdType: 1
   sellable: 1
   sellPrice: 10
   sellCategory: 3
+  category: 2
+  holdPositionOffset: {x: -0.04, y: 0.18, z: 0.48}
+  holdRotationOffset: {x: 0, y: 0, z: 0}
+  holdScale: {x: 1, y: 1, z: 1}
+  energyRestore: 2
+  healthRestore: 2

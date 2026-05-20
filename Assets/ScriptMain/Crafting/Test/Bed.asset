@@ -18,13 +18,13 @@ MonoBehaviour:
   description: Sleep
   icon: {fileID: 21300000, guid: dee513575896b3d48b969f7c5317b289, type: 3}
   ingredients:
-  - item: {fileID: 11400000, guid: b752f5711965d244691c412ffdf74212, type: 2}
+  - item: {fileID: 11400000, guid: 9043bc6dab0c80b43a659771454f90fd, type: 2}
     amount: 4
-  - item: {fileID: 11400000, guid: e8140e0fbbb6ae347bc7b08a524f91c5, type: 2}
+  - item: {fileID: 11400000, guid: c4fe9b5e92828d74d99b9592af95de25, type: 2}
     amount: 5
-  - item: {fileID: 11400000, guid: 861c6b75b7aedab46836bee7b45a8fc0, type: 2}
+  - item: {fileID: 11400000, guid: 32d79f3900f0cf74b9dd7ae9299dccbf, type: 2}
     amount: 2
-  resultItem: {fileID: 11400000, guid: 27f384cccd7dbb44cb0479f166bf039b, type: 2}
+  resultItem: {fileID: 11400000, guid: 58e8663d6f3632744998b5e294305304, type: 2}
   resultAmount: 1
   requiresLearning: 0
   minWorkbenchLevel: 0

@@ -9,24 +9,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79cfb68f21602e44daa4e394bb48e58d, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c90964b97133554f81479862b5286e4, type: 3}
   m_Name: Wood
-  m_EditorClassIdentifier: Assembly-CSharp::ItemSO
+  m_EditorClassIdentifier: Assembly-CSharp::ResourceItemSO
   itemName: Wood
   itemID: 5
   icon: {fileID: 21300000, guid: 71ab2595f9d64234a95eb0aabf353e84, type: 3}
-  equipmentPrefab: {fileID: 0}
-  actionVFX: {fileID: 0}
-  actionSFX: {fileID: 0}
-  sfxDuration: 0
-  pitchRandomMultiplier: 1
-  energyCost: 0
   isStackable: 1
   maxStack: 99
-  category: 0
-  toolAction: 0
-  seedCrop: {fileID: 0}
-  farmHelperData: {fileID: 0}
+  equipmentPrefab: {fileID: 3326264457535587385, guid: cfb0981616b7cb641953d46122ca7654,
+    type: 3}
+  worldItemPrefab: {fileID: 3326264457535587385, guid: 3d128b847798ca342b93a4f43ccae3e5,
+    type: 3}
+  holdType: 1
   sellable: 1
   sellPrice: 10
   sellCategory: 3
+  category: 0
+  holdPositionOffset: {x: 0.22, y: -0.13, z: 0.35}
+  holdRotationOffset: {x: 57.34, y: 40.7, z: 122.1}
+  holdScale: {x: 1, y: 1, z: 1}
