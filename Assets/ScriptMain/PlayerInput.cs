@@ -181,6 +181,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseTool"",
+                    ""type"": ""Button"",
+                    ""id"": ""298b3f6d-678e-4119-ba81-98344131fafd"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -513,6 +522,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e56c5097-666f-4a9e-bf02-a0a3647427fd"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseTool"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -537,6 +557,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Key_Numkey = m_Key.FindAction("Numkey", throwIfNotFound: true);
         m_Key_NumPad = m_Key.FindAction("NumPad", throwIfNotFound: true);
         m_Key_Pause = m_Key.FindAction("Pause", throwIfNotFound: true);
+        m_Key_UseTool = m_Key.FindAction("UseTool", throwIfNotFound: true);
     }
 
     ~@PlayerControls()
@@ -627,6 +648,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Key_Numkey;
     private readonly InputAction m_Key_NumPad;
     private readonly InputAction m_Key_Pause;
+    private readonly InputAction m_Key_UseTool;
     /// <summary>
     /// Provides access to input actions defined in input action map "Key".
     /// </summary>
@@ -678,6 +700,10 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Key/Pause".
         /// </summary>
         public InputAction @Pause => m_Wrapper.m_Key_Pause;
+        /// <summary>
+        /// Provides access to the underlying input action "Key/UseTool".
+        /// </summary>
+        public InputAction @UseTool => m_Wrapper.m_Key_UseTool;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -734,6 +760,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Pause.started += instance.OnPause;
             @Pause.performed += instance.OnPause;
             @Pause.canceled += instance.OnPause;
+            @UseTool.started += instance.OnUseTool;
+            @UseTool.performed += instance.OnUseTool;
+            @UseTool.canceled += instance.OnUseTool;
         }
 
         /// <summary>
@@ -775,6 +804,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Pause.started -= instance.OnPause;
             @Pause.performed -= instance.OnPause;
             @Pause.canceled -= instance.OnPause;
+            @UseTool.started -= instance.OnUseTool;
+            @UseTool.performed -= instance.OnUseTool;
+            @UseTool.canceled -= instance.OnUseTool;
         }
 
         /// <summary>
@@ -898,5 +930,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnPause(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "UseTool" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnUseTool(InputAction.CallbackContext context);
     }
 }
