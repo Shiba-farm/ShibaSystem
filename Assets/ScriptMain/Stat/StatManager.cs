@@ -84,14 +84,19 @@ public class StatManager : NetworkBehaviour
     {
         if (!IsServer) return;
 
+
         if (_controller.IsRunning.Value)
         {
             Debug.Log("Detect running");
-            float drainAmount = statsTemplate.energyDrainRunning * Time.deltaTime;
-            ConsumeStat(StatType.Stamina, drainAmount);
+            float energyDrainAmount = statsTemplate.energyDrainRunning * Time.deltaTime;
+            float staminaDrainAmount = statsTemplate.staminaDrainRunning * Time.deltaTime;
+            ConsumeStat(StatType.Energy, energyDrainAmount);
+            ConsumeStat(StatType.Stamina, staminaDrainAmount);
         }
         else
         {
+            float energyDrainNormal = statsTemplate.energyDrainNormal * Time.deltaTime;
+            ConsumeStat(StatType.Energy, energyDrainNormal);
             // Optional: Regen stamina when NOT running
             RegenStat(StatType.Stamina, statsTemplate.staminaRegenNormal * Time.deltaTime);
         }
@@ -122,11 +127,11 @@ public class StatManager : NetworkBehaviour
         {
             if (AllStats[i].Type == type)
             {
-                Debug.Log("Find stat");
+                // Debug.Log("Find stat");
                 var stat = AllStats[i];
                 if (stat.CurrentValue <= 0) return;
                 stat.CurrentValue = Mathf.Clamp(stat.CurrentValue - amount, 0, stat.MaxValue);
-                Debug.Log($"New stat : {stat.CurrentValue}");
+                // Debug.Log($"New stat : {stat.CurrentValue}");
                 AllStats[i] = stat;
                 return;
             }
@@ -134,9 +139,15 @@ public class StatManager : NetworkBehaviour
     }
 
     [ServerRpc]
-    public void RequestUseItemServerRpc(int inventoryIndex)
+    private void UseItemServerRpc(int itemID)
     {
+        var data = GameDataManager.Instance.itemDatabases.GetItemByID(itemID);
+        if (data is not IUsable usable) return;
 
+        // server validates AGAIN — client CanUse() is just UX, not security
+        if (!usable.CanUse(GetComponent<StatManager>())) return;
+
+        // usable.Use(GetComponent<StatManager>());
     }
 
     [ServerRpc]

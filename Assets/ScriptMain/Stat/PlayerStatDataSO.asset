@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStatDataSO
   maxHealth: 100
   moveSpeed: 20
-  maxStamina: 50
+  maxStamina: 100
   maxEnergy: 80
   energyDrainRunning: 2
-  energyDrainNormal: 0
-  staminaDrainRunning: 0
-  staminaRegenNormal: 1
+  energyDrainNormal: 0.1
+  staminaDrainRunning: 2
+  staminaRegenNormal: 2
