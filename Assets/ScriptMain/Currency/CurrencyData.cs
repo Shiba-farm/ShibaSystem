@@ -5,7 +5,7 @@ public class CurrencyData : NetworkBehaviour
 {
     [SerializeField] private CurrencySignal currencySignal;
     private NetworkVariable<long> gold = new NetworkVariable<long>(
-        500,
+        0,
         NetworkVariableReadPermission.Owner,  // only owner sees their balance
         NetworkVariableWritePermission.Server  // only server can change it
     );
