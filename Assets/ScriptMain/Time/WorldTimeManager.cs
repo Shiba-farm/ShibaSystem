@@ -7,7 +7,7 @@ public class WorldTimeManager : NetworkBehaviour
     [Header("Time Settings")]
     [SerializeField] private WorldTimeSignal timeSignal;
     [SerializeField] private int startHour = 6;
-    [SerializeField] private float realSecondsPerGameMinute = 1f;
+    [SerializeField] private float realSecondsPerGameMinute = 5f;
 
     [Header("Time of the day phase Thresholds")]
     [SerializeField] private float dawnStart = 0.20f;
