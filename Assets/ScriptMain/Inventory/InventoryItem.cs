@@ -8,12 +8,12 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     [Header("UI")]
     [SerializeField] public Image image;
     [HideInInspector] public Transform parentAfterdrag;
-    [HideInInspector] public ItemData item;
+    [HideInInspector] public ItemSO item;
 
-    public void InitialiseItem(ItemData newItem)
+    public void InitialiseItem(ItemSO newItem)
     {
         item = newItem;
-        image.sprite = newItem.image;
+        image.sprite = newItem.icon;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
