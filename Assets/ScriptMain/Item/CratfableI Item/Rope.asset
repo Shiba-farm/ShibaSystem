@@ -9,24 +9,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79cfb68f21602e44daa4e394bb48e58d, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c90964b97133554f81479862b5286e4, type: 3}
   m_Name: Rope
-  m_EditorClassIdentifier: Assembly-CSharp::ItemSO
+  m_EditorClassIdentifier: Assembly-CSharp::ResourceItemSO
   itemName: Rope
   itemID: 17
-  icon: {fileID: 21300000, guid: 4b1178cbedcc951468f0367bfb8e50c2, type: 3}
-  equipmentPrefab: {fileID: 0}
-  actionVFX: {fileID: 0}
-  actionSFX: {fileID: 0}
-  sfxDuration: 0
-  pitchRandomMultiplier: 1
-  energyCost: 0
+  icon: {fileID: 21300000, guid: fcc6d486132499f4f8e7de2d88868290, type: 3}
   isStackable: 1
   maxStack: 99
-  category: 3
-  toolAction: 0
-  seedCrop: {fileID: 0}
-  farmHelperData: {fileID: 0}
+  equipmentPrefab: {fileID: 4825909914000509330, guid: 63415a47a65d77e44891870a379c7218,
+    type: 3}
+  worldItemPrefab: {fileID: 4825909914000509330, guid: 80f076f28b5655c40a9541fd5da7fefa,
+    type: 3}
+  holdType: 1
   sellable: 1
   sellPrice: 10
   sellCategory: 3
+  category: 0
+  holdPositionOffset: {x: 0, y: 0, z: 0}
+  holdRotationOffset: {x: 0, y: 0, z: 0}
+  holdScale: {x: 1, y: 1, z: 1}

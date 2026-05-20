@@ -18,9 +18,9 @@ MonoBehaviour:
   description: Eat
   icon: {fileID: 21300000, guid: 5719b644e6d7eb942bbf1a3456f5b3c3, type: 3}
   ingredients:
-  - item: {fileID: 11400000, guid: 9625e31cc0e03c441bea9070b13133d8, type: 2}
+  - item: {fileID: 11400000, guid: 644a99173688cc44cb97751d7039f560, type: 2}
     amount: 1
-  resultItem: {fileID: 11400000, guid: 3870a6b370cf05e44a74808c64ba7e52, type: 2}
+  resultItem: {fileID: 11400000, guid: c2cc60788f007af498e5b2ad077b4bac, type: 2}
   resultAmount: 1
   requiresLearning: 0
   minWorkbenchLevel: 0

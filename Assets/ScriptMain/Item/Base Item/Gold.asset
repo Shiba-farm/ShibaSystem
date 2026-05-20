@@ -9,24 +9,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79cfb68f21602e44daa4e394bb48e58d, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c90964b97133554f81479862b5286e4, type: 3}
   m_Name: Gold
-  m_EditorClassIdentifier: Assembly-CSharp::ItemSO
+  m_EditorClassIdentifier: Assembly-CSharp::ResourceItemSO
   itemName: Gold
   itemID: 10
-  icon: {fileID: 0}
-  equipmentPrefab: {fileID: 0}
-  actionVFX: {fileID: 0}
-  actionSFX: {fileID: 0}
-  sfxDuration: 0
-  pitchRandomMultiplier: 1
-  energyCost: 0
+  icon: {fileID: 21300000, guid: 429399d535c51a141a67f19f1a1d4634, type: 3}
   isStackable: 1
   maxStack: 99
-  category: 0
-  toolAction: 0
-  seedCrop: {fileID: 0}
-  farmHelperData: {fileID: 0}
+  equipmentPrefab: {fileID: 8562844499703336021, guid: 2a7a1405f59c1e84d87ef34a0729f323,
+    type: 3}
+  worldItemPrefab: {fileID: 8562844499703336021, guid: bf3706967493b2444b7a0fcd00ec0cdf,
+    type: 3}
+  holdType: 1
   sellable: 1
   sellPrice: 10
   sellCategory: 3
+  category: 0
+  holdPositions: []
+  defaultHoldState: 0

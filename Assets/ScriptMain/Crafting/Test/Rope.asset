@@ -18,9 +18,9 @@ MonoBehaviour:
   description: 
   icon: {fileID: 21300000, guid: 4b1178cbedcc951468f0367bfb8e50c2, type: 3}
   ingredients:
-  - item: {fileID: 11400000, guid: 805b5d9c99e3e8b4bb3996aeed17ca1f, type: 2}
+  - item: {fileID: 11400000, guid: ee850f45f823a724fa669c9584e9d34b, type: 2}
     amount: 3
-  resultItem: {fileID: 11400000, guid: 861c6b75b7aedab46836bee7b45a8fc0, type: 2}
+  resultItem: {fileID: 11400000, guid: 32d79f3900f0cf74b9dd7ae9299dccbf, type: 2}
   resultAmount: 1
   requiresLearning: 0
   minWorkbenchLevel: 0
