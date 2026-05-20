@@ -28,6 +28,7 @@ public class InventorySlotUIs : MonoBehaviour, IDropHandler
     [Header("Interaction")]
     public SlotInteractionMode interactionMode = SlotInteractionMode.DragDrop;
     private InventoryItems currentItemUI;
+    private Color originalBackgroundColor;
 
     private void Awake()
     {
@@ -43,6 +44,7 @@ public class InventorySlotUIs : MonoBehaviour, IDropHandler
     {
         backgroundImage.sprite = backgroundSprite;
         backgroundImageForAmountText.GetComponent<Image>().sprite = backgroundSpriteForAmountText;
+        originalBackgroundColor = backgroundImage.color;
     }
 
     public void RefreshSlot(ItemSO newItem, int newAmount)
@@ -107,6 +109,13 @@ public class InventorySlotUIs : MonoBehaviour, IDropHandler
                 break;
         }
     }
+
+    public void SetBackgroundColor(Color color)
+    {
+        backgroundImage.color = color;
+    }
+
+    public Color GetOriginalColor() => originalBackgroundColor;
 
     public void OnItemClicked(InventoryItems itemUI, PointerEventData eventData)
     {

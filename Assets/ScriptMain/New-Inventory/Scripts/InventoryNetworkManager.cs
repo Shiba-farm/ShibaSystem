@@ -1,9 +1,11 @@
+using System;
 using Unity.Netcode;
 using UnityEngine;
 
 public class InventoryNetworkManager : NetworkBehaviour
 {
     public static InventoryNetworkManager Instance { get; private set; }
+    public event Action<bool> OnInventoryConfirmedEmpty;
 
     void Awake()
     {
@@ -84,5 +86,59 @@ public class InventoryNetworkManager : NetworkBehaviour
         if (inventory == null) return;
 
         inventory.RemoveItem(itemID, amount);
+    }
+
+    [Rpc(SendTo.Server, InvokePermission = RpcInvokePermission.Everyone)]
+    public void RequestDeleteBatchServerRpc(int inventoryID, int[] slotIndices, RpcParams rpcParams = default)
+    {
+        ulong requesterClientId = rpcParams.Receive.SenderClientId;
+        InventoryData inventory = InventoryDataRegistry.GetByOwnerAndID(requesterClientId, inventoryID);
+        Debug.Log($"Is inventory null : {inventory == null}");
+        if (inventory == null) return;
+
+        foreach (int slotIndex in slotIndices)
+        {
+            if (slotIndex < 0 || slotIndex >= inventory.InventoryItems.Count) continue;
+            inventory.InventoryItems[slotIndex] = new NetworkItems { ItemID = 0, Amount = 0 };
+        }
+
+        CheckInventoryEmptyRpc(inventoryID, requesterClientId);
+    }
+
+    [Rpc(SendTo.Server, InvokePermission = RpcInvokePermission.Everyone)]
+    public void CheckInventoryEmptyServerRpc(int inventoryID, RpcParams rpcParams = default)
+    {
+        ulong requesterClientId = rpcParams.Receive.SenderClientId;
+        InventoryData inventory = InventoryDataRegistry.GetByOwnerAndID(requesterClientId, inventoryID);
+        // Debug.Log($"Inventory Null ? : {inventory == null}");
+        if (inventory == null) return;
+
+        CheckInventoryEmptyRpc(inventoryID, requesterClientId);
+    }
+
+    // Extracted so both paths can reuse it
+    private void CheckInventoryEmptyRpc(int inventoryID, ulong clientId)
+    {
+        InventoryData inventory = InventoryDataRegistry.GetByOwnerAndID(clientId, inventoryID);
+        if (inventory == null) return;
+
+        bool isEmpty = true;
+        foreach (var item in inventory.InventoryItems)
+        {
+            if (item.ItemID != 0 && item.Amount > 0)
+            {
+                isEmpty = false;
+                break;
+            }
+        }
+        Debug.Log($"Is inventory empty : {isEmpty}");
+        NotifyInventoryEmptyClientRpc(isEmpty, RpcTarget.Single(clientId, RpcTargetUse.Temp));
+    }
+
+    [Rpc(SendTo.SpecifiedInParams)]
+    private void NotifyInventoryEmptyClientRpc(bool isEmpty, RpcParams rpcParams = default)
+    {
+        Debug.Log($"Notify the client : {isEmpty}");
+        OnInventoryConfirmedEmpty?.Invoke(isEmpty);
     }
 }

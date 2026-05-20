@@ -120,7 +120,7 @@ public class InventoryMainUIs : MonoBehaviour
         }
     }
 
-    public void RefreshAllSlots()
+    public virtual void RefreshAllSlots()
     {
         if (activeData == null) return;
 
