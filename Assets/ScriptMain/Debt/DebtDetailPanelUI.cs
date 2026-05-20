@@ -13,29 +13,40 @@ public class DebtDetailPanelUI : MonoBehaviour
     [SerializeField] private TMP_InputField customPayInput;    // "Pay : 15000"
     [SerializeField] private Button payButton;
     [SerializeField] private Button punishmentButton;
+    [SerializeField] private Button endButton;
 
     [Header("Dialogue")]
     [SerializeField] private TextMeshProUGUI dialogueText;
+    [Header("Reference")]
+    [SerializeField] private DebtPayUI _controller;
+
     private void Start()
     {
-        punishmentButton.gameObject.SetActive(false);
+        // punishmentButton.gameObject.SetActive(false);
+        // endButton.gameObject.SetActive(false);
     }
 
     private void OnEnable()
     {
         if (DebtManager.Instance == null) return;
-
         DebtManager.Instance.OnDebtChanged += PopulateUI;
-        PopulateUI();
+
         payButton.onClick.AddListener(OnPayClicked);
+        punishmentButton.onClick.AddListener(OnPunishmentClicked);
+        endButton.onClick.AddListener(OnEndClicked);
+        InventoryNetworkManager.Instance.OnInventoryConfirmedEmpty += OnInventoryCheckResult;
+        // PopulateUI();
     }
 
     private void OnDisable()
     {
         if (DebtManager.Instance == null) return;
+        DebtManager.Instance.OnDebtChanged -= PopulateUI;
 
         payButton.onClick.RemoveListener(OnPayClicked);
-        DebtManager.Instance.OnDebtChanged -= PopulateUI;
+        punishmentButton.onClick.RemoveListener(OnPunishmentClicked);
+        endButton.onClick.RemoveListener(OnEndClicked);
+        InventoryNetworkManager.Instance.OnInventoryConfirmedEmpty -= OnInventoryCheckResult;
     }
 
     private void PopulateUI()
@@ -52,53 +63,78 @@ public class DebtDetailPanelUI : MonoBehaviour
         // Default input to minimum due
         customPayInput.text = playerGold < remaining ? playerGold.ToString() : remaining.ToString();
 
-        if (playerGold <= 0)
+        bool hasGold = playerGold > 0;
+
+        if (hasGold)
         {
-            punishmentButton.gameObject.SetActive(true);
-            payButton.gameObject.SetActive(false);
-            dialogueText.text = "You have nothing. Hand over your goods.";
+            payButton.gameObject.SetActive(true);
+            punishmentButton.gameObject.SetActive(false);
+            endButton.gameObject.SetActive(false);
+            dialogueText.text = playerGold >= remaining
+                ? "Hmm... you managed to scrape it together. Don't make me wait next time."
+                : "You don't have enough. This will cost you.";
         }
         else
         {
+            payButton.gameObject.SetActive(false);
             punishmentButton.gameObject.SetActive(false);
-            payButton.gameObject.SetActive(true);
-            dialogueText.text = "Hmm... you managed to scrape it together.";
+            endButton.gameObject.SetActive(false);
+            dialogueText.text = "...";
+            // Determine case 2 vs 3 from server
+            InventoryNetworkManager.Instance.CheckInventoryEmptyServerRpc(0);
         }
+    }
 
-        // Set dialogue based on player's situation
-        dialogueText.text = playerGold >= remaining
-            ? "Hmm... you managed to scrape it together. Don't make me wait next time."
-            : "You don't have enough. This will cost you.";
+    public void Open()
+    {
+        gameObject.SetActive(true);
+        PopulateUI(); 
+    }
+    public void Close()
+    {
+        gameObject.SetActive(false);
     }
 
     private void OnPayClicked()
     {
-        long playerGold = CurrencyManager.Instance.CurrentGold;
-        int remaining = DebtManager.Instance.RemainingDueThisMonth;
-
         if (!int.TryParse(customPayInput.text, out int payAmount)) return;
 
-        // Can't pay less than minimum
-        if (payAmount < remaining)
-        {
-            dialogueText.text = "That's not enough. But will expand your time for a while.";
-            DebtManager.Instance.MakePaymentServerRpc(payAmount);
-            return;
-        }
+        long playerGold = CurrencyManager.Instance.CurrentGold;
 
-        // Can't pay more than player has
         if (payAmount > playerGold)
         {
             dialogueText.text = "You don't have that much gold.";
             return;
         }
 
-        if (playerGold <= 0)
-        {
-            return;
-        }
+        // Report up — controller decides what happens next
+        _controller.OnPaymentSubmitted(payAmount);
+    }
 
-        DebtManager.Instance.MakePaymentServerRpc(payAmount);
-        // InGameUIManager.Instance.OpenExclusivePanel("DebtPay"); // close panel
+    private void OnInventoryCheckResult(bool isEmpty)
+    {
+        payButton.gameObject.SetActive(false);
+        if (isEmpty)
+        {
+            punishmentButton.gameObject.SetActive(false);
+            endButton.gameObject.SetActive(true);
+            dialogueText.text = "You have nothing at all. This debt will grow.";
+        }
+        else
+        {
+            punishmentButton.gameObject.SetActive(true);
+            endButton.gameObject.SetActive(false);
+            dialogueText.text = "You have no gold. Hand over your goods.";
+        }
+    }
+
+    private void OnPunishmentClicked()
+    {
+        _controller.OnPunishClicked();
+    }
+
+    private void OnEndClicked()
+    {
+        _controller.OnRefuseClicked(null); // nothing to trade, apply penalty and end
     }
 }
