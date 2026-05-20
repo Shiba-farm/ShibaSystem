@@ -250,9 +250,9 @@ public class GameManager : MonoBehaviour
             var allHelperSOs = new System.Collections.Generic.List<FarmHelperSO>();
             if (itemDatabase != null)
             {
-                foreach (var item in itemDatabase.items)
-                    if (item != null && item.farmHelperData != null)
-                        allHelperSOs.Add(item.farmHelperData);
+                // foreach (var item in itemDatabase.items)
+                //     if (item != null && item.farmHelperData != null)
+                //         allHelperSOs.Add(item.farmHelperData);
             }
             FarmHelperManager.Instance.ApplySaveData(data.farmHelpers, allHelperSOs.ToArray());
         }

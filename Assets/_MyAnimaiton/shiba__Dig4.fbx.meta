@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: eeddc2b7b63f2bb48a89b1261870ee91
 ModelImporter:
-  serializedVersion: 22200
+  serializedVersion: 24200
   internalIDToNameTable: []
   externalObjects: {}
   materials:
@@ -16,16 +16,13 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
-      human bone 'LeftLowerLeg' not found\n"
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -88,6 +85,9 @@ ModelImporter:
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
     optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
@@ -346,7 +346,8 @@ ModelImporter:
     - name: thigh_ik_nostr.l
       parentName: c_thigh_b.l
       position: {x: 2.1536835e-11, y: 0.00021580773, z: 1.2259989e-10}
-      rotation: {x: -0.00000008195638, y: 0.000000059604638, z: -0.0000000074505797, w: 1}
+      rotation: {x: -0.00000008195638, y: 0.000000059604638, z: -0.0000000074505797,
+        w: 1}
       scale: {x: 1.0000004, y: 1.0000012, z: 1.0000006}
     - name: leg_ik_nostr.l
       parentName: thigh_ik_nostr.l
@@ -376,7 +377,8 @@ ModelImporter:
     - name: thigh_ik.r
       parentName: c_thigh_b.r
       position: {x: -1.04773785e-11, y: 0.00021580774, z: 1.8044375e-11}
-      rotation: {x: 0.000000014901159, y: -0.000000029802319, z: -0.000000108033404, w: 1}
+      rotation: {x: 0.000000014901159, y: -0.000000029802319, z: -0.000000108033404,
+        w: 1}
       scale: {x: 1.0000002, y: 1.0000014, z: 1.0000004}
     - name: leg_ik.r
       parentName: thigh_ik.r
@@ -391,7 +393,8 @@ ModelImporter:
     - name: thigh_ik_nostr.r
       parentName: c_thigh_b.r
       position: {x: 2.6775523e-11, y: 0.00021580774, z: 1.7462297e-11}
-      rotation: {x: -0.000000026077029, y: -0.000000029802319, z: -0.00000007078051, w: 1}
+      rotation: {x: -0.000000026077029, y: -0.000000029802319, z: -0.00000007078051,
+        w: 1}
       scale: {x: 1.0000005, y: 1.0000015, z: 1.0000004}
     - name: leg_ik_nostr.r
       parentName: thigh_ik_nostr.r
@@ -406,7 +409,8 @@ ModelImporter:
     - name: c_thigh_fk.r
       parentName: c_thigh_b.r
       position: {x: -1.04773785e-11, y: 0.00021580774, z: 1.8044375e-11}
-      rotation: {x: 0.000000014901159, y: -0.000000029802319, z: -0.000000108033404, w: 1}
+      rotation: {x: 0.000000014901159, y: -0.000000029802319, z: -0.000000108033404,
+        w: 1}
       scale: {x: 1.0000002, y: 1.0000014, z: 1.0000005}
     - name: thigh_fk.r
       parentName: c_thigh_fk.r
@@ -506,7 +510,8 @@ ModelImporter:
     - name: thigh.r
       parentName: c_thigh_b.r
       position: {x: -1.04773785e-11, y: 0.00021580774, z: 1.8044375e-11}
-      rotation: {x: 0.000000014901159, y: -0.000000029802319, z: -0.000000108033404, w: 1}
+      rotation: {x: 0.000000014901159, y: -0.000000029802319, z: -0.000000108033404,
+        w: 1}
       scale: {x: 1.0000002, y: 1.0000012, z: 1.0000004}
     - name: c_stretch_leg.r
       parentName: thigh.r
@@ -536,7 +541,8 @@ ModelImporter:
     - name: thigh_twist.r
       parentName: c_thigh_b.r
       position: {x: -1.04773785e-11, y: 0.00021580774, z: 1.8044375e-11}
-      rotation: {x: 0.000000037252896, y: -0.000000089406946, z: -0.000000089406946, w: 1}
+      rotation: {x: 0.000000037252896, y: -0.000000089406946, z: -0.000000089406946,
+        w: 1}
       scale: {x: 1.0000002, y: 1.0000013, z: 1.0000006}
     - name: thigh_twist.r_end
       parentName: thigh_twist.r
@@ -546,7 +552,8 @@ ModelImporter:
     - name: c_thigh_ik.r
       parentName: c_thigh_b.r
       position: {x: -1.04773785e-11, y: 0.00021580774, z: 1.8044375e-11}
-      rotation: {x: 0.000000014901159, y: -0.000000029802319, z: -0.000000108033404, w: 1}
+      rotation: {x: 0.000000014901159, y: -0.000000029802319, z: -0.000000108033404,
+        w: 1}
       scale: {x: 1.0000002, y: 1.0000014, z: 1.0000005}
     - name: c_thigh_ik.r_end
       parentName: c_thigh_ik.r
@@ -786,7 +793,8 @@ ModelImporter:
     - name: arm_ik_nostr.r
       parentName: arm_ik_nostr_scale_fix.r
       position: {x: 2.3283064e-12, y: 2.1747837e-10, z: -5.707625e-10}
-      rotation: {x: 0.000000037252903, y: 0.00000004749745, z: -0.00000006548362, w: 1}
+      rotation: {x: 0.000000037252903, y: 0.00000004749745, z: -0.00000006548362,
+        w: 1}
       scale: {x: 1.0000006, y: 1.0000011, z: 1.0000007}
     - name: forearm_ik_nostr.r
       parentName: arm_ik_nostr.r
@@ -866,7 +874,8 @@ ModelImporter:
     - name: shoulder.l
       parentName: c_shoulder.l
       position: {x: -1.8626451e-11, y: 9.57516e-11, z: -2.919114e-10}
-      rotation: {x: 0.00000005960463, y: -0.00000013411042, z: 0.000000029802315, w: 1}
+      rotation: {x: 0.00000005960463, y: -0.00000013411042, z: 0.000000029802315,
+        w: 1}
       scale: {x: 1.0000005, y: 1.0000008, z: 1.0000005}
     - name: shoulder_track_pole.l
       parentName: shoulder.l
@@ -1041,7 +1050,8 @@ ModelImporter:
     - name: arm_fk_pole.r
       parentName: arm_fk_pre_pole.r
       position: {x: -0.0012991583, y: 0.0003763863, z: 0.000090408146}
-      rotation: {x: -0.00000005750917, y: -0.0000000037252903, z: 0.000000061530955, w: 1}
+      rotation: {x: -0.00000005750917, y: -0.0000000037252903, z: 0.000000061530955,
+        w: 1}
       scale: {x: 1.0000008, y: 1.0000006, z: 1.0000007}
     - name: arm_fk_pole.r_end
       parentName: arm_fk_pole.r
@@ -1146,7 +1156,8 @@ ModelImporter:
     - name: leg_twist.l
       parentName: leg_stretch.l
       position: {x: 3.259629e-11, y: 0.00054719934, z: -1.36788e-10}
-      rotation: {x: 0.000000029802322, y: -0.000000014901161, z: -0.000000059604645, w: 1}
+      rotation: {x: 0.000000029802322, y: -0.000000014901161, z: -0.000000059604645,
+        w: 1}
       scale: {x: 1.0000011, y: 1.0000006, z: 1.0000007}
     - name: leg_twist.l_end
       parentName: leg_twist.l
@@ -1161,7 +1172,8 @@ ModelImporter:
     - name: leg_twist.r
       parentName: leg_stretch.r
       position: {x: -6.7520885e-11, y: 0.0005471996, z: 1.4260877e-10}
-      rotation: {x: -0.000000029802322, y: 0.000000029802322, z: 0.000000044703484, w: 1}
+      rotation: {x: -0.000000029802322, y: 0.000000029802322, z: 0.000000044703484,
+        w: 1}
       scale: {x: 1.0000006, y: 1.0000007, z: 1.0000007}
     - name: leg_twist.r_end
       parentName: leg_twist.r
@@ -1391,7 +1403,8 @@ ModelImporter:
     - name: foot_bank_01.r
       parentName: c_foot_ik.r
       position: {x: -0.0006849795, y: -0.00057419954, z: -0.00038589948}
-      rotation: {x: 0.000000015187332, y: -0.0000012371693, z: -0.00000041257496, w: 1}
+      rotation: {x: 0.000000015187332, y: -0.0000012371693, z: -0.00000041257496,
+        w: 1}
       scale: {x: 1.0000001, y: 1, z: 1}
     - name: foot_bank_02.r
       parentName: foot_bank_01.r
@@ -1401,7 +1414,8 @@ ModelImporter:
     - name: foot_heel.r
       parentName: foot_bank_02.r
       position: {x: -0.00071651983, y: 0.00002875403, z: -0.000000015722572}
-      rotation: {x: -0.0000000032571548, y: 0.00000026540695, z: -0.0000000018626385, w: 1}
+      rotation: {x: -0.0000000032571548, y: 0.00000026540695, z: -0.0000000018626385,
+        w: 1}
       scale: {x: 1.0000001, y: 1.0000001, z: 1}
     - name: toes_end.r
       parentName: foot_heel.r
@@ -1536,12 +1550,14 @@ ModelImporter:
     - name: foot_bank_02.l
       parentName: foot_bank_01.l
       position: {x: -0.0014330401, y: -0.00005750716, z: 0.00000002695856}
-      rotation: {x: -0.000000019227498, y: -0.0000015663663, z: -0.00000041443857, w: 1}
+      rotation: {x: -0.000000019227498, y: -0.0000015663663, z: -0.00000041443857,
+        w: 1}
       scale: {x: 1.0000004, y: 1.0000004, z: 1}
     - name: foot_heel.l
       parentName: foot_bank_02.l
       position: {x: 0.00071651983, y: 0.000028754008, z: -0.00000001572418}
-      rotation: {x: -0.0000000032571548, y: -0.00000026540695, z: 0.0000000018626385, w: 1}
+      rotation: {x: -0.0000000032571548, y: -0.00000026540695, z: 0.0000000018626385,
+        w: 1}
       scale: {x: 1.0000001, y: 1.0000001, z: 1}
     - name: toes_end.l
       parentName: foot_heel.l
@@ -1551,7 +1567,8 @@ ModelImporter:
     - name: c_toes_ik.l
       parentName: toes_end.l
       position: {x: -8.1490726e-12, y: -0.00067028997, z: 2.561137e-11}
-      rotation: {x: -0.00000004206231, y: 0.0000006891787, z: 0.0000000011641532, w: 1}
+      rotation: {x: -0.00000004206231, y: 0.0000006891787, z: 0.0000000011641532,
+        w: 1}
       scale: {x: 0.9999995, y: 1.0000001, z: 1.0000004}
     - name: c_toes_ik.l_end
       parentName: c_toes_ik.l
@@ -1928,13 +1945,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0

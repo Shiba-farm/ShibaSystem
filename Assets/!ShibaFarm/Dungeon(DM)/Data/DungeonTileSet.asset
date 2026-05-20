@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47073762aa8dcb242bbc21f36ec4739b, type: 3}
+  m_Name: DungeonTileSet
+  m_EditorClassIdentifier: 
+  prefabRoomFloor: {fileID: 9196976494611136251, guid: acbf3151d4c2e3240ae5efc9cf3ed365,
+    type: 3}
+  prefabStraight: {fileID: 9196976494611136251, guid: acbf3151d4c2e3240ae5efc9cf3ed365,
+    type: 3}
+  prefabCorner: {fileID: 9135252397013542205, guid: 5e29aaf6764e2944a8617cf384889380,
+    type: 3}
+  prefabTJunction: {fileID: 9196976494611136251, guid: acbf3151d4c2e3240ae5efc9cf3ed365,
+    type: 3}
+  prefabCross: {fileID: 9196976494611136251, guid: acbf3151d4c2e3240ae5efc9cf3ed365,
+    type: 3}
+  prefabDeadEnd: {fileID: 9196976494611136251, guid: acbf3151d4c2e3240ae5efc9cf3ed365,
+    type: 3}
+  prefabOpen: {fileID: 9196976494611136251, guid: acbf3151d4c2e3240ae5efc9cf3ed365,
+    type: 3}
+  prefabWall: {fileID: 7443688463409390118, guid: 4db43eddb14b3774483b366fc1824ccd,
+    type: 3}
+  wallModelWidth: 8
+  prefabFallback: {fileID: 4627726712106816176, guid: 8eedc8c57443f974aabff7c189b2bbfb,
+    type: 3}
