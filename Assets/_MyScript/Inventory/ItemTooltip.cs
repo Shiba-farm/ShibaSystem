@@ -78,8 +78,8 @@ public class ItemTooltip : MonoBehaviour
         if (categoryText)
         {
             string catStr = GetCategoryThai(item.category);
-            if (item.toolAction != ToolAction.None)
-                catStr += $" ({item.toolAction})";
+            // if (item.toolAction != ToolAction.None)
+            //     catStr += $" ({item.toolAction})";
             categoryText.text = catStr;
         }
 
@@ -149,12 +149,12 @@ public class ItemTooltip : MonoBehaviour
         if (descriptionText)
         {
             string desc = "";
-            if (item.category == ItemCategory.Seed && item.seedCrop != null)
-                desc = $"เมล็ดพันธุ์: {item.seedCrop.cropName}";
-            else if (item.category == ItemCategory.FarmHelper && item.farmHelperData != null)
-                desc = item.farmHelperData.description;
-            else if (item.energyCost > 0)
-                desc = $"ใช้พลังงาน: {item.energyCost}";
+            // if (item.category == ItemCategory.Seed && item.seedCrop != null)
+            //     desc = $"เมล็ดพันธุ์: {item.seedCrop.cropName}";
+            // else if (item.category == ItemCategory.FarmHelper && item.farmHelperData != null)
+            //     desc = item.farmHelperData.description;
+            // else if (item.energyCost > 0)
+            //     desc = $"ใช้พลังงาน: {item.energyCost}";
             descriptionText.text = desc;
         }
 

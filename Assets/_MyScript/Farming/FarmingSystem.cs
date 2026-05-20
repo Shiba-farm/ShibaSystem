@@ -45,13 +45,13 @@ public class FarmingSystem : SerializedMonoBehaviour
         // ���Ѵ����Ẻ FlatPos ���ͻ�ͧ�ѹ�ѭ�ҵ���Ф��׹�����٧/��ӡ��ҵ����
         if (playerTransform && Vector3.Distance(FlatPos(playerTransform.position), FlatPos(tree.transform.position)) > interactRange) return;
 
-        float cost = Mathf.Max(0, axeItem.energyCost);
-        if (energy && energy.CurrentEnergy < cost) return;
+        // // float cost = Mathf.Max(0, axeItem.energyCost);
+        // if (energy && energy.CurrentEnergy < cost) return;
 
-        tree.GetHit(1f);
-        PlayActionEffects(axeItem, tree.transform.position);
+        // tree.GetHit(1f);
+        // PlayActionEffects(axeItem, tree.transform.position);
 
-        if (energy) energy.UseEnergy(cost);
+        // if (energy) energy.UseEnergy(cost);
     }
 
     public void ApplyItemOnTile(ItemSO item, SoilTile tile)
@@ -91,25 +91,25 @@ public class FarmingSystem : SerializedMonoBehaviour
 
     void UseTool(ItemSO tool, SoilTile tile)
     {
-        float cost = Mathf.Max(0, tool.energyCost);
-        if (energy && energy.CurrentEnergy < cost) return;
-        bool success = false;
-        if (tool.toolAction == ToolAction.Hoe) { tile.Till(); success = true; }
-        if (tool.toolAction == ToolAction.Water && tile.isTilled) { tile.Water(); success = true; }
-        if (success) { PlayActionEffects(tool, tile.transform.position); if (energy) energy.UseEnergy(cost); }
+        // float cost = Mathf.Max(0, tool.energyCost);
+        // if (energy && energy.CurrentEnergy < cost) return;
+        // bool success = false;
+        // if (tool.toolAction == ToolAction.Hoe) { tile.Till(); success = true; }
+        // if (tool.toolAction == ToolAction.Water && tile.isTilled) { tile.Water(); success = true; }
+        // if (success) { PlayActionEffects(tool, tile.transform.position); if (energy) energy.UseEnergy(cost); }
     }
 
     void PlantSeed(ItemSO seedItem, SoilTile tile)
     {
-        if (!seedItem.seedCrop) return;
-        if (!HotbarUI.Instance) return;
-        var slot = HotbarUI.Instance.GetSelectedSlot();
-        if (slot == null || slot.amount <= 0) return;
-        if (!tile.CanPlant(seedItem.seedCrop)) return;
-        float cost = Mathf.Max(0, seedItem.energyCost);
-        if (energy && energy.CurrentEnergy < cost) return;
-        tile.Plant(seedItem.seedCrop); PlayActionEffects(seedItem, tile.transform.position);
-        if (energy) energy.UseEnergy(cost); slot.amount -= 1; if (slot.amount <= 0) slot.Clear(); else slot.UpdateUI();
+        // if (!seedItem.seedCrop) return;
+        // if (!HotbarUI.Instance) return;
+        // var slot = HotbarUI.Instance.GetSelectedSlot();
+        // if (slot == null || slot.amount <= 0) return;
+        // if (!tile.CanPlant(seedItem.seedCrop)) return;
+        // float cost = Mathf.Max(0, seedItem.energyCost);
+        // if (energy && energy.CurrentEnergy < cost) return;
+        // tile.Plant(seedItem.seedCrop); PlayActionEffects(seedItem, tile.transform.position);
+        // if (energy) energy.UseEnergy(cost); slot.amount -= 1; if (slot.amount <= 0) slot.Clear(); else slot.UpdateUI();
     }
 
     void TryHarvest() => TryHarvestExternal(null);
@@ -130,28 +130,28 @@ public class FarmingSystem : SerializedMonoBehaviour
             spawnPos = hit.point + Vector3.up * effectHeightOffset;
         }
 
-        // --- ��ǹ���ҧ VFX ---
-        if (item.actionVFX)
-        {
-            GameObject vfxObj = Instantiate(item.actionVFX, spawnPos, Quaternion.identity);
-            ParticleSystem ps = vfxObj.GetComponent<ParticleSystem>();
-            if (ps != null)
-            {
-                ps.Play();
-                Destroy(vfxObj, ps.main.duration + ps.main.startLifetime.constantMax + 0.2f);
-            }
-            else
-            {
-                Destroy(vfxObj, 2f);
-            }
-        }
+        // // --- ��ǹ���ҧ VFX ---
+        // if (item.actionVFX)
+        // {
+        //     GameObject vfxObj = Instantiate(item.actionVFX, spawnPos, Quaternion.identity);
+        //     ParticleSystem ps = vfxObj.GetComponent<ParticleSystem>();
+        //     if (ps != null)
+        //     {
+        //         ps.Play();
+        //         Destroy(vfxObj, ps.main.duration + ps.main.startLifetime.constantMax + 0.2f);
+        //     }
+        //     else
+        //     {
+        //         Destroy(vfxObj, 2f);
+        //     }
+        // }
 
-        if (item.actionSFX)
-        {
-            float duration = item.sfxDuration;
-            float pitch = Random.Range(1f, item.pitchRandomMultiplier);
-            PlaySoundWithMixer(item.actionSFX, spawnPos, duration, pitch);
-        }
+        // if (item.actionSFX)
+        // {
+        //     float duration = item.sfxDuration;
+        //     float pitch = Random.Range(1f, item.pitchRandomMultiplier);
+        //     PlaySoundWithMixer(item.actionSFX, spawnPos, duration, pitch);
+        // }
     }
 
     void PlaySoundWithMixer(AudioClip clip, Vector3 position, float durationLimit = 0f, float pitch = 1f)
