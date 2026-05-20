@@ -59,9 +59,26 @@ public class DebtManager : NetworkBehaviour
         NetworkVariableWritePermission.Server
     );
 
-    public int RemainingDueThisMonth => Mathf.Max(0, monthlyMinimumDue.Value - paidThisMonth.Value);
+    private NetworkVariable<bool> isMonthSettled = new NetworkVariable<bool>(
+        false,
+        NetworkVariableReadPermission.Everyone,
+        NetworkVariableWritePermission.Server
+    );
+
+    private NetworkVariable<int> tradeValuePaidThisMonth = new NetworkVariable<int>(
+        0,
+        NetworkVariableReadPermission.Everyone,
+        NetworkVariableWritePermission.Server
+    );
+
+    public int RemainingDueThisMonth => Mathf.Max(0, monthlyMinimumDue.Value - paidThisMonth.Value - tradeValuePaidThisMonth.Value);
     public int MonthlyMinimumDue => monthlyMinimumDue.Value;
     public int CurrentTradeValue => currentTradeValue.Value;
+    public int PaidThisMonth => paidThisMonth.Value;
+    public int TradePaidThisMonth => tradeValuePaidThisMonth.Value; // trade only
+    public int TotalPaidThisMonth => paidThisMonth.Value + tradeValuePaidThisMonth.Value;
+    public bool IsMonthSettled => isMonthSettled.Value;
+    public int penalty { get; private set; }
 
     private void Awake()
     {
@@ -71,6 +88,10 @@ public class DebtManager : NetworkBehaviour
             return;
         }
         Instance = this;
+    }
+    public void SetPenalty(int amount)
+    {
+        penalty = amount;
     }
 
     public override void OnNetworkSpawn()
@@ -87,13 +108,18 @@ public class DebtManager : NetworkBehaviour
     public void OnMonthEnd()
     {
         if (!IsServer) return;
-
-        // 1. Interest first
         ApplyInterest();
-
         monthlyMinimumDue.Value = Mathf.RoundToInt(currentDebt.Value *
-        Mathf.Max(MinimumPaymentPercent, GetMonthlyPaymentRate()));
+            Mathf.Max(MinimumPaymentPercent, GetMonthlyPaymentRate()));
         paidThisMonth.Value = 0;
+        tradeValuePaidThisMonth.Value = 0;
+        isMonthSettled.Value = false;
+    }
+
+    public void SetMonthSettled(bool value)
+    {
+        if (!IsServer) return;
+        isMonthSettled.Value = value;
     }
 
     private void ApplyInterest()
@@ -117,6 +143,30 @@ public class DebtManager : NetworkBehaviour
         }
 
         ExecutePayment(amount);
+    }
+    [Rpc(SendTo.Server, InvokePermission = RpcInvokePermission.Everyone)]
+    public void MakeTradePaymentServerRpc()
+    {
+        int amount = currentTradeValue.Value;
+        if (amount <= 0) return;
+
+        tradeValuePaidThisMonth.Value += amount; // ← separate tracker
+        currentTradeValue.Value = 0;
+        currentDebt.Value = Mathf.Max(0, currentDebt.Value - amount);
+    }
+
+    [Rpc(SendTo.Server, InvokePermission = RpcInvokePermission.Everyone)]
+    public void AddDebtPunishmentServerRpc(int amount)
+    {
+        if (!IsServer) return;
+        currentDebt.Value += amount;
+        Debug.Log($"[DebtManager] Punishment debt added: +{amount}, total: {currentDebt.Value}");
+    }
+
+    [Rpc(SendTo.Server, InvokePermission = RpcInvokePermission.Everyone)]
+    public void SetMonthSettledServerRpc()
+    {
+        isMonthSettled.Value = true;
     }
 
     public void AddTradeValue(int amount)
@@ -146,12 +196,16 @@ public class DebtManager : NetworkBehaviour
         }
     }
 
-    // private void ApplyPunishment(int playerGold, int minimumDue)
-    // {
-    //     Debug.Log($"[DebtManager] PUNISHMENT — player has {playerGold} gold but owes {minimumDue}. Can't pay minimum!");
-    //     // TODO: replace with real punishment logic
-    //     // e.g. increase debt penalty, trigger negative event, etc.
-    // }
+    public void ApplyPunishment(PunishmentResult result)
+    {
+        int remaining = RemainingDueThisMonth;
+        int penalty = Mathf.RoundToInt(remaining * 1.5f);
+
+        Debug.Log($"[Penalty] Remaining={remaining}, Penalty={penalty}, {tradeValuePaidThisMonth.Value}, {paidThisMonth.Value}"); // add this
+        result.AddedDebt = penalty;
+        SetPenalty(penalty);
+        AddDebtPunishmentServerRpc(penalty);
+    }
 
     private void CheckDefaultCondition()
     {
@@ -163,4 +217,18 @@ public class DebtManager : NetworkBehaviour
     }
 
     public float GetMonthlyPaymentRate() => DifficultyPaymentRate[GameDataManager.Instance.CurrentDifficulty];
+}
+
+public class PunishmentResult
+{
+    public List<(ItemSO item, int amount)> LostItems { get; } = new();
+    public int AddedDebt { get; set; } = 0;
+    public int GoldPaid { get; set; } = 0;      // ← snapshot at trade time
+    public int TradePaid { get; set; } = 0;     // ← snapshot at trade time
+    public int FinalDebt { get; set; } = 0;
+    public bool WasRefused { get; set; } = false;
+
+    public bool HasLostItems => LostItems.Count > 0;
+    public bool HasAddedDebt => AddedDebt > 0;
+
 }
