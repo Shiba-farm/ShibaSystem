@@ -145,11 +145,6 @@ public class PlayerController : NetworkBehaviour
     private void StartActionTrigger(string triggerName) { isBusyAction = true; animator.ResetTrigger(triggerName); animator.SetTrigger(triggerName); }
     private void FaceTo(Vector3 worldPos) { Vector3 dir = worldPos - transform.position; dir.y = 0f; if (dir.sqrMagnitude < 0.001f) return; transform.rotation = Quaternion.LookRotation(dir.normalized); }
 
-    public void OnActionAnimationFinished()
-    {
-        isBusyAction = false;
-    }
-
     public void Sit(Transform sitPoint) { if (isSitting) return; currentSitPoint = sitPoint; isSitting = true; isBusyAction = false; controller.enabled = false; transform.position = sitPoint.position; transform.rotation = sitPoint.rotation; animator.SetBool("Sit", true); }
     private void HandleSitInput() { if (Input.GetKeyDown(KeyCode.E)) StandUpFromSit(); }
     public void StandUpFromSit() { if (!isSitting) return; isSitting = false; animator.SetBool("Sit", false); controller.enabled = true; }

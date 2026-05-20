@@ -22,6 +22,7 @@ public class InputHandler : MonoBehaviour
     public event Action<bool> OnSprintToggled;
     public event Action<int> OnNumkeyTriggered;
     public event Action OnPauseTriggered;
+    public event Action OnUseTool;
 
     private void Awake()
     {
@@ -75,6 +76,12 @@ public class InputHandler : MonoBehaviour
             {
                 OnNumkeyTriggered?.Invoke(val);
             }
+        };
+
+        _controls.Key.UseTool.performed += ctx =>
+        {
+            if (InputLocked) return;
+            OnUseTool?.Invoke();
         };
     }
 
