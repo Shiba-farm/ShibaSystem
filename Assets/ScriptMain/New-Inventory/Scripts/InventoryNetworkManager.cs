@@ -147,6 +147,8 @@ public class InventoryNetworkManager : NetworkBehaviour, ISaveable
     {
         var playerData = save.GetOrCreatePlayer(clientId);
 
+                Debug.Log($"Get Player with player id {clientId}, is it null : {playerData == null}");
+
         playerData.inventory = CaptureInventory(clientId, inventoryID: 0);
         playerData.hotbar = CaptureInventory(clientId, inventoryID: 1);
     }
