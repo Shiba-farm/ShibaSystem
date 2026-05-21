@@ -218,15 +218,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 43816456b8210d24db4efcb1ab1d5f30,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4784761641020092593}
+      addedObject: {fileID: 2962211916199652812}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 43816456b8210d24db4efcb1ab1d5f30,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3755434843940493723}
+      addedObject: {fileID: 2861829148039187056}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 43816456b8210d24db4efcb1ab1d5f30,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2286697775126605756}
+      addedObject: {fileID: 7381856981609902815}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 43816456b8210d24db4efcb1ab1d5f30,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9124583170048422434}
     - targetCorrespondingSourceObject: {fileID: -5770634479784780433, guid: 43816456b8210d24db4efcb1ab1d5f30,
         type: 3}
       insertIndex: -1
@@ -273,33 +277,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2652532964250902676}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3228e5b1499abad47b9284306bfdeeb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openKey: 101
-  boxAnimator: {fileID: 0}
-  sellMultiplier: 1
-  promptPanel: {fileID: 0}
-  promptLabel: {fileID: 0}
-  sellPanel: {fileID: 0}
-  inventorySlotsParent: {fileID: 0}
-  inventoryItemButtonPrefab: {fileID: 1781346943229972084, guid: b6c383b7ff1cc614995e251ce0f29e33,
-    type: 3}
-  stagedSlotsParent: {fileID: 0}
-  stagedRowPrefab: {fileID: 1781346943229972084, guid: 70b4df95500b7c94b84fffe15395f895,
-    type: 3}
-  totalPriceText: {fileID: 0}
-  sellButton: {fileID: 0}
-  clearButton: {fileID: 0}
-  closeButton: {fileID: 0}
-  feedbackLabel: {fileID: 0}
-  feedbackDuration: 2.5
-  sfxSource: {fileID: 0}
-  openSfx: {fileID: 0}
-  sellSfx: {fileID: 0}
-  sfxVolume: 1
 --- !u!65 &8024262667044734126
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -343,7 +325,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!114 &4784761641020092593
+--- !u!114 &2962211916199652812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2652532964250902676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3228e5b1499abad47b9284306bfdeeb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SellBox
+--- !u!114 &2861829148039187056
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -355,8 +349,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 3333185617
-  InScenePlacedSourceGlobalObjectIdHash: 3333185617
+  GlobalObjectIdHash: 2354812051
+  InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
   AlwaysReplicateAsRoot: 0
@@ -368,7 +362,7 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
---- !u!114 &3755434843940493723
+--- !u!114 &7381856981609902815
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -381,9 +375,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SharedCartData
   ShowTopMostFoldoutHeaderGroup: 1
-  cartInventory: {fileID: 2286697775126605756}
+  cartInventory: {fileID: 9124583170048422434}
   sharedCartSignal: {fileID: 11400000, guid: caab7f9bcfbaaba498d1e20f5cc6b25b, type: 2}
---- !u!114 &2286697775126605756
+--- !u!114 &9124583170048422434
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -398,7 +392,7 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   inventorySize: 80
   connectionSignal: {fileID: 11400000, guid: 8f3de600bb1b2404eb673db630bede51, type: 2}
-  inventoryID: 3
+  inventoryID: 2
   needMockData: 0
   InventoryItems:
     UpdateTraits:

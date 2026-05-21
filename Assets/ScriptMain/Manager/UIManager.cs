@@ -1,16 +1,77 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public enum GameScene
+{
+    MainMenu,
+    GameOption,
+    GameWorldSelect,
+    CreateNewGame,
+    GameMode,
+    Game,
+}
 
 public class UIManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public static UIManager Instance { get; private set; }
+
+    [Header("Transition")]
+    [SerializeField] private CanvasGroup fadeCanvasGroup;
+    [SerializeField] private float fadeDuration = 0.5f;
+
+    [Header("Scenes")]
+    [SerializeField]
+    private string[] sceneNames =
     {
-        
+        "MainMenu",       // 0 — GameScene.MainMenu
+        "GameOption",     // 1 — GameScene.GameOption
+        "GameWorldSelect",// 2 — GameScene.GameWorldSelect
+        "CreateNewGame",  // 3 — GameScene.CreateNewGame
+        "GameMode",       // 4 — GameScene.GameMode
+        "Game"            // 5 — GameScene.Game
+    };
+    private void Awake()
+    {
+        if (Instance != null) { Destroy(gameObject); return; }
+        Instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    // ── Public API ───────────────────────────────────────────
+    public void LoadScene(GameScene scene)
     {
-        
+        Debug.Log($"Game scene selected : {(int)scene}");
+        StartCoroutine(TransitionToScene(sceneNames[(int)scene]));
+    }
+
+    private IEnumerator TransitionToScene(string sceneName)
+    {
+        // Fade out
+        yield return StartCoroutine(Fade(0f, 1f));
+
+        SceneManager.LoadScene(sceneName);
+
+        // Wait one frame for scene to load
+        yield return null;
+
+        // Fade in
+        yield return StartCoroutine(Fade(1f, 0f));
+    }
+
+    private IEnumerator Fade(float from, float to)
+    {
+        float elapsed = 0f;
+        fadeCanvasGroup.blocksRaycasts = true;
+
+        while (elapsed < fadeDuration)
+        {
+            elapsed += Time.unscaledDeltaTime;   // unscaled — works even if timeScale is 0
+            fadeCanvasGroup.alpha = Mathf.Lerp(from, to, elapsed / fadeDuration);
+            yield return null;
+        }
+
+        fadeCanvasGroup.alpha = to;
+        fadeCanvasGroup.blocksRaycasts = to > 0f;
     }
 }

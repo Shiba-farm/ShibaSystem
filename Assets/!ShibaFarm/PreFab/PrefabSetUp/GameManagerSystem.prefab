@@ -1,0 +1,211 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4721826739920704249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3923711492932498164}
+  - component: {fileID: 1316299916577528487}
+  - component: {fileID: 8770609685499606682}
+  - component: {fileID: 9099182889885407277}
+  - component: {fileID: 4297471148586362869}
+  - component: {fileID: 5990119423208585305}
+  - component: {fileID: 8718826986634935126}
+  - component: {fileID: 7954093707872101040}
+  - component: {fileID: 3200116883206896585}
+  m_Layer: 0
+  m_Name: GameManagerSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 2800000, guid: 1f6c13fb08855954d9cf0446453b32ec, type: 3}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3923711492932498164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721826739920704249}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -100.262085, y: 574.14575, z: 458.99597}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1316299916577528487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721826739920704249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac8913deabe17a0469fb28b4a0f86797, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  inventoryUI: {fileID: 0}
+  hotbarUI: {fileID: 0}
+  playerEnergy: {fileID: 0}
+  calendar: {fileID: 0}
+  timeOfDay: {fileID: 0}
+  itemDatabase: {fileID: 0}
+  playerWallet: {fileID: 8770609685499606682}
+  debtManager: {fileID: 9099182889885407277}
+  allCrops:
+  - {fileID: 11400000, guid: 5f8a98eb434b84948b63feca8cf57195, type: 2}
+  - {fileID: 11400000, guid: d564e6f033e708a4280e4db3abf9a94a, type: 2}
+  - {fileID: 11400000, guid: a2ae61deed2160d48b16afc251f2d876, type: 2}
+  - {fileID: 11400000, guid: f56ee6cb6e845bd4a9fcf6f6dbb6cdc7, type: 2}
+--- !u!114 &8770609685499606682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721826739920704249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d8774fb9b24e2945844c5644a9eb794, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 10000000
+--- !u!114 &9099182889885407277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721826739920704249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea8deb779ea2c9646a10e3123414409f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  calendar: {fileID: 0}
+  wallet: {fileID: 8770609685499606682}
+  startingDebt: 100000
+  minimumPayment: 500
+  lateFee: 500
+  dueDay: -1
+  totalMonths: 12
+  currentDebt: 0
+  missedPayments: 0
+  monthsPassed: 3
+  collectorVisiting: 1
+--- !u!114 &4297471148586362869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721826739920704249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 243d71b819b501e43bcce18525657d73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debtManager: {fileID: 9099182889885407277}
+  monthlyDebtFallback: {fileID: 0}
+  missesBeforeDestruction: 2
+  baseDestroyCount: 1
+  extraDebtPerDestruction: 1000
+  destroyAllAtMax: 1
+  maxConsecutiveForDestroyAll: 4
+  punishmentPanel: {fileID: 0}
+  punishmentDialogueText: {fileID: 0}
+  punishmentDetailText: {fileID: 0}
+  dialogueDelay: 1.5
+  detailDelay: 2.5
+  closePanelDelay: 5
+  consecutiveMisses: 0
+--- !u!114 &5990119423208585305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721826739920704249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a56a077aea0e9774a913a4b0e99f4500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allRecipes:
+  - {fileID: 11400000, guid: 774cfff9b9730784b8cd142d06e7ff05, type: 2}
+  - {fileID: 11400000, guid: abc9b692d7f49584faf773470abb56d2, type: 2}
+  - {fileID: 11400000, guid: b2fcbe58349c1a348a706ad4c3458f91, type: 2}
+  - {fileID: 11400000, guid: 9e91e67f1e009ba40ae9bf7636096374, type: 2}
+  - {fileID: 11400000, guid: 9e0a34592d78e0f4ea8b9807bcc0b120, type: 2}
+  - {fileID: 11400000, guid: 145eadbf18b50234c87148d57efba06b, type: 2}
+  inventory: {fileID: 0}
+  learnedRecipes: []
+--- !u!114 &8718826986634935126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721826739920704249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c5348c078127e4786227c3dcbab3f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bedtimeHour: 2
+  wakeHour: 6
+  wakeMinute: 0
+  summaryPanel: {fileID: 0}
+  summaryTitleText: {fileID: 0}
+  rowsParent: {fileID: 0}
+  categoryHeaderPrefab: {fileID: 2073069575359133796, guid: 89438be9d8369cb43928d9060971f639,
+    type: 3}
+  itemRowPrefab: {fileID: 1520219322333263119, guid: c418468352917b740829457bad78fb9d,
+    type: 3}
+  totalText: {fileID: 0}
+  sleepButton: {fileID: 0}
+  fadePanel: {fileID: 0}
+  fadeOutDuration: 0.8
+  fadeInDuration: 0.6
+  countUpDuration: 1.8
+  dividerPrefab: {fileID: 6792888358571541533, guid: 5e99ed682941357448d1a19eede68f1c,
+    type: 3}
+  bannerPanel: {fileID: 0}
+  bannerText: {fileID: 0}
+  bannerDuration: 2.5
+  bannerFadeTime: 0.5
+  audioSource: {fileID: 0}
+  sleepSound: {fileID: 0}
+  morningSound: {fileID: 0}
+--- !u!114 &7954093707872101040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721826739920704249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed2ad087b352df4d97acd18068090c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3200116883206896585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721826739920704249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d864f54bc7d3fc74d93f71331f599240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

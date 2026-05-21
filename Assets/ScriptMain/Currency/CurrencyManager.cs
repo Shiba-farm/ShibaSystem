@@ -1,7 +1,7 @@
 using Unity.Netcode;
 using UnityEngine;
 
-public class CurrencyManager : NetworkBehaviour
+public class CurrencyManager : NetworkBehaviour, ISaveable
 {
     public static CurrencyManager Instance { get; private set; }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -32,5 +32,16 @@ public class CurrencyManager : NetworkBehaviour
         currencyStorage.ReduceCurrency(newAmount);
         Debug.Log($"Client {clientId} updated their gold to {newAmount}");
 
+    }
+
+    public void CaptureState(GameSaveData save, ulong clientId = 0)
+    {
+        save.world.sharedGold = CurrentGold;
+    }
+
+    public void RestoreState(GameSaveData save, ulong clientId = 0)
+    {
+        if (!IsServer) return;
+        currencyStorage.SetCurrency(save.world.sharedGold);
     }
 }

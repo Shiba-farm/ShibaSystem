@@ -104,6 +104,10 @@ MonoBehaviour:
   stageIndex: 0
   stageTimer: 0
   cropParent: {fileID: 2165781671591304916}
+  cropPositionOffset: {x: 0, y: 1.4, z: 0}
+  cropScaleMultiplier: 1
   groundParent: {fileID: 2321887689777200131}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747, type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573, type: 3}
+  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
+    type: 3}
+  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
+    type: 3}

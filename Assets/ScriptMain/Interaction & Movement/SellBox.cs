@@ -6,12 +6,6 @@ using TMPro;
 
 public class SellBox : MonoBehaviour, IInteractable
 {
-    [Header("Box Animation")]
-    [Tooltip("Animator ของ model กล่อง — ต้องมี trigger 'Open' และ 'Close'")]
-    public Animator boxAnimator;
-
-    [Header("Price")]
-    public float sellMultiplier = 1f;
     public PromptType InteractPromptType => PromptType.Shop;
 
     public void Interact()

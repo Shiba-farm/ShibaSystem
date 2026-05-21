@@ -1,7 +1,7 @@
 using Unity.Netcode;
 using UnityEngine;
 
-public class WorldTimeManager : NetworkBehaviour
+public class WorldTimeManager : NetworkBehaviour, ISaveable
 {
     public static WorldTimeManager Instance { get; private set; }
     [Header("Time Settings")]
@@ -41,7 +41,7 @@ public class WorldTimeManager : NetworkBehaviour
 
     private void Awake()
     {
-        if(Instance != null && Instance != this)
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
@@ -126,5 +126,24 @@ public class WorldTimeManager : NetworkBehaviour
         int currentDayStart = (CurrentDay - 1) * MinutesPerHour * HoursPerDay;
         int nextDayMorning = currentDayStart + (HoursPerDay * MinutesPerHour) + (startHour * MinutesPerHour);
         totalGameMinutes.Value = nextDayMorning;
+    }
+    public void CaptureState(GameSaveData save, ulong clientId = 0)
+    {
+        save.world.currentYear = CurrentYear;
+        save.world.currentMonth = CurrentMonth;
+        save.world.currentDay = CurrentDay;
+    }
+
+    public void RestoreState(GameSaveData save, ulong clientId = 0)
+    {
+        if (!IsServer) return;
+
+        int restoredMinutes =
+            (save.world.currentYear - 1) * MonthsPerYear * DaysPerMonth * HoursPerDay * MinutesPerHour +
+            (save.world.currentMonth - 1) * DaysPerMonth * HoursPerDay * MinutesPerHour +
+            (save.world.currentDay - 1) * HoursPerDay * MinutesPerHour +
+            startHour * MinutesPerHour;
+
+        totalGameMinutes.Value = restoredMinutes;
     }
 }

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ff4aebf022f3914d802947333fc890b, type: 3}
+  m_Name: Carrot_Crop
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  cropName: Carrot_Crop
+  icon: {fileID: 21300000, guid: c6187c50a8d758140a83e57927d956ad, type: 3}
+  growthPrefabs:
+  - {fileID: 919132149155446097, guid: 903802ef24cf7a54f9d89150bd7e3358, type: 3}
+  - {fileID: 919132149155446097, guid: 35d5ca619ed9f0a41b30f81009e8a7b0, type: 3}
+  - {fileID: 919132149155446097, guid: 45eec64ea20dcfa43b6dd777200f1f7c, type: 3}
+  stageDurations: []
+  requiresWaterEachStage: 1
+  harvestItem: {fileID: 11400000, guid: 67d350beb0aba3b45bf70c7409b5cb87, type: 2}
+  yieldRange: {x: 1, y: 1}
+  destroyOnHarvest: 1

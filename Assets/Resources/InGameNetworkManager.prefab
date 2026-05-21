@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3203660628047513135}
   - component: {fileID: 8006091121495567204}
   - component: {fileID: 5632200643304866870}
+  - component: {fileID: 4067220148699271884}
   m_Layer: 0
   m_Name: InGameNetworkManager
   m_TagString: Untagged
@@ -157,3 +158,20 @@ MonoBehaviour:
   prefabOverrides:
   - itemID: 5
     prefab: {fileID: 865091189374435511, guid: 3d128b847798ca342b93a4f43ccae3e5, type: 3}
+--- !u!114 &4067220148699271884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520117834135268845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77e978cdf8854041a73fb24ee1e5b5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SaveLoadManager
+  ShowTopMostFoldoutHeaderGroup: 1
+  worldTimeManager: {fileID: 9007748318814958730}
+  currencyManager: {fileID: 3203660628047513135}
+  debtManager: {fileID: 8006091121495567204}
+  saveFileName: shiba_farm_slot_{0}.json

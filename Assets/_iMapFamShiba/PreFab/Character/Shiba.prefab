@@ -1386,7 +1386,7 @@ MonoBehaviour:
   animator: {fileID: 2154141272514966527}
   interactMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 2048
 --- !u!1 &4724395467278755671
 GameObject:
   m_ObjectHideFlags: 0

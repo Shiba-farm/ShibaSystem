@@ -2,7 +2,7 @@ using UnityEngine;
 using Unity.Cinemachine;
 using Unity.Netcode;
 
-public class PlayerController : NetworkBehaviour
+public class PlayerController : NetworkBehaviour, ISaveable
 {
     public void SetBusy(bool busy) { isBusyAction = busy; }
     [Header("Movement")]
@@ -13,7 +13,7 @@ public class PlayerController : NetworkBehaviour
 
     [Header("References")]
     public Transform cameraTransform;
-    [SerializeField] private CinemachineCamera playerVcam;
+    // [SerializeField] private CinemachineCamera playerVcam;
 
     [Header("")]
     private StatManager statManager;
@@ -43,14 +43,18 @@ public class PlayerController : NetworkBehaviour
         if (IsOwner)
         {
             NetworkManager.Singleton.SceneManager.OnLoadEventCompleted += HandleSceneLoaded;
-            playerVcam.Priority = 100;
-            playerVcam.enabled = true;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible   = false;
+            AssignCamera();
+
+            // Tell scene VCam to follow us
+            if (CameraFollow.Instance != null)
+                CameraFollow.Instance.SetFollowTarget(transform);
+            else
+                Debug.Log($"Camera follow is null : {CameraFollow.Instance == null}");
+
             InputHandler.Singleton.OnInteractTriggered -= OnPlayerInteract;
             InputHandler.Singleton.OnInteractTriggered += OnPlayerInteract;
-        }
-        else
-        {
-            playerVcam.enabled = false;
         }
     }
     private void HandleSceneLoaded(string sceneName,
@@ -150,4 +154,26 @@ public class PlayerController : NetworkBehaviour
     public void StandUpFromSit() { if (!isSitting) return; isSitting = false; animator.SetBool("Sit", false); controller.enabled = true; }
     public void StartFishing(Transform fishPoint) { if (isBusyAction) return; transform.position = fishPoint.position; transform.rotation = fishPoint.rotation; isBusyAction = true; animator.SetTrigger("Fish"); }
     public void OnFishingAnimationFinished() { isBusyAction = false; }
+
+    public void CaptureState(GameSaveData save, ulong clientId = 0)
+    {
+        var playerData = save.GetOrCreatePlayer(clientId);
+        var pos = transform.position;
+
+        playerData.posX = pos.x;
+        playerData.posY = pos.y;
+        playerData.posZ = pos.z;
+        playerData.rotY = transform.eulerAngles.y;
+    }
+
+    public void RestoreState(GameSaveData save, ulong clientId = 0)
+    {
+        if (!IsServer) return;
+        var playerData = save.FindPlayer(clientId);
+        if (playerData == null) return;
+
+        // teleport on server — ClientNetworkTransform syncs it to client
+        transform.position    = new Vector3(playerData.posX, playerData.posY, playerData.posZ);
+        transform.eulerAngles = new Vector3(0, playerData.rotY, 0);
+    }
 }
