@@ -25,7 +25,9 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: b2c4fe614144a79478daf5fc7aaafa3e, type: 3}
   growthPrefabs:
   - {fileID: 7799478294520063406, guid: 8279a2d7fdfb9d34fb39559ec3a1ebf5, type: 3}
+  - {fileID: 919132149155446097, guid: 25365cc5d1107ae41aff9c2df76fb0b0, type: 3}
   stageDurations:
+  - 1
   - 1
   requiresWaterEachStage: 1
   harvestItem: {fileID: 11400000, guid: 2ddab977725f3204e82867e73cb584d9, type: 2}

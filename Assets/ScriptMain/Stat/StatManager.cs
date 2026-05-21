@@ -1,6 +1,6 @@
 using Unity.Netcode;
 using UnityEngine;
-public class StatManager : NetworkBehaviour
+public class StatManager : NetworkBehaviour, ISaveable
 {
     [Header("Stat")]
     [SerializeField] public PlayerStatDataSO statsTemplate;
@@ -154,5 +154,43 @@ public class StatManager : NetworkBehaviour
     public void RequestConsumeEnergyServerRpc()
     {
 
+    }
+
+    public void CaptureState(GameSaveData save, ulong clientId = 0)
+    {
+        var playerData = save.GetOrCreatePlayer(clientId);
+
+        playerData.stats.Clear();
+        foreach (var stat in AllStats)
+        {
+            playerData.stats.Add(new StatSaveData
+            {
+                type = stat.Type,
+                currentValue = stat.CurrentValue,
+                maxValue = stat.MaxValue
+            });
+        }
+
+        // save level if you store it in StatManager
+        // playerData.level = currentLevel.Value;
+    }
+
+    public void RestoreState(GameSaveData save, ulong clientId = 0)
+    {
+        if (!IsServer) return;
+        var playerData = save.FindPlayer(clientId);
+        if (playerData == null) return;
+
+        // rebuild AllStats NetworkList from save
+        AllStats.Clear();
+        foreach (var saved in playerData.stats)
+        {
+            AllStats.Add(new NetworkStat
+            {
+                Type = saved.type,
+                CurrentValue = saved.currentValue,
+                MaxValue = saved.maxValue
+            });
+        }
     }
 }

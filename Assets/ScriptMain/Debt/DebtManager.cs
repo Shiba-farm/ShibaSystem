@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
-public class DebtManager : NetworkBehaviour
+public class DebtManager : NetworkBehaviour, ISaveable
 {
     public static DebtManager Instance { get; private set; }
     public event Action OnDebtChanged;
@@ -217,6 +217,23 @@ public class DebtManager : NetworkBehaviour
     }
 
     public float GetMonthlyPaymentRate() => DifficultyPaymentRate[GameDataManager.Instance.CurrentDifficulty];
+
+    public void CaptureState(GameSaveData save, ulong clientId = 0)
+    {
+        save.world.currentDebt = CurrentDebt;
+        save.world.monthlyMinimumDue = MonthlyMinimumDue;
+        save.world.paidThisMonth = PaidThisMonth;
+        save.world.tradeValuePaidThisMonth = TradePaidThisMonth;
+    }
+
+    public void RestoreState(GameSaveData save, ulong clientId = 0)
+    {
+        if (!IsServer) return;
+        currentDebt.Value = save.world.currentDebt;
+        monthlyMinimumDue.Value = save.world.monthlyMinimumDue;
+        paidThisMonth.Value = save.world.paidThisMonth;
+        tradeValuePaidThisMonth.Value = save.world.tradeValuePaidThisMonth;
+    }
 }
 
 public class PunishmentResult

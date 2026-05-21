@@ -35,6 +35,11 @@ public class CurrencyData : NetworkBehaviour
         if (!IsServer) return;
         gold.Value -= amount;
     }
+    public void SetCurrency(long amount)
+    {
+        if (!IsServer) return;
+        gold.Value = amount;
+    }
 
     public bool TrySpendCurrency(long amount)
     {

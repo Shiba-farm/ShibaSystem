@@ -22,11 +22,14 @@ MonoBehaviour:
   pitchRandomMultiplier: 1
   energyCost: 0
   isStackable: 1
-  maxStack: 99
-  category: 3
+  maxStack: 5
+  category: 5
   toolAction: 0
   seedCrop: {fileID: 0}
   farmHelperData: {fileID: 0}
+  placeablePrefab: {fileID: 4534633985774317305, guid: fe7ac953650d15549be8f618d56ba6ac,
+    type: 3}
+  placementCheckSize: {x: 0, y: 0, z: 0}
   sellable: 0
   sellPrice: 10
   sellCategory: 3

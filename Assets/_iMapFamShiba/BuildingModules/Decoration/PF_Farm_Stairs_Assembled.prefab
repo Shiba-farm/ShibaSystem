@@ -1,0 +1,1496 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7750224244024859943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3551979758814906289}
+  m_Layer: 0
+  m_Name: PF_Farm_Stairs_Assembled
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3551979758814906289
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7750224244024859943}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5880200865812928147}
+  - {fileID: 8005515340311275657}
+  - {fileID: 6049834649883178053}
+  - {fileID: 8753263382912182559}
+  - {fileID: 3101739545155625009}
+  - {fileID: 6762613079915669393}
+  - {fileID: 1847191239798451698}
+  - {fileID: 5808967540887422845}
+  - {fileID: 7897846279004391672}
+  - {fileID: 1557003865865363896}
+  - {fileID: 1823714491330591313}
+  - {fileID: 8513703629072412342}
+  - {fileID: 7643124153804282819}
+  - {fileID: 9158117106820332315}
+  - {fileID: 3435604382182513574}
+  - {fileID: 2373010531422998128}
+  - {fileID: 8781112286617138551}
+  - {fileID: 3064223314672072462}
+  - {fileID: 7083495886128465236}
+  - {fileID: 1002115003744054040}
+  - {fileID: 2733527675395639049}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1181363276788656634
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3551979758814906289}
+    m_Modifications:
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3583972
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.551
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.6500092
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071079
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70710576
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522084585159636041, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_Name
+      value: PF_Farm_StoneStair_400_01 (9)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+--- !u!4 &2733527675395639049 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+  m_PrefabInstance: {fileID: 1181363276788656634}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1541598682116219011
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3551979758814906289}
+    m_Modifications:
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0527
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.40099993
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.4000092
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522084585159636041, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_Name
+      value: PF_Farm_StoneStair_400_01 (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+--- !u!4 &2373010531422998128 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+  m_PrefabInstance: {fileID: 1541598682116219011}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1884700023766545749
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3551979758814906289}
+    m_Modifications:
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0527
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.20099993
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.90000916
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522084585159636041, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_Name
+      value: PF_Farm_StoneStair_400_01 (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+--- !u!4 &3435604382182513574 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+  m_PrefabInstance: {fileID: 1884700023766545749}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2198298654753525442
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3551979758814906289}
+    m_Modifications:
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0527
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.4606667
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.301
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.1500092
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071079
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.70710576
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522084585159636041, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_Name
+      value: PF_Farm_StoneStair_400_01 (16)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+--- !u!4 &3101739545155625009 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+  m_PrefabInstance: {fileID: 2198298654753525442}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2237221984460757501
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3551979758814906289}
+    m_Modifications:
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3583972
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.24900007
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.000015258789
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522084585159636041, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_Name
+      value: PF_Farm_StoneStair_400_01 (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+--- !u!4 &3064223314672072462 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+  m_PrefabInstance: {fileID: 2237221984460757501}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2310889287737233227
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3551979758814906289}
+    m_Modifications:
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0527
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.4606667
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.80099994
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.2500153
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522084585159636041, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_Name
+      value: PF_Farm_StoneStair_400_01 (18)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+--- !u!4 &1557003865865363896 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+  m_PrefabInstance: {fileID: 2310889287737233227}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3182059155542475521
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3551979758814906289}
+    m_Modifications:
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0527
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.051
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.7000122
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522084585159636041, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_Name
+      value: PF_Farm_StoneStair_400_01 (12)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+--- !u!4 &1847191239798451698 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+  m_PrefabInstance: {fileID: 3182059155542475521}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3226083659286582434
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3551979758814906289}
+    m_Modifications:
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0527
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.60099995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.8500061
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522084585159636041, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_Name
+      value: PF_Farm_StoneStair_400_01 (14)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+--- !u!4 &1823714491330591313 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+  m_PrefabInstance: {fileID: 3226083659286582434}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4062881408031720939
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3551979758814906289}
+    m_Modifications:
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3583972
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.551
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.6500092
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522084585159636041, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_Name
+      value: PF_Farm_StoneStair_400_01 (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+--- !u!4 &1002115003744054040 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+  m_PrefabInstance: {fileID: 4062881408031720939}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4876478121615114309
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3551979758814906289}
+    m_Modifications:
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0527
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.4606667
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.60099995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.8500061
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522084585159636041, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_Name
+      value: PF_Farm_StoneStair_400_01 (19)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+--- !u!4 &8513703629072412342 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+  m_PrefabInstance: {fileID: 4876478121615114309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5373447090212034024
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3551979758814906289}
+    m_Modifications:
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0527
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.4606667
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.40099993
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.4500122
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522084585159636041, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_Name
+      value: PF_Farm_StoneStair_400_01 (20)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+--- !u!4 &9158117106820332315 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+  m_PrefabInstance: {fileID: 5373447090212034024}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5500791036808797060
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3551979758814906289}
+    m_Modifications:
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0527
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.60099995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.8500061
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522084585159636041, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_Name
+      value: PF_Farm_StoneStair_400_01 (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+--- !u!4 &8781112286617138551 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+  m_PrefabInstance: {fileID: 5500791036808797060}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5544966879232116716
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3551979758814906289}
+    m_Modifications:
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0527
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.301
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.1500092
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071079
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.70710576
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522084585159636041, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_Name
+      value: PF_Farm_StoneStair_400_01 (11)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+--- !u!4 &8753263382912182559 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+  m_PrefabInstance: {fileID: 5544966879232116716}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6325264644548406183
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3551979758814906289}
+    m_Modifications:
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3583972
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.101
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.7000122
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522084585159636041, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_Name
+      value: PF_Farm_StoneStair_400_01 (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+--- !u!4 &7083495886128465236 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+  m_PrefabInstance: {fileID: 6325264644548406183}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6345767642170091019
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3551979758814906289}
+    m_Modifications:
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0527
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.80099994
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.2500153
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522084585159636041, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_Name
+      value: PF_Farm_StoneStair_400_01 (13)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+--- !u!4 &7897846279004391672 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+  m_PrefabInstance: {fileID: 6345767642170091019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6526620334860551802
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3551979758814906289}
+    m_Modifications:
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0527
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.85099995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.2500153
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522084585159636041, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_Name
+      value: PF_Farm_StoneStair_400_01 (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+--- !u!4 &8005515340311275657 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+  m_PrefabInstance: {fileID: 6526620334860551802}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6889293260971554096
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3551979758814906289}
+    m_Modifications:
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0527
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.40099993
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.4500122
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522084585159636041, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_Name
+      value: PF_Farm_StoneStair_400_01 (15)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+--- !u!4 &7643124153804282819 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+  m_PrefabInstance: {fileID: 6889293260971554096}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7210492648388081760
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3551979758814906289}
+    m_Modifications:
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0527
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.40000916
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522084585159636041, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_Name
+      value: PF_Farm_StoneStair_400_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+--- !u!4 &5880200865812928147 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+  m_PrefabInstance: {fileID: 7210492648388081760}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7284539856558713230
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3551979758814906289}
+    m_Modifications:
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0527
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.4606667
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.051
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.7000122
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522084585159636041, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_Name
+      value: PF_Farm_StoneStair_400_01 (17)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+--- !u!4 &5808967540887422845 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+  m_PrefabInstance: {fileID: 7284539856558713230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7385674533906619062
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3551979758814906289}
+    m_Modifications:
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0527
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.301
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.1500092
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522084585159636041, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_Name
+      value: PF_Farm_StoneStair_400_01 (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+--- !u!4 &6049834649883178053 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+  m_PrefabInstance: {fileID: 7385674533906619062}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7517593615234582882
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3551979758814906289}
+    m_Modifications:
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0527
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.551
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.6500092
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522084585159636041, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+      propertyPath: m_Name
+      value: PF_Farm_StoneStair_400_01 (10)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+--- !u!4 &6762613079915669393 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3858031631571218163, guid: 85fa133a3c7c15e46828b5ea8e894c11, type: 3}
+  m_PrefabInstance: {fileID: 7517593615234582882}
+  m_PrefabAsset: {fileID: 0}

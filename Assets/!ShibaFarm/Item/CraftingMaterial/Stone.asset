@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Stone
   m_EditorClassIdentifier: 
   itemName: stone
-  icon: {fileID: 21300000, guid: 9ff4b4699e62b6d4d9d11790fe845ece, type: 3}
+  icon: {fileID: 21300000, guid: f47f1aa4c530b004da3efdb7c37ea38f, type: 3}
   equipmentPrefab: {fileID: 0}
   actionVFX: {fileID: 0}
   actionSFX: {fileID: 0}
@@ -26,6 +26,8 @@ MonoBehaviour:
   toolAction: 0
   seedCrop: {fileID: 0}
   farmHelperData: {fileID: 0}
+  placeablePrefab: {fileID: 0}
+  placementCheckSize: {x: 0, y: 0, z: 0}
   sellable: 1
   sellPrice: 10
   sellCategory: 2

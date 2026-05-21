@@ -196,7 +196,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 60.37, y: 0.006206095, z: 132.36}
   m_LocalScale: {x: 1.8, y: 1.8, z: 1.8}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1277423171499911456}
   - {fileID: 3633430096268576831}
@@ -265,6 +265,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactKey: 101
   slotCount: 20
+  boxAnimator: {fileID: 0}
+  openTrigger: Open
+  closeTrigger: Close
   promptPanel: {fileID: 0}
   promptLabel: {fileID: 0}
   slots: []
