@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "UnityShiba.slnx"
+    "dotnet.defaultSolution": "ShibaSystem.slnx"
 }
