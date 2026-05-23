@@ -17,29 +17,39 @@ public class RockObject : DestructibleObject
     [SerializeField] private List<OreDrop> drops;
     [SerializeField] private GameObject destroyVFX;
     [SerializeField] private AudioClip destroySFX;
+    [SerializeField] private AudioClip hitSFX;
 
     [Header("Hit Feel")]
     [SerializeField] private float shakeDuration = 0.15f;
     [SerializeField] private float shakeMagnitude = 0.06f;
 
+    [Header("Audio")]
+    [SerializeField] private float hitSFXDuration = 0.15f;
+    [SerializeField] private float destroySFXDuration = 0.5f;
+
     private Vector3 _originPos;
     private Coroutine _shakeCoroutine;
+    private AudioSource _audioSource;
 
     private void Start()
     {
-        // Cache origin so shake always returns to exact position
         _originPos = transform.position;
+        _audioSource = GetComponent<AudioSource>();
+        if (_audioSource == null)
+            _audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     protected override bool CanBeDamagedBy(ToolAction tool)
         => tool == ToolAction.Mine;
 
-    // Runs on all clients when health changes — safe for visuals
     protected override void OnHealthChanged(int prev, int next)
     {
         if (_shakeCoroutine != null)
             StopCoroutine(_shakeCoroutine);
         _shakeCoroutine = StartCoroutine(ShakeRoutine());
+
+        if (next > 0 && hitSFX != null)
+            StartCoroutine(PlayClipBriefly(hitSFX, hitSFXDuration));
     }
 
     protected override void OnDepleted()
@@ -51,31 +61,47 @@ public class RockObject : DestructibleObject
                 drop.itemID, amount, transform.position);
         }
 
-        // Tell all clients to play VFX before despawning
         PlayDestroyVFXClientRpc();
-
         GetComponent<NetworkObject>().Despawn(false);
-        gameObject.SetActive(false);
     }
 
     [ClientRpc]
     private void PlayDestroyVFXClientRpc()
     {
-        if (destroyVFX == null) return;
+        if (destroyVFX != null)
+        {
+            destroyVFX.transform.SetParent(null);
+            destroyVFX.SetActive(true);
+            foreach (var ps in destroyVFX.GetComponentsInChildren<ParticleSystem>(true))
+                ps.Play();
+        }
 
-        destroyVFX.transform.SetParent(null);
-        destroyVFX.SetActive(true);
-
-        // Manually play all particle systems since Play On Awake is disabled
-        foreach (var ps in destroyVFX.GetComponentsInChildren<ParticleSystem>(true))
-            ps.Play();
+        if (destroySFX != null)
+            StartCoroutine(PlaySoundThenHide(destroySFX, destroySFXDuration));
+        else
+            gameObject.SetActive(false);
     }
 
-    // Subtle left-right sine shake — magnitude intentionally small
+    // Hide object after sound finishes — keeps coroutine alive until done
+    private IEnumerator PlaySoundThenHide(AudioClip clip, float duration)
+    {
+        _audioSource.PlayOneShot(clip);
+        yield return new WaitForSeconds(duration);
+        _audioSource.Stop();
+        gameObject.SetActive(false);
+    }
+
+    // Plays a clip for a set duration then stops — avoids full-length playback
+    private IEnumerator PlayClipBriefly(AudioClip clip, float duration)
+    {
+        _audioSource.PlayOneShot(clip);
+        yield return new WaitForSeconds(duration);
+        _audioSource.Stop();
+    }
+
     private IEnumerator ShakeRoutine()
     {
         float elapsed = 0f;
-
         while (elapsed < shakeDuration)
         {
             float x = Mathf.Sin(elapsed / shakeDuration * Mathf.PI * 8f) * shakeMagnitude;
@@ -83,7 +109,6 @@ public class RockObject : DestructibleObject
             elapsed += Time.deltaTime;
             yield return null;
         }
-
         transform.position = _originPos;
         _shakeCoroutine = null;
     }
