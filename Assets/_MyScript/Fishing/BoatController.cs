@@ -62,8 +62,8 @@ public class BoatController : MonoBehaviour
     void Awake()
     {
         _rb = GetComponent<Rigidbody>();
-        _rb.drag        = waterDrag;
-        _rb.angularDrag = waterAngularDrag;
+        _rb.linearDamping        = waterDrag;
+        _rb.angularDamping = waterAngularDrag;
         // ล็อกการเอียงเพื่อไม่ให้เรือล้ม
         _rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
 

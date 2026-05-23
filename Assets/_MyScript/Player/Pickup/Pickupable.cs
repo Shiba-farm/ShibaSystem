@@ -73,7 +73,7 @@ public class Pickupable : MonoBehaviour
         {
             if (rb == null) yield break;
 
-            bool velocityStopped = rb.velocity.magnitude < 0.05f
+            bool velocityStopped = rb.linearVelocity.magnitude < 0.05f
                                 && rb.angularVelocity.magnitude < 0.05f;
             if (velocityStopped) break;
 
@@ -84,7 +84,7 @@ public class Pickupable : MonoBehaviour
         if (rb == null) yield break;
 
         // หยุด velocity ทั้งหมด แล้วเปลี่ยนเป็น Kinematic
-        rb.velocity        = Vector3.zero;
+        rb.linearVelocity        = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
         rb.isKinematic     = true;
 

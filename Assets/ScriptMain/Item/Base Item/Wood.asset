@@ -25,7 +25,6 @@ MonoBehaviour:
   sellable: 1
   sellPrice: 10
   sellCategory: 3
-  category: 0
-  holdPositionOffset: {x: 0.22, y: -0.13, z: 0.35}
-  holdRotationOffset: {x: 57.34, y: 40.7, z: 122.1}
-  holdScale: {x: 1, y: 1, z: 1}
+  category: 5
+  holdPositions: []
+  defaultHoldState: 0
