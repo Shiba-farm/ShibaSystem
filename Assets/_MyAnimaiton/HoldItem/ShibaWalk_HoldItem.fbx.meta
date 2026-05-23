@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 373e99ab09667ed4e97a7d58ce49cb87
 ModelImporter:
-  serializedVersion: 22200
+  serializedVersion: 24200
   internalIDToNameTable: []
   externalObjects: {}
   materials:
@@ -16,8 +16,6 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: "\nClip 'root|rigAction' has import animation warnings
       that might lower retargeting quality:\nNote: Activate translation DOF on avatar
@@ -64,7 +62,7 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -90,6 +88,9 @@ ModelImporter:
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
     optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
@@ -360,12 +361,14 @@ ModelImporter:
     - name: leg_twist.l
       parentName: leg_stretch.l
       position: {x: -0.0000000012665987, y: 0.054719932, z: -0.00000000461936}
-      rotation: {x: -0.000000017491399, y: -0.000000064137666, z: -0.00000014895068, w: 1}
+      rotation: {x: -0.000000017491399, y: -0.000000064137666, z: -0.00000014895068,
+        w: 1}
       scale: {x: 1.0000006, y: 1.0000014, z: 1.0000007}
     - name: thigh_twist.l
       parentName: thigh_stretch.l
       position: {x: 0.000000048205255, y: 0.00000004798174, z: -0.000000020042062}
-      rotation: {x: 0.00000012665984, y: 0.0000000069849175, z: -0.0000000018626447, w: 1}
+      rotation: {x: 0.00000012665984, y: 0.0000000069849175, z: -0.0000000018626447,
+        w: 1}
       scale: {x: 1.0000004, y: 1.0000004, z: 1.0000004}
     - name: thigh_stretch.r
       parentName: root.x
@@ -395,7 +398,8 @@ ModelImporter:
     - name: thigh_twist.r
       parentName: thigh_stretch.r
       position: {x: -0.00000007495284, y: 0.00000009268522, z: 8.9406965e-10}
-      rotation: {x: -0.000000018626448, y: 0.0000000015133989, z: 0.000000016763803, w: 1}
+      rotation: {x: -0.000000018626448, y: 0.0000000015133989, z: 0.000000016763803,
+        w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: spine_01.x
       parentName: root.x

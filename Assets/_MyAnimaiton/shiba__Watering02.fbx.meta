@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 6a3f85bd32be0d1408a4c5edb95a5180
 ModelImporter:
-  serializedVersion: 22200
+  serializedVersion: 24200
   internalIDToNameTable: []
   externalObjects: {}
   materials:
@@ -16,8 +16,6 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: "\nClip 'root|rigAction' has import animation warnings
       that might lower retargeting quality:\nNote: Activate translation DOF on avatar
@@ -64,7 +62,7 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -90,6 +88,9 @@ ModelImporter:
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
     optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
@@ -365,7 +366,8 @@ ModelImporter:
     - name: thigh_twist.l
       parentName: thigh_stretch.l
       position: {x: -0.000000018533319, y: 0.000000052154064, z: -0.00000001790002}
-      rotation: {x: 0.00000010803339, y: 0.0000000060535954, z: 0.000000018626448, w: 1}
+      rotation: {x: 0.00000010803339, y: 0.0000000060535954, z: 0.000000018626448,
+        w: 1}
       scale: {x: 1.0000001, y: 1, z: 1.0000001}
     - name: thigh_stretch.r
       parentName: root.x
@@ -390,7 +392,8 @@ ModelImporter:
     - name: leg_twist.r
       parentName: leg_stretch.r
       position: {x: -0.00000014930963, y: 0.0547199, z: -3.7252902e-11}
-      rotation: {x: 0.000000044426994, y: -0.0000000052832543, z: 0.000000044635822, w: 1}
+      rotation: {x: 0.000000044426994, y: -0.0000000052832543, z: 0.000000044635822,
+        w: 1}
       scale: {x: 1.0000001, y: 1.000001, z: 1}
     - name: thigh_twist.r
       parentName: thigh_stretch.r
@@ -480,7 +483,8 @@ ModelImporter:
     - name: arm_twist.r
       parentName: arm_stretch.r
       position: {x: -0.00000002682209, y: -0.000000035762785, z: -0.000000047683713}
-      rotation: {x: -0.00000040978185, y: -0.00000024307514, z: -0.000000014726535, w: 1}
+      rotation: {x: -0.00000040978185, y: -0.00000024307514, z: -0.000000014726535,
+        w: 1}
       scale: {x: 1.000001, y: 1.0000014, z: 1.0000007}
     - name: shoulder.l
       parentName: spine_03.x
@@ -510,7 +514,8 @@ ModelImporter:
     - name: arm_twist.l
       parentName: arm_stretch.l
       position: {x: -0.000000026226044, y: 0.000000009536743, z: -0.000000037550926}
-      rotation: {x: -0.00000042468312, y: 0.00000023189934, z: -0.000000019907022, w: 1}
+      rotation: {x: -0.00000042468312, y: 0.00000023189934, z: -0.000000019907022,
+        w: 1}
       scale: {x: 1.0000005, y: 1.0000011, z: 0.99999994}
     - name: c_tail_00.x
       parentName: root.x

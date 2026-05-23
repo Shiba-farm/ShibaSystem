@@ -6,52 +6,52 @@ using UnityEngine.SceneManagement;
 
 public class DungeonEntrance : MonoBehaviour
 {
-    [Header("Interaction")]
-    public float   interactRadius  = 2f;
-    public KeyCode interactKey     = KeyCode.E;
-    public GameObject promptUI;          // ป้าย "[E] เข้าถ้ำ"
+    // [Header("Interaction")]
+    // public float   interactRadius  = 2f;
+    // public KeyCode interactKey     = KeyCode.E;
+    // public GameObject promptUI;          // ป้าย "[E] เข้าถ้ำ"
 
-    [Header("Scene")]
-    public string dungeonSceneName = "Dungeon";  // ชื่อ Scene ถ้ำ
+    // [Header("Scene")]
+    // public string dungeonSceneName = "Dungeon";  // ชื่อ Scene ถ้ำ
 
-    private Transform player;
+    // private Transform player;
 
-    // ──────────────────────────────────────────────────────────────────────
-    void Start()
-    {
-        var go = GameObject.FindGameObjectWithTag("Player");
-        if (go) player = go.transform;
-    }
+    // // ──────────────────────────────────────────────────────────────────────
+    // void Start()
+    // {
+    //     var go = GameObject.FindGameObjectWithTag("Player");
+    //     if (go) player = go.transform;
+    // }
 
-    void Update()
-    {
-        if (!player) return;
+    // void Update()
+    // {
+    //     if (!player) return;
 
-        float dist   = Vector2.Distance(
-            new Vector2(transform.position.x, transform.position.z),
-            new Vector2(player.position.x,    player.position.z));
-        bool nearby  = dist <= interactRadius;
+    //     float dist   = Vector2.Distance(
+    //         new Vector2(transform.position.x, transform.position.z),
+    //         new Vector2(player.position.x,    player.position.z));
+    //     bool nearby  = dist <= interactRadius;
 
-        if (promptUI) promptUI.SetActive(nearby);
+    //     if (promptUI) promptUI.SetActive(nearby);
 
-        if (nearby && Input.GetKeyDown(interactKey))
-            EnterDungeon();
-    }
+    //     if (nearby && Input.GetKeyDown(interactKey))
+    //         EnterDungeon();
+    // }
 
-    // ──────────────────────────────────────────────────────────────────────
-    void EnterDungeon()
-    {
-        // บันทึก Scene + position ปัจจุบัน เพื่อ return กลับมา
-        DungeonReturnData.farmScene       = SceneManager.GetActiveScene().name;
-        DungeonReturnData.returnPosition  = player.position;
-        DungeonReturnData.returnFromDeath = false;
+    // // ──────────────────────────────────────────────────────────────────────
+    // void EnterDungeon()
+    // {
+    //     // บันทึก Scene + position ปัจจุบัน เพื่อ return กลับมา
+    //     DungeonReturnData.farmScene       = SceneManager.GetActiveScene().name;
+    //     DungeonReturnData.returnPosition  = player.position;
+    //     DungeonReturnData.returnFromDeath = false;
 
-        SceneManager.LoadScene(dungeonSceneName);
-    }
+    //     SceneManager.LoadScene(dungeonSceneName);
+    // }
 
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.magenta;
-        Gizmos.DrawWireSphere(transform.position, interactRadius);
-    }
+    // void OnDrawGizmosSelected()
+    // {
+    //     Gizmos.color = Color.magenta;
+    //     Gizmos.DrawWireSphere(transform.position, interactRadius);
+    // }
 }

@@ -46,17 +46,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d780a1ddcf200574bb0bdc34ff9714d0,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d780a1ddcf200574bb0bdc34ff9714d0,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d780a1ddcf200574bb0bdc34ff9714d0,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d780a1ddcf200574bb0bdc34ff9714d0,
         type: 3}
@@ -83,6 +83,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TreeFall1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d780a1ddcf200574bb0bdc34ff9714d0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -95,6 +100,18 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8076282259925705227}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d780a1ddcf200574bb0bdc34ff9714d0,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 513987297948392893}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d780a1ddcf200574bb0bdc34ff9714d0,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7771335285122343775}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d780a1ddcf200574bb0bdc34ff9714d0,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7745540066822929472}
   m_SourcePrefab: {fileID: 100100000, guid: d780a1ddcf200574bb0bdc34ff9714d0, type: 3}
 --- !u!1 &1955471012777006435 stripped
 GameObject:
@@ -110,17 +127,17 @@ Animation:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1955471012777006435}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 8442312376713584710, guid: d780a1ddcf200574bb0bdc34ff9714d0,
-    type: 3}
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 5cb2d779753b9b3429a5d29a78f90f8a, type: 2}
   m_Animations: []
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
+  m_UpdateMode: 0
   m_CullingType: 0
 --- !u!95 &8076282259925705227
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -134,8 +151,73 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &513987297948392893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955471012777006435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
+  GlobalObjectIdHash: 582352504
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  DeferredDespawnTick: 0
+  Ownership: 1
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 0
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+  SyncOwnerTransformWhenParented: 1
+  AllowOwnerToParent: 0
+--- !u!114 &7771335285122343775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955471012777006435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aeae691ee4f75e48a0cf1c7dca55de5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TreeObject
+  ShowTopMostFoldoutHeaderGroup: 1
+  maxHealth: 10
+  requiredTool: 3
+  woodItemID: 5
+  woodAmount: 3
+  fallDuration: 4
+--- !u!65 &7745540066822929472
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955471012777006435}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 3.45, z: 1}
+  m_Center: {x: 0, y: 1.73, z: 0}

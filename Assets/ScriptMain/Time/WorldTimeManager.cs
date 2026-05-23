@@ -1,7 +1,7 @@
 using Unity.Netcode;
 using UnityEngine;
 
-public class WorldTimeManager : NetworkBehaviour, ISaveable
+public class WorldTimeManager : NetworkSaveableBehaviour
 {
     public static WorldTimeManager Instance { get; private set; }
     [Header("Time Settings")]
@@ -39,6 +39,8 @@ public class WorldTimeManager : NetworkBehaviour, ISaveable
     public float DuskStart => duskStart;
     public float NightStart => nightStart;
 
+    public override bool IsPlayerSaveable => false;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -51,10 +53,14 @@ public class WorldTimeManager : NetworkBehaviour, ISaveable
 
     public override void OnNetworkSpawn()
     {
+        base.OnNetworkSpawn();
         Debug.Log($"[WorldTimeManager] Spawned — IsServer:{IsServer} IsHost:{IsHost} IsClient:{IsClient} IsOwner:{IsOwner}");
         // Set start time
         if (IsServer)
+        {
+            SaveLoadManager.Instance?.Register(this);
             totalGameMinutes.Value = startHour * MinutesPerHour;
+        }
 
         totalGameMinutes.OnValueChanged += OnTimeChanged;
 
@@ -65,7 +71,10 @@ public class WorldTimeManager : NetworkBehaviour, ISaveable
 
     public override void OnNetworkDespawn()
     {
+        base.OnNetworkDespawn();
         totalGameMinutes.OnValueChanged -= OnTimeChanged;
+        if (IsServer)
+            SaveLoadManager.Instance?.Unregister(this);
     }
 
     void Update()
@@ -127,14 +136,14 @@ public class WorldTimeManager : NetworkBehaviour, ISaveable
         int nextDayMorning = currentDayStart + (HoursPerDay * MinutesPerHour) + (startHour * MinutesPerHour);
         totalGameMinutes.Value = nextDayMorning;
     }
-    public void CaptureState(GameSaveData save, ulong clientId = 0)
+    public override void CaptureState(GameSaveData save, ulong clientId = 0)
     {
         save.world.currentYear = CurrentYear;
         save.world.currentMonth = CurrentMonth;
         save.world.currentDay = CurrentDay;
     }
 
-    public void RestoreState(GameSaveData save, ulong clientId = 0)
+    public override void RestoreState(GameSaveData save, ulong clientId = 0)
     {
         if (!IsServer) return;
 

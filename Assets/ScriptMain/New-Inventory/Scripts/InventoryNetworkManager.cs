@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
-public class InventoryNetworkManager : NetworkBehaviour, ISaveable
+public class InventoryNetworkManager : NetworkBehaviour
 {
     public static InventoryNetworkManager Instance { get; private set; }
     public event Action<bool> OnInventoryConfirmedEmpty;
@@ -141,61 +141,5 @@ public class InventoryNetworkManager : NetworkBehaviour, ISaveable
     {
         Debug.Log($"Notify the client : {isEmpty}");
         OnInventoryConfirmedEmpty?.Invoke(isEmpty);
-    }
-
-    public void CaptureState(GameSaveData save, ulong clientId = 0)
-    {
-        var playerData = save.GetOrCreatePlayer(clientId);
-
-                Debug.Log($"Get Player with player id {clientId}, is it null : {playerData == null}");
-
-        playerData.inventory = CaptureInventory(clientId, inventoryID: 0);
-        playerData.hotbar = CaptureInventory(clientId, inventoryID: 1);
-    }
-
-    private List<ItemSlotSaveData> CaptureInventory(ulong clientId, int inventoryID)
-    {
-        var result = new List<ItemSlotSaveData>();
-        var inventory = InventoryDataRegistry.GetByOwnerAndID(clientId, inventoryID);
-        if (inventory == null) return result;
-
-        for (int i = 0; i < inventory.InventoryItems.Count; i++)
-        {
-            var item = inventory.InventoryItems[i];
-            result.Add(new ItemSlotSaveData
-            {
-                slotIndex = i,
-                itemID = item.ItemID,
-                amount = item.Amount
-            });
-        }
-
-        return result;
-    }
-
-    public void RestoreState(GameSaveData save, ulong clientId = 0)
-    {
-        if (!IsServer) return;
-        var playerData = save.FindPlayer(clientId);
-        if (playerData == null) return;
-
-        RestoreInventory(clientId, inventoryID: 0, playerData.inventory);
-        RestoreInventory(clientId, inventoryID: 1, playerData.hotbar);
-    }
-
-    private void RestoreInventory(ulong clientId, int inventoryID, List<ItemSlotSaveData> slots)
-    {
-        var inventory = InventoryDataRegistry.GetByOwnerAndID(clientId, inventoryID);
-        if (inventory == null) return;
-
-        foreach (var saved in slots)
-        {
-            if (saved.slotIndex >= inventory.InventoryItems.Count) continue;
-            inventory.InventoryItems[saved.slotIndex] = new NetworkItems
-            {
-                ItemID = saved.itemID,
-                Amount = saved.amount
-            };
-        }
     }
 }

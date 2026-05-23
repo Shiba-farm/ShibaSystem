@@ -1,9 +1,10 @@
 using Unity.Netcode;
 using UnityEngine;
 
-public class CurrencyManager : NetworkBehaviour, ISaveable
+public class CurrencyManager : NetworkSaveableBehaviour
 {
     public static CurrencyManager Instance { get; private set; }
+    public override bool IsPlayerSaveable => false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private CurrencyData currencyStorage;
     public long CurrentGold => currencyStorage.Gold;
@@ -15,6 +16,20 @@ public class CurrencyManager : NetworkBehaviour, ISaveable
             return;
         }
         Instance = this;
+    }
+
+    public override void OnNetworkSpawn()
+    {
+        base.OnNetworkSpawn();
+        if (IsServer)
+            SaveLoadManager.Instance?.Register(this);
+    }
+
+    public override void OnNetworkDespawn()
+    {
+        base.OnNetworkDespawn();
+        if (IsServer)
+            SaveLoadManager.Instance?.Unregister(this);
     }
 
     [Rpc(SendTo.Server, InvokePermission = RpcInvokePermission.Everyone)]
@@ -34,12 +49,12 @@ public class CurrencyManager : NetworkBehaviour, ISaveable
 
     }
 
-    public void CaptureState(GameSaveData save, ulong clientId = 0)
+    public override void CaptureState(GameSaveData save, ulong clientId = 0)
     {
         save.world.sharedGold = CurrentGold;
     }
 
-    public void RestoreState(GameSaveData save, ulong clientId = 0)
+    public override void RestoreState(GameSaveData save, ulong clientId = 0)
     {
         if (!IsServer) return;
         currencyStorage.SetCurrency(save.world.sharedGold);

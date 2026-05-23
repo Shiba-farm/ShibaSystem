@@ -47,11 +47,18 @@ public class CreateNewGameUI : MonoBehaviour
             return;
         }
 
+        int slot = GlobalSaveContext.Instance.GetNextAvailableSlot();
+        if (slot == -1)
+        {
+            Debug.LogWarning("[CreateNewGame] No available save slots.");
+            return; // optionally show a UI message
+        }
+
         // Store config in GlobalSaveContext before loading game scene
-        GlobalSaveContext.Instance.RequestNewGame(0); // slot 0 for now — wire to slot select later
+        GlobalSaveContext.Instance.RequestNewGame(slot, worldName);
         // TODO: pass worldName and playerAmount to GlobalSaveContext when ready
 
-        UIManager.Instance.LoadScene(GameScene.Game);
+        UIManager.Instance.LoadScene(GameScene.MainGame);
     }
 
     public void OnBackButtonClick()

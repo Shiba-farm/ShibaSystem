@@ -172,8 +172,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 360.07153, y: -0.6791}
-  m_SizeDelta: {x: 317.8568, y: 149.3582}
+  m_AnchoredPosition: {x: 297.94296, y: -0.6791}
+  m_SizeDelta: {x: 442.114, y: 149.3582}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3938952754507665057
 MonoBehaviour:
@@ -647,8 +647,8 @@ MonoBehaviour:
   emptyState: {fileID: 2312081951434938072}
   filledState: {fileID: 2516693148467708681}
   backgroundImage: {fileID: 991827557038281436}
-  normalColor: {r: 0, g: 0, b: 0, a: 0}
-  selectedColor: {r: 1, g: 0.55994403, b: 0.13679248, a: 0}
+  normalColor: {r: 0, g: 0, b: 0, a: 0.6392157}
+  selectedColor: {r: 1, g: 0.55994403, b: 0.13679248, a: 1}
 --- !u!114 &934190714809122123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -727,8 +727,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -423, y: -42}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -281.70764, y: -42}
+  m_SizeDelta: {x: 482.5847, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2696120331732125742
 CanvasRenderer:

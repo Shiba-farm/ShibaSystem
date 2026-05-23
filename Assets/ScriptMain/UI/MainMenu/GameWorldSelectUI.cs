@@ -28,6 +28,7 @@ public class GameWorldSelectUI : MonoBehaviour
         {
             var slot = Instantiate(slotItemPrefab, slotContainer);
             var preview = SaveSlotReader.ReadSlot(i);
+            Debug.Log($"[SlotItemUI] Slot {i} worldName: '{preview?.worldName}' savedAt: '{preview?.savedAt}'");
             slot.Populate(i, preview);
 
             // capture i for lambda
@@ -55,13 +56,31 @@ public class GameWorldSelectUI : MonoBehaviour
     public void OnLoadButtonClick()
     {
         if (_selectedSlot == null || !_selectedSlot.HasData) return;
+        int    slot      = _selectedSlot.SlotIndex;
+        string sceneName = GetHostScene(slot);
 
-        GlobalSaveContext.Instance.RequestLoad(_selectedSlot.SlotIndex);
-        UIManager.Instance.LoadScene(GameScene.Game);
+        GlobalSaveContext.Instance.RequestLoad(_selectedSlot.SlotIndex, sceneName);
+        UIManager.Instance.LoadScneneByName(sceneName);
     }
 
     public void OnBackButtonClick()
     {
         UIManager.Instance.LoadScene(GameScene.GameMode);
+    }
+
+    private string GetHostScene(int slot)
+    {
+        var preview = SaveSlotReader.ReadSlot(slot);
+
+        // Use host's scene (playerId "0") as the initial load scene
+        // Other players will be moved to their own scenes after connecting
+        if (preview?.players != null && preview.players.Count > 0)
+        {
+            var hostData = preview.players.Find(p => p.playerId == "0");
+            if (hostData != null && !string.IsNullOrEmpty(hostData.currentScene))
+                return hostData.currentScene;
+        }
+
+        return "MainGame";  // fallback
     }
 }

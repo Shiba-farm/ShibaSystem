@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class SaveSlotPreview
     public string worldName;
     public int    slotIndex;
     public WorldSaveData world;   // enough to show month/day
+    public List<PlayerSaveData> players;
 }
 
 public static class SaveSlotReader

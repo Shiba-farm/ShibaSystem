@@ -2,7 +2,7 @@ using UnityEngine;
 using Unity.Cinemachine;
 using Unity.Netcode;
 
-public class PlayerController : NetworkBehaviour, ISaveable
+public class PlayerController : NetworkSaveableBehaviour
 {
     public void SetBusy(bool busy) { isBusyAction = busy; }
     [Header("Movement")]
@@ -21,16 +21,18 @@ public class PlayerController : NetworkBehaviour, ISaveable
     private CharacterController controller;
     private Animator animator;
     private Vector3 velocity;
-    public bool _isRunning {get; private set;}
+    public bool _isRunning { get; private set; }
     public NetworkVariable<bool> IsRunning = new NetworkVariable<bool>(false,
     NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
     public bool isGrounded { get; private set; }
     public bool isBusyAction { get; private set; }
     public bool isSitting { get; private set; }
     private Transform currentSitPoint;
+    public override bool IsPlayerSaveable => true;
 
     public override void OnNetworkSpawn()
     {
+        base.OnNetworkSpawn();
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
         statManager = GetComponentInChildren<StatManager>();
@@ -56,7 +58,23 @@ public class PlayerController : NetworkBehaviour, ISaveable
 
             InputHandler.Singleton.OnInteractTriggered -= OnPlayerInteract;
             InputHandler.Singleton.OnInteractTriggered += OnPlayerInteract;
+
+            var hotbar = FindFirstObjectByType<HotbarUIController>();
+            hotbar?.SetOwnerClientId(OwnerClientId);
+            Debug.Log("Set hotbar owner client ID");
         }
+        if (IsServer)
+        {
+            SaveLoadManager.Instance?.Register(this);
+        }
+
+    }
+
+    public override void OnNetworkDespawn()
+    {
+        base.OnNetworkDespawn();
+        if (IsServer)
+            SaveLoadManager.Instance?.Unregister(this);
     }
     private void HandleSceneLoaded(string sceneName,
                                 UnityEngine.SceneManagement.LoadSceneMode loadSceneMode,
@@ -101,7 +119,7 @@ public class PlayerController : NetworkBehaviour, ISaveable
     {
         isGrounded = controller.isGrounded;
         if (isGrounded && velocity.y < 0f) velocity.y = -2f;
- 
+
         Vector2 input = InputHandler.Singleton.MoveInput;
 
         _isRunning = InputHandler.Singleton.IsSprinting;
@@ -116,7 +134,7 @@ public class PlayerController : NetworkBehaviour, ISaveable
         {
             IsRunning.Value = false;
         }
-        
+
         if (input.sqrMagnitude >= 0.01f)
         {
             Vector3 camForward = cameraTransform.forward;
@@ -156,25 +174,26 @@ public class PlayerController : NetworkBehaviour, ISaveable
     public void StartFishing(Transform fishPoint) { if (isBusyAction) return; transform.position = fishPoint.position; transform.rotation = fishPoint.rotation; isBusyAction = true; animator.SetTrigger("Fish"); }
     public void OnFishingAnimationFinished() { isBusyAction = false; }
 
-    public void CaptureState(GameSaveData save, ulong clientId = 0)
+    public override void CaptureState(GameSaveData save, ulong clientId = 0)
     {
         var playerData = save.GetOrCreatePlayer(clientId);
         var pos = transform.position;
 
+        playerData.currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
         playerData.posX = pos.x;
         playerData.posY = pos.y;
         playerData.posZ = pos.z;
         playerData.rotY = transform.eulerAngles.y;
     }
 
-    public void RestoreState(GameSaveData save, ulong clientId = 0)
+    public override void RestoreState(GameSaveData save, ulong clientId = 0)
     {
         if (!IsServer) return;
         var playerData = save.FindPlayer(clientId);
         if (playerData == null) return;
 
         // teleport on server — ClientNetworkTransform syncs it to client
-        transform.position    = new Vector3(playerData.posX, playerData.posY, playerData.posZ);
+        transform.position = new Vector3(playerData.posX, playerData.posY, playerData.posZ);
         transform.eulerAngles = new Vector3(0, playerData.rotY, 0);
     }
 }

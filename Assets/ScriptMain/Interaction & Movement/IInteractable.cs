@@ -13,4 +13,6 @@ public enum PromptType
     CraftTable,
     Shop,
     Debt,
+    Mine,
+    Door,
 }

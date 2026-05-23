@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6806827226123387466}
   - component: {fileID: 7796993805267882288}
+  - component: {fileID: 3759878552776565971}
   m_Layer: 0
   m_Name: TimeOfDaySystem
   m_TagString: Untagged
@@ -307,6 +308,21 @@ MonoBehaviour:
   skyExposureNight: 0.6
   nightStart: 0.8
   dawnStart: 0.2
+--- !u!114 &3759878552776565971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4715030925144841754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 223a87329a296a84dae2f55b3235df89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BedInteraction
+  timeSignal: {fileID: 11400000, guid: accb031eece68af44916f510ca7589a2, type: 2}
+  restrictBedtime: 0
+  earlyBedtimeHour: 20
 --- !u!1001 &1680781962535136802
 PrefabInstance:
   m_ObjectHideFlags: 0

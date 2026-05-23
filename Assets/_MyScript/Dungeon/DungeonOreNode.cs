@@ -45,7 +45,7 @@ namespace MyGame.Dungeon
             oreData         = ore;
             gridPos         = pos;
             manager         = mgr;
-            playerTransform = mgr.player;
+            // playerTransform = mgr.player;
 
             if (playerTransform)
                 playerAnimator = playerTransform.GetComponent<Animator>();

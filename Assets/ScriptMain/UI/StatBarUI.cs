@@ -26,8 +26,27 @@ public class StatBarUI : MonoBehaviour
         _statManager = statManager;
         _statManager.AllStats.OnListChanged += OnStatsChanged;
 
-        RefreshAll();
+        // Only refresh if data is ready
+        if (_statManager.AllStats.Count > 0)
+            RefreshAll();
+        else
+            Debug.Log("[StatBarUI] Stats not synced yet — waiting for OnListChanged");
     }
+
+    private void OnEnable()
+    {
+        if (_statManager != null)
+        {
+            _statManager.AllStats.OnListChanged -= OnStatsChanged;
+            _statManager.AllStats.OnListChanged += OnStatsChanged;
+
+            // Only refresh immediately if data already exists
+            if (_statManager.AllStats.Count > 0)
+                RefreshAll();
+            // else: wait for OnListChanged to fire when NGO syncs the data
+        }
+    }
+
 
     private void OnDisable()
     {
@@ -37,6 +56,7 @@ public class StatBarUI : MonoBehaviour
 
     private void OnStatsChanged(NetworkListEvent<NetworkStat> changeEvent)
     {
+        Debug.Log("Stats changed, refreshing UI...");
         RefreshAll();
     }
 
@@ -46,39 +66,40 @@ public class StatBarUI : MonoBehaviour
 
         foreach (var stat in _statManager.AllStats)
         {
+            // Debug.Log($"Updating UI for {stat.Type}: {stat.CurrentValue}/{stat.MaxValue}");
             switch (stat.Type)
             {
                 case StatType.Health:
-                    SetLinear(healthBar, 
+                    SetLinear(healthBar,
                         stat.CurrentValue, stat.MaxValue);
                     break;
 
                 case StatType.Stamina:
-                    SetLinear(staminaBar, 
+                    SetLinear(staminaBar,
                         stat.CurrentValue, stat.MaxValue);
                     break;
 
                 case StatType.Energy:
-                    SetCircular(hungryCircular, 
+                    SetCircular(hungryCircular,
                         stat.CurrentValue, stat.MaxValue);
                     break;
             }
         }
     }
 
-    private void SetLinear(Slider slider, 
+    private void SetLinear(Slider slider,
         float current, float max)
     {
         if (slider == null) return;
         slider.minValue = 0;
         slider.maxValue = max;
-        slider.value    = current;
+        slider.value = current;
 
         // if (label != null)
         //     label.text = $"{Mathf.CeilToInt(current)}/{Mathf.CeilToInt(max)}";
     }
 
-    private void SetCircular(CircularProgress circular, 
+    private void SetCircular(CircularProgress circular,
         float current, float max)
     {
         if (circular == null) return;

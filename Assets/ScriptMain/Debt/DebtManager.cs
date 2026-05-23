@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
-public class DebtManager : NetworkBehaviour, ISaveable
+public class DebtManager : NetworkSaveableBehaviour
 {
     public static DebtManager Instance { get; private set; }
     public event Action OnDebtChanged;
     public event Action OnTradeValueChanged;
+    public override bool IsPlayerSaveable => false;
 
     private static readonly Dictionary<GameDifficulty, float> DifficultyPaymentRate = new()
     {
@@ -96,12 +97,24 @@ public class DebtManager : NetworkBehaviour, ISaveable
 
     public override void OnNetworkSpawn()
     {
+        base.OnNetworkSpawn();
         if (IsServer)
+        {
             currentDebt.Value = startingDebt;
+            SaveLoadManager.Instance?.Register(this);
+        }
 
         currentDebt.OnValueChanged += (prev, next) => OnDebtChanged?.Invoke();
         currentTradeValue.OnValueChanged += (prev, next) => OnTradeValueChanged?.Invoke();
         monthlyMinimumDue.Value = MinimumPaymentDue;
+
+    }
+
+    public override void OnNetworkDespawn()
+    {
+        base.OnNetworkDespawn();
+        if (IsServer)
+            SaveLoadManager.Instance?.Unregister(this);
     }
 
     // Called at end of each month by WorldTimeManager
@@ -218,7 +231,7 @@ public class DebtManager : NetworkBehaviour, ISaveable
 
     public float GetMonthlyPaymentRate() => DifficultyPaymentRate[GameDataManager.Instance.CurrentDifficulty];
 
-    public void CaptureState(GameSaveData save, ulong clientId = 0)
+    public override void CaptureState(GameSaveData save, ulong clientId = 0)
     {
         save.world.currentDebt = CurrentDebt;
         save.world.monthlyMinimumDue = MonthlyMinimumDue;
@@ -226,7 +239,7 @@ public class DebtManager : NetworkBehaviour, ISaveable
         save.world.tradeValuePaidThisMonth = TradePaidThisMonth;
     }
 
-    public void RestoreState(GameSaveData save, ulong clientId = 0)
+    public override void RestoreState(GameSaveData save, ulong clientId = 0)
     {
         if (!IsServer) return;
         currentDebt.Value = save.world.currentDebt;

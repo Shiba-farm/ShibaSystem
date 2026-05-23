@@ -3,18 +3,18 @@ using MyGame.Dungeon;
 
 public class DungeonTester : MonoBehaviour
 {
-    void Start()
-    {
-        DungeonManager.Instance.EnterDungeon();
-    }
+    // void Start()
+    // {
+    //     DungeonManager.Instance.EnterDungeon();
+    // }
 
-    void Update()
-    {
-        // ¡´ G à¾×èÍ Generate ãËÁè
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            DungeonManager.Instance.ClearFloor();
-            DungeonManager.Instance.EnterDungeon();
-        }
-    }
+    // void Update()
+    // {
+    //     // ï¿½ï¿½ G ï¿½ï¿½ï¿½ï¿½ Generate ï¿½ï¿½ï¿½ï¿½
+    //     if (Input.GetKeyDown(KeyCode.G))
+    //     {
+    //         DungeonManager.Instance.ClearFloor();
+    //         DungeonManager.Instance.EnterDungeon();
+    //     }
+    // }
 }

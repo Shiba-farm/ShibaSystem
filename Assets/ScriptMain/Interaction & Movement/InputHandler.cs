@@ -23,6 +23,8 @@ public class InputHandler : MonoBehaviour
     public event Action<int> OnNumkeyTriggered;
     public event Action OnPauseTriggered;
     public event Action OnUseTool;
+    public event Action OnOrbitLeftTriggered;
+    public event Action OnOrbitRightTriggered;
 
     private void Awake()
     {
@@ -44,28 +46,34 @@ public class InputHandler : MonoBehaviour
 
     private void BindActions()
     {
-        _controls.Key.Jump.performed += ctx => {
+        _controls.Key.Jump.performed += ctx =>
+        {
             if (InputLocked) return;
             OnJumpTriggered?.Invoke();
         };
 
-        _controls.Key.Interact.performed += ctx => {
+        _controls.Key.Interact.performed += ctx =>
+        {
             if (InputLocked) return;
             OnInteractTriggered?.Invoke();
         };
 
-        _controls.Key.Inventory.performed += ctx => {
+        _controls.Key.Inventory.performed += ctx =>
+        {
             OnInventoryTriggered?.Invoke();
         };
-        _controls.Key.Pause.performed += ctx => {
+        _controls.Key.Pause.performed += ctx =>
+        {
             OnPauseTriggered?.Invoke();
         };
 
-        _controls.Key.Sprint.performed += ctx => {
+        _controls.Key.Sprint.performed += ctx =>
+        {
             if (InputLocked) return;
             OnSprintToggled?.Invoke(true);
         };
-        _controls.Key.Sprint.canceled += ctx => {
+        _controls.Key.Sprint.canceled += ctx =>
+        {
             OnSprintToggled?.Invoke(false);
         };
 
@@ -82,6 +90,18 @@ public class InputHandler : MonoBehaviour
         {
             if (InputLocked) return;
             OnUseTool?.Invoke();
+        };
+
+        _controls.Key.OrbitLeft.performed += ctx =>
+        {
+            if (InputLocked) return;
+            OnOrbitLeftTriggered?.Invoke();
+        };
+
+        _controls.Key.OrbitRight.performed += ctx =>
+        {
+            if (InputLocked) return;
+            OnOrbitRightTriggered?.Invoke();
         };
     }
 

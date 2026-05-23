@@ -33,17 +33,17 @@ public class SaveSlotButtonUI : MonoBehaviour
         }
     }
 
-    public void OnLoadClick()
-    {
-        GlobalSaveContext.Instance.RequestLoad(_slot);
-        NetworkManager.Singleton.StartHost();
-        SceneManager.LoadScene("GameScene");
-    }
+    // public void OnLoadClick()
+    // {
+    //     GlobalSaveContext.Instance.RequestLoad(_slot);
+    //     NetworkManager.Singleton.StartHost();
+    //     SceneManager.LoadScene("GameScene");
+    // }
 
-    public void OnNewGameClick()
-    {
-        GlobalSaveContext.Instance.RequestNewGame(_slot);
-        NetworkManager.Singleton.StartHost();
-        SceneManager.LoadScene("GameScene");
-    }
+    // public void OnNewGameClick()
+    // {
+    //     GlobalSaveContext.Instance.RequestNewGame(_slot);
+    //     NetworkManager.Singleton.StartHost();
+    //     SceneManager.LoadScene("GameScene");
+    // }
 }

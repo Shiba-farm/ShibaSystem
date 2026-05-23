@@ -2,7 +2,7 @@ using System;
 using Unity.Netcode;
 using UnityEngine;
 
-public class InventoryData : NetworkBehaviour
+public class InventoryData : NetworkSaveableBehaviour
 {
     [SerializeField] private int inventorySize = 20;
     [SerializeField] private InventoryDataSignal connectionSignal;
@@ -10,6 +10,7 @@ public class InventoryData : NetworkBehaviour
     [SerializeField] private bool needMockData = true;
     public NetworkList<NetworkItems> InventoryItems;
     public int InventoryID => inventoryID;
+    public override bool IsPlayerSaveable => true;
 
     void Awake()
     {
@@ -18,11 +19,13 @@ public class InventoryData : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
+        base.OnNetworkSpawn();
         InventoryDataRegistry.Register(inventoryID, this);
         InventoryDataRegistry.RegisterOwner(OwnerClientId, this);
         if (IsServer)
         {
             InitializeInventory();
+            SaveLoadManager.Instance?.Register(this);
         }
         if (IsOwner)
         {
@@ -32,8 +35,11 @@ public class InventoryData : NetworkBehaviour
 
     public override void OnNetworkDespawn()
     {
+        base.OnNetworkDespawn();
         InventoryDataRegistry.Unregister(inventoryID);
         InventoryDataRegistry.UnregisterOwner(OwnerClientId, this);
+        if (IsServer)
+            SaveLoadManager.Instance?.Unregister(this);
     }
 
     private void InitializeInventory()
@@ -140,5 +146,56 @@ public class InventoryData : NetworkBehaviour
         {
             InventoryItems[i] = new NetworkItems { ItemID = 0, Amount = 0 };
         }
+    }
+
+    public override void CaptureState(GameSaveData save, ulong clientId = 0)
+    {
+        // Use OUR OWN OwnerClientId — ignore the passed clientId
+        var playerData = save.GetOrCreatePlayer(OwnerClientId);
+
+        var slots = new System.Collections.Generic.List<ItemSlotSaveData>();
+        for (int i = 0; i < InventoryItems.Count; i++)
+        {
+            var item = InventoryItems[i];
+            slots.Add(new ItemSlotSaveData
+            {
+                slotIndex = i,
+                itemID = item.ItemID,
+                amount = item.Amount
+            });
+        }
+
+        // inventoryID tells us whether this is main inventory or hotbar
+        if (inventoryID == 0) playerData.inventory = slots;
+        if (inventoryID == 1) playerData.hotbar = slots;
+
+        Debug.Log($"[InventoryData] Captured inv {inventoryID} for client {OwnerClientId}");
+    }
+
+    public override void RestoreState(GameSaveData save, ulong clientId = 0)
+    {
+        if (!IsServer) return;
+
+        // Use OUR OWN OwnerClientId
+        var playerData = save.FindPlayer(OwnerClientId);
+        if (playerData == null) return;
+
+        var slots = inventoryID == 0 ? playerData.inventory
+                  : inventoryID == 1 ? playerData.hotbar
+                  : null;
+
+        if (slots == null) return;
+
+        foreach (var saved in slots)
+        {
+            if (saved.slotIndex >= InventoryItems.Count) continue;
+            InventoryItems[saved.slotIndex] = new NetworkItems
+            {
+                ItemID = saved.itemID,
+                Amount = saved.amount
+            };
+        }
+
+        Debug.Log($"[InventoryData] Restored inv {inventoryID} for client {OwnerClientId}");
     }
 }

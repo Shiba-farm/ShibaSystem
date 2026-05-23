@@ -187,7 +187,9 @@ MonoBehaviour:
   - GameWorldSelect
   - CreateNewGame
   - GameMode
-  - Game
+  - MainGame
+  - Dungeon
+  - RoomShiba
 --- !u!114 &4260706783853169067
 MonoBehaviour:
   m_ObjectHideFlags: 0

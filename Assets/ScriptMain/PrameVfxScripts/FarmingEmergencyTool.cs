@@ -35,7 +35,7 @@ public class FarmingEmergencyTool : MonoBehaviour
             Debug.LogError("Assign HeldItemSignal and a Test Seed Item in the Inspector!");
             return;
         }
-        heldItemSignal.Set(testSeedItem);
+        heldItemSignal.Set(testSeedItem, 0);
         Debug.Log($"[EmergencyTool] Simulated holding: {testSeedItem.itemName}");
     }
 

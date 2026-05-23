@@ -25,7 +25,7 @@ namespace MyGame.Dungeon
         public void Setup(DungeonManager mgr)
         {
             manager = mgr;
-            playerTransform = mgr.player;
+            // playerTransform = mgr.player;
         }
 
         // ──────────────────────────────────────────────────────────────────────

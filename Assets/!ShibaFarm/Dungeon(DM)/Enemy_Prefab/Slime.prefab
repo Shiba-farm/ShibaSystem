@@ -63,6 +63,56 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime
       objectReference: {fileID: 0}
+    - target: {fileID: 6561498103380915689, guid: 9fe97ad80c0b25d46ac8fa2721e574a2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -38.980618
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561498103380915689, guid: 9fe97ad80c0b25d46ac8fa2721e574a2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0.44787067
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561498103380915689, guid: 9fe97ad80c0b25d46ac8fa2721e574a2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.5322006
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654763592455359506, guid: 9fe97ad80c0b25d46ac8fa2721e574a2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 64.99316
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654763592455359506, guid: 9fe97ad80c0b25d46ac8fa2721e574a2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -178.83047
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654763592455359506, guid: 9fe97ad80c0b25d46ac8fa2721e574a2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 178.83047
+      objectReference: {fileID: 0}
+    - target: {fileID: 8407907643135618399, guid: 9fe97ad80c0b25d46ac8fa2721e574a2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -4.702376
+      objectReference: {fileID: 0}
+    - target: {fileID: 8407907643135618399, guid: 9fe97ad80c0b25d46ac8fa2721e574a2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.0000030661454
+      objectReference: {fileID: 0}
+    - target: {fileID: 8407907643135618399, guid: 9fe97ad80c0b25d46ac8fa2721e574a2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.0000030661463
+      objectReference: {fileID: 0}
+    - target: {fileID: 8879528566716807029, guid: 9fe97ad80c0b25d46ac8fa2721e574a2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -89.98021
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -74,15 +124,27 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9fe97ad80c0b25d46ac8fa2721e574a2,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2740840309014040485}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9fe97ad80c0b25d46ac8fa2721e574a2,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 3608035103841468276}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9fe97ad80c0b25d46ac8fa2721e574a2,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: -4999731399641631825}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9fe97ad80c0b25d46ac8fa2721e574a2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3005478581088733446}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9fe97ad80c0b25d46ac8fa2721e574a2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4829923097996460102}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9fe97ad80c0b25d46ac8fa2721e574a2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1898184890312896794}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9fe97ad80c0b25d46ac8fa2721e574a2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1052530193385885129}
   m_SourcePrefab: {fileID: 100100000, guid: 9fe97ad80c0b25d46ac8fa2721e574a2, type: 3}
 --- !u!1 &8208307658403783832 stripped
 GameObject:
@@ -112,29 +174,9 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &2740840309014040485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8208307658403783832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1613d4d8f7cead4468e11d5a85d9c00c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHP: 20
-  attackDamage: 5
-  detectionRadius: 20
-  attackRadius: 1.5
-  attackCooldown: 1.5
-  walkAnimBool: IsRunning
-  attackAnimTrig: Chop
-  dieAnimTrig: Die
 --- !u!95 &3608035103841468276
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -148,6 +190,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -161,11 +204,96 @@ Animation:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8208307658403783832}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Animation: {fileID: 4781951162920444690, guid: 9f260181bac982549b4f81b6408d4b5b,
     type: 3}
   m_Animations: []
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
+  m_UpdateMode: 0
   m_CullingType: 0
+--- !u!114 &3005478581088733446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8208307658403783832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
+  GlobalObjectIdHash: 2292300383
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  DeferredDespawnTick: 0
+  Ownership: 1
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+  SyncOwnerTransformWhenParented: 1
+  AllowOwnerToParent: 0
+--- !u!114 &-4829923097996460102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8208307658403783832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphAgent
+  ShowTopMostFoldoutHeaderGroup: 1
+  m_Graph: {fileID: 3565078696992754197, guid: 8667a8887fe3d5d4ba29bf7fa8baf1de, type: 2}
+  m_BlackboardVariableOverridesList:
+  - rid: 5843274814766448856
+  m_OriginalGraph: {fileID: 3565078696992754197, guid: 8667a8887fe3d5d4ba29bf7fa8baf1de,
+    type: 2}
+  m_IsInitialised: 0
+  m_IsStarted: 0
+  NetcodeRunOnlyOnOwner: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 5843274814766448856
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]',
+        ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1
+          m_Value1: 0
+        Name: Self
+        m_Value: {fileID: 8208307658403783832}
+--- !u!114 &1898184890312896794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8208307658403783832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9eed023c631a9144b01112f97f4f4cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SlimeDebug
+  targetPoint: {fileID: 0}
+--- !u!114 &1052530193385885129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8208307658403783832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45390e311a48b43419c3eb4a917b5ab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SlimeInitializer
+  ShowTopMostFoldoutHeaderGroup: 1

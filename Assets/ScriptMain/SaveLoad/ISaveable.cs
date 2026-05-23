@@ -5,4 +5,10 @@ public interface ISaveable
 
     // Server calls this to push data back after loading JSON
     void RestoreState(GameSaveData save, ulong clientId = 0);
+    bool IsPlayerSaveable { get; }
+}
+
+public interface ILocalSaveable : ISaveable
+{
+    ulong OwnerClientId { get; }
 }

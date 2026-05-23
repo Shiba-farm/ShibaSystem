@@ -1,6 +1,6 @@
 using Unity.Netcode;
 using UnityEngine;
-public class StatManager : NetworkBehaviour, ISaveable
+public class StatManager : NetworkSaveableBehaviour
 {
     [Header("Stat")]
     [SerializeField] public PlayerStatDataSO statsTemplate;
@@ -8,6 +8,7 @@ public class StatManager : NetworkBehaviour, ISaveable
 
     public NetworkList<NetworkStat> AllStats;
     public NetworkList<NetworkKnowledgeStat> KnowledgeLevels;
+    public override bool IsPlayerSaveable => true;
     private PlayerController _controller;
 
     public void Awake()
@@ -30,40 +31,54 @@ public class StatManager : NetworkBehaviour, ISaveable
 
     public override void OnNetworkSpawn()
     {
+        base.OnNetworkSpawn();
+        Debug.Log($"[StatManager] OnNetworkSpawn — AllStats.Count: {AllStats.Count} IsServer:{IsServer}");
         if (IsServer)
         {
-            InitializeStat(StatType.Health, statsTemplate.maxHealth);
-            InitializeStat(StatType.Stamina, statsTemplate.maxStamina);
-            InitializeStat(StatType.Energy, statsTemplate.maxEnergy);
+            if (AllStats.Count == 0)
+            {
+                InitializeStat(StatType.Health, statsTemplate.maxHealth);
+                InitializeStat(StatType.Stamina, statsTemplate.maxStamina);
+                InitializeStat(StatType.Energy, statsTemplate.maxEnergy);
+            }
 
             foreach (RecipeCategory cat in System.Enum.GetValues(typeof(RecipeCategory)))
             {
                 KnowledgeLevels.Add(new NetworkKnowledgeStat { Category = cat, Level = 1 });
             }
+            SaveLoadManager.Instance?.Register(this);
         }
         if (IsOwner)
         {
-            if (PlayerUI.Instance != null)
-            {
-                PlayerUI.Instance.BindPlayer(this);
-            }
-            else
-            {
-                NetworkManager.SceneManager.OnSceneEvent += OnSceneEvent;
-            }
-            // knowledgeSignal.UpdateKnowledgeSource(this);
+            // Subscribe to scene events to rebind UI after every transition
+            NetworkManager.SceneManager.OnSceneEvent -= OnSceneEvent;
+            NetworkManager.SceneManager.OnSceneEvent += OnSceneEvent;
+
+            // Bind immediately if UI already exists
+            TryBindUI();
+        }
+    }
+
+    private void TryBindUI()
+    {
+        if (PlayerUI.Instance != null)
+        {
+            PlayerUI.Instance.BindPlayer(this);
+            Debug.Log($"[StatManager] UI bound — AllStats.Count: {AllStats.Count}");
         }
     }
 
     private void OnSceneEvent(SceneEvent sceneEvent)
     {
-        if (sceneEvent.SceneEventType == SceneEventType.LoadEventCompleted)
-        {
-            if (PlayerUI.Instance != null)
-            {
-                PlayerUI.Instance.BindPlayer(this);
-            }
-        }
+        if (sceneEvent.SceneEventType != SceneEventType.LoadEventCompleted) return;
+        StartCoroutine(BindUINextFrame());
+    }
+
+    private System.Collections.IEnumerator BindUINextFrame()
+    {
+        yield return null;  // wait one frame for NGO to sync NetworkLists
+        yield return null;  // wait one more frame to be safe
+        TryBindUI();
     }
 
     public int GetLevelForCategory(RecipeCategory category)
@@ -77,7 +92,13 @@ public class StatManager : NetworkBehaviour, ISaveable
 
     public override void OnNetworkDespawn()
     {
+        base.OnNetworkDespawn();
 
+        if (IsOwner)
+            NetworkManager.SceneManager.OnSceneEvent -= OnSceneEvent;
+
+        if (IsServer)
+            SaveLoadManager.Instance?.Unregister(this);
     }
 
     void Update()
@@ -156,7 +177,7 @@ public class StatManager : NetworkBehaviour, ISaveable
 
     }
 
-    public void CaptureState(GameSaveData save, ulong clientId = 0)
+    public override void CaptureState(GameSaveData save, ulong clientId = 0)
     {
         var playerData = save.GetOrCreatePlayer(clientId);
 
@@ -175,7 +196,7 @@ public class StatManager : NetworkBehaviour, ISaveable
         // playerData.level = currentLevel.Value;
     }
 
-    public void RestoreState(GameSaveData save, ulong clientId = 0)
+    public override void RestoreState(GameSaveData save, ulong clientId = 0)
     {
         if (!IsServer) return;
         var playerData = save.FindPlayer(clientId);

@@ -190,6 +190,24 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": ""Press"",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""OrbitLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""717d0d96-419a-4c86-af96-d9b5fcb081ea"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""OrbitRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""843bb343-e139-4a05-925c-2d4fafe862d3"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -533,6 +551,28 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""UseTool"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8f6153fd-2d15-4f98-86f8-2d819ad4917f"",
+                    ""path"": ""<Keyboard>/j"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OrbitLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5f3a9743-7d0b-4809-9441-458cd83ffd9d"",
+                    ""path"": ""<Keyboard>/k"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OrbitRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -558,6 +598,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Key_NumPad = m_Key.FindAction("NumPad", throwIfNotFound: true);
         m_Key_Pause = m_Key.FindAction("Pause", throwIfNotFound: true);
         m_Key_UseTool = m_Key.FindAction("UseTool", throwIfNotFound: true);
+        m_Key_OrbitLeft = m_Key.FindAction("OrbitLeft", throwIfNotFound: true);
+        m_Key_OrbitRight = m_Key.FindAction("OrbitRight", throwIfNotFound: true);
     }
 
     ~@PlayerControls()
@@ -649,6 +691,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Key_NumPad;
     private readonly InputAction m_Key_Pause;
     private readonly InputAction m_Key_UseTool;
+    private readonly InputAction m_Key_OrbitLeft;
+    private readonly InputAction m_Key_OrbitRight;
     /// <summary>
     /// Provides access to input actions defined in input action map "Key".
     /// </summary>
@@ -704,6 +748,14 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Key/UseTool".
         /// </summary>
         public InputAction @UseTool => m_Wrapper.m_Key_UseTool;
+        /// <summary>
+        /// Provides access to the underlying input action "Key/OrbitLeft".
+        /// </summary>
+        public InputAction @OrbitLeft => m_Wrapper.m_Key_OrbitLeft;
+        /// <summary>
+        /// Provides access to the underlying input action "Key/OrbitRight".
+        /// </summary>
+        public InputAction @OrbitRight => m_Wrapper.m_Key_OrbitRight;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -763,6 +815,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @UseTool.started += instance.OnUseTool;
             @UseTool.performed += instance.OnUseTool;
             @UseTool.canceled += instance.OnUseTool;
+            @OrbitLeft.started += instance.OnOrbitLeft;
+            @OrbitLeft.performed += instance.OnOrbitLeft;
+            @OrbitLeft.canceled += instance.OnOrbitLeft;
+            @OrbitRight.started += instance.OnOrbitRight;
+            @OrbitRight.performed += instance.OnOrbitRight;
+            @OrbitRight.canceled += instance.OnOrbitRight;
         }
 
         /// <summary>
@@ -807,6 +865,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @UseTool.started -= instance.OnUseTool;
             @UseTool.performed -= instance.OnUseTool;
             @UseTool.canceled -= instance.OnUseTool;
+            @OrbitLeft.started -= instance.OnOrbitLeft;
+            @OrbitLeft.performed -= instance.OnOrbitLeft;
+            @OrbitLeft.canceled -= instance.OnOrbitLeft;
+            @OrbitRight.started -= instance.OnOrbitRight;
+            @OrbitRight.performed -= instance.OnOrbitRight;
+            @OrbitRight.canceled -= instance.OnOrbitRight;
         }
 
         /// <summary>
@@ -937,5 +1001,19 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnUseTool(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "OrbitLeft" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnOrbitLeft(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "OrbitRight" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnOrbitRight(InputAction.CallbackContext context);
     }
 }

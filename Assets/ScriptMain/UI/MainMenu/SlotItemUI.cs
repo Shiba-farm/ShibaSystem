@@ -37,10 +37,22 @@ public class SlotItemUI : MonoBehaviour
         emptyState?.SetActive(false);
         filledState?.SetActive(true);
 
-        worldNameText.text  = preview.worldName;
-        dateTimeText.text   = $"Month {preview.world.currentMonth} · Day {preview.world.currentDay}";
-        moneyText.text      = $"{preview.world.sharedGold}G";
-        timeSpendText.text  = preview.savedAt;
+        worldNameText.text = preview.worldName;
+        dateTimeText.text = $"Month {preview.world.currentMonth} · Day {preview.world.currentDay}";
+        moneyText.text = $"{preview.world.sharedGold}G";
+        timeSpendText.text = preview.savedAt;
+        if (System.DateTime.TryParse(preview.savedAt, null, System.Globalization.DateTimeStyles.RoundtripKind, out var date))
+        {
+            var localDate = date.ToLocalTime();
+            int adYear = localDate.Year;
+
+            // If running on Thai locale, Year might already be BE (2569), so correct it
+            if (adYear > 2500) adYear -= 543;
+
+            timeSpendText.text = $"{localDate.ToString("MMM", System.Globalization.CultureInfo.InvariantCulture)} {localDate.Day}, {adYear}  {localDate:HH:mm}";
+        }
+        else
+            timeSpendText.text = preview.savedAt;
     }
 
     public void SetSelected(bool selected)

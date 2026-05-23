@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 
 public enum ItemCategory { Base, Tools, Food, Structures, Resources, Seed, FarmHelper, Wearables }
-public enum ToolAction { None, Hoe, Water, Axe, Mine, Fish }
+public enum ToolAction { None, Hoe, Water, Axe, Mine, Fish, Weapon }
 
 public enum SellCategory { Farming, Fishing, Ore, Other }
 public enum HoldType

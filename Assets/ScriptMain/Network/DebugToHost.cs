@@ -3,18 +3,39 @@ using UnityEngine;
 
 public class DebugToHost : MonoBehaviour
 {
-    void Start()
+    private void Start()
     {
-        if (NetworkManager.Singleton == null)
+        NetworkManager.Singleton.ConnectionApprovalCallback += ApprovalCheck;
+        NetworkManager.Singleton.StartHost();
+    }
+
+    private void OnDestroy()
+    {
+        if (NetworkManager.Singleton != null)
+            NetworkManager.Singleton.ConnectionApprovalCallback -= ApprovalCheck;
+    }
+
+    private void ApprovalCheck(
+        NetworkManager.ConnectionApprovalRequest request,
+        NetworkManager.ConnectionApprovalResponse response)
+    {
+        response.Approved           = true;
+        response.CreatePlayerObject = true;
+
+        // Read spawn point from current scene's SpawnPointManager
+        if (SpawnPointManager.Instance != null)
         {
-            Debug.LogWarning("NetworkManager not found yet. Waiting...");
-            return;
+            response.Position = SpawnPointManager.Instance.GetNextPosition();
+            response.Rotation = SpawnPointManager.Instance.GetNextRotation();
         }
-        
-        if (Application.isEditor && !NetworkManager.Singleton.IsServer && !NetworkManager.Singleton.IsClient)
+        else
         {
-            Debug.Log("DEBUG: Automatically starting Host for Shiba testing...");
-            NetworkManager.Singleton.StartHost();
+            // No SpawnPointManager in scene — use origin
+            response.Position = Vector3.zero;
+            response.Rotation = Quaternion.identity;
         }
+
+        Debug.Log($"[Approval] Spawning client {request.ClientNetworkId} " +
+                  $"at {response.Position}");
     }
 }

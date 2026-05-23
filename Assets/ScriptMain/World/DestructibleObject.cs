@@ -31,7 +31,7 @@ public abstract class DestructibleObject : NetworkBehaviour, IDamageable
 
         currentHealth.Value -= amount;
 
-        // Debug.Log($"Take the damage : {amount}");
+        Debug.Log($"Take the damage : {amount}, current health : {currentHealth.Value}");
         
         if (currentHealth.Value <= 0)
             OnDepleted();

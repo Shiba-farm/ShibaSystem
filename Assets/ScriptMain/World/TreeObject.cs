@@ -5,24 +5,40 @@ public class TreeObject : DestructibleObject
 {
     [SerializeField] private int woodItemID;
     [SerializeField] private int woodAmount = 3;
-    // [SerializeField] private GameObject shakeVFX;
+    [SerializeField] private float fallDuration = 1.5f; // match your Tree fall clip length
 
-    // runs on all clients — just visuals
-    protected override void OnHealthChanged(int prev, int next)
+    private Animator _animator;
+    private static readonly int DepletedHash = Animator.StringToHash("Depleted");
+
+    public override void OnNetworkSpawn()
     {
-        // play shake/hit vfx locally on every client
-        // if (shakeVFX != null)
-        //     shakeVFX.SetActive(true);
+        base.OnNetworkSpawn();
+        _animator = GetComponent<Animator>();
+        Debug.Log($"Tree spawned with health: {currentHealth.Value}, animator found: {_animator != null}");
     }
 
-    // runs on server only
     protected override void OnDepleted()
     {
-        // spawn loot
+        // Play fall animation on all clients before despawning
+        PlayFallAnimationClientRpc();
+
+        // Spawn loot immediately on server
         NetworkItemSpawner.Instance.SpawnItem(
             woodItemID, woodAmount, transform.position);
 
-        // despawn the tree for all clients
+        // Despawn after animation finishes
+        StartCoroutine(DespawnAfterFall());
+    }
+
+    [ClientRpc]
+    private void PlayFallAnimationClientRpc()
+    {
+        _animator?.SetBool(DepletedHash, true);
+    }
+
+    private System.Collections.IEnumerator DespawnAfterFall()
+    {
+        yield return new WaitForSeconds(fallDuration);
         GetComponent<NetworkObject>().Despawn();
     }
 }

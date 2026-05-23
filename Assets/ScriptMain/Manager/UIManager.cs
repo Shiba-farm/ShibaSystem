@@ -9,7 +9,9 @@ public enum GameScene
     GameWorldSelect,
     CreateNewGame,
     GameMode,
-    Game,
+    MainGame,
+    DunGeon,
+    RoomShiba,
 }
 
 public class UIManager : MonoBehaviour
@@ -19,6 +21,7 @@ public class UIManager : MonoBehaviour
     [Header("Transition")]
     [SerializeField] private CanvasGroup fadeCanvasGroup;
     [SerializeField] private float fadeDuration = 0.5f;
+    public float FadeDuration => fadeDuration;
 
     [Header("Scenes")]
     [SerializeField]
@@ -29,7 +32,9 @@ public class UIManager : MonoBehaviour
         "GameWorldSelect",// 2 — GameScene.GameWorldSelect
         "CreateNewGame",  // 3 — GameScene.CreateNewGame
         "GameMode",       // 4 — GameScene.GameMode
-        "Game"            // 5 — GameScene.Game
+        "MainGame",            // 5 — GameScene.Game
+        "Dungeon",            // 5 — GameScene.Game
+        "RoomShiba"            // 5 — GameScene.Game
     };
     private void Awake()
     {
@@ -43,6 +48,11 @@ public class UIManager : MonoBehaviour
     {
         Debug.Log($"Game scene selected : {(int)scene}");
         StartCoroutine(TransitionToScene(sceneNames[(int)scene]));
+    }
+
+    public void LoadScneneByName(string sceneName)
+    {
+        StartCoroutine(TransitionToScene(sceneName));
     }
 
     private IEnumerator TransitionToScene(string sceneName)
@@ -73,5 +83,17 @@ public class UIManager : MonoBehaviour
 
         fadeCanvasGroup.alpha = to;
         fadeCanvasGroup.blocksRaycasts = to > 0f;
+    }
+
+    public void FadeOut()
+    {
+        StopAllCoroutines();
+        StartCoroutine(Fade(fadeCanvasGroup.alpha, 1f));
+    }
+
+    public void FadeIn()
+    {
+        StopAllCoroutines();
+        StartCoroutine(Fade(fadeCanvasGroup.alpha, 0f));
     }
 }

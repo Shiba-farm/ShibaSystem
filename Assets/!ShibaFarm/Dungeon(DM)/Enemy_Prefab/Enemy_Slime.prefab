@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1531225372320160555}
   - component: {fileID: 1675643689554404944}
   - component: {fileID: 8893686014235277472}
-  - component: {fileID: 5393696576517893365}
+  - component: {fileID: -1583767732583427168}
   m_Layer: 0
   m_Name: Enemy_Slime
   m_TagString: Enemy
@@ -62,6 +62,11 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -83,9 +88,11 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &1675643689554404944
 BoxCollider:
@@ -130,7 +137,7 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &5393696576517893365
+--- !u!114 &-1583767732583427168
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,17 +146,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 4155482033927367520}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1613d4d8f7cead4468e11d5a85d9c00c, type: 3}
+  m_Script: {fileID: 11500000, guid: 117c177bd5197b04f853c5b0a372cba9, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  maxHP: 20
+  m_EditorClassIdentifier: Assembly-CSharp::SlimeAI
+  sightRange: 8
+  forgetRange: 12
+  attackRange: 1.5
+  roamRadius: 6
+  idleTimeMin: 1
+  idleTimeMax: 3
+  attackCooldown: 1.2
   attackDamage: 5
-  detectionRadius: 20
-  attackRadius: 1.5
-  attackCooldown: 1.5
-  walkAnimBool: IsRunning
-  attackAnimTrig: Chop
-  dieAnimTrig: Die
+  maxHP: 30
+  lowHealthThreshold: 0.3
 --- !u!1001 &5744868783375316401
 PrefabInstance:
   m_ObjectHideFlags: 0

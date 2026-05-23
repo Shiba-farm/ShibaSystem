@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using MyGame.Dungeon;
 
 [System.Serializable]
 public class GameSaveData
@@ -7,9 +8,11 @@ public class GameSaveData
     public string saveVersion = "1.0";
     public string savedAt;               // DateTime.UtcNow.ToString()
     public int    slotIndex;
+    public string worldName;
 
     public WorldSaveData world = new();
     public List<PlayerSaveData> players = new();
+    public DungeonSaveData dungeon;
 
     public PlayerSaveData GetOrCreatePlayer(ulong clientId)
     {
@@ -79,6 +82,7 @@ public class PlayerSaveData
     // Identity
     public string playerId;           // stable ID (Steam ID later, GUID for now)
     public string playerName;
+    public string currentScene;
 
     // PlayerController — position
     public float posX, posY, posZ;
