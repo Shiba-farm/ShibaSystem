@@ -48,7 +48,7 @@ public class InventoryData : NetworkBehaviour
 
         if (needMockData)
         {
-            InventoryItems[0] = new NetworkItems { ItemID = 4, Amount = 1 }; // e.g. Sword
+            InventoryItems[0] = new NetworkItems { ItemID = 20, Amount = 2 }; // e.g. Sword
             InventoryItems[1] = new NetworkItems { ItemID = 5, Amount = 4 }; // e.g. Potions
             InventoryItems[2] = new NetworkItems { ItemID = 17, Amount = 2 }; // e.g. Potions
             InventoryItems[3] = new NetworkItems { ItemID = 18, Amount = 1 }; // e.g. Potions
