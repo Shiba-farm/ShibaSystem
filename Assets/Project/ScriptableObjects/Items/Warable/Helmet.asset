@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301b467e6d361c34792e4029e86e37d8, type: 3}
+  m_Name: Helmet
+  m_EditorClassIdentifier: Assembly-CSharp::WearableItemSO
+  itemName: Helmet
+  itemID: 200
+  icon: {fileID: 384877917, guid: 25d21e07faad6884d91919ee563fca17, type: 3}
+  isStackable: 0
+  maxStack: 99
+  equipmentPrefab: {fileID: 5561742101586074446, guid: ec08487c9e2994f4aa7fc50a2644de0b,
+    type: 3}
+  worldItemPrefab: {fileID: 5561742101586074446, guid: ec08487c9e2994f4aa7fc50a2644de0b,
+    type: 3}
+  holdType: 1
+  sellable: 1
+  sellPrice: 10
+  sellCategory: 3
+  category: 7
+  holdPositions:
+  - state: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+    rotationOffset: {x: 0, y: 0, z: 0}
+    localScale: {x: 1, y: 1, z: 1}
+  - state: 1
+    positionOffset: {x: 0, y: 0, z: 0}
+    rotationOffset: {x: 0, y: 0, z: 0}
+    localScale: {x: 1, y: 1, z: 1}
+  defaultHoldState: 0
+  slot: 0
+  defenseBonus: 0
+  speedBonus: 0
+  visualPrefab: {fileID: 5561742101586074446, guid: ec08487c9e2994f4aa7fc50a2644de0b,
+    type: 3}
+  visualPositionOffset: {x: 0.0000000013771, y: 0.98209, z: -0.0099995}
+  visualRotationOffset: {x: 0, y: 0, z: 0}
+  visualScale: {x: 3.3461988, y: 3.3461988, z: 3.3461988}

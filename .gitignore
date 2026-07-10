@@ -31,9 +31,6 @@
 /[Aa]ssets/Plugins/Editor/JetBrains*
 # Jetbrains Rider personal-layer settings
 *.DotSettings.user
-/Assets/!SoStylized/
-/Assets/_MyObject/
-/Assets/Polyart/
 
 # Visual Studio cache directory
 .vs/
@@ -45,8 +42,10 @@
 ExportedObj/
 .consulo/
 *.csproj
+*.csproj.lscache
 *.unityproj
 *.sln
+*.slnx
 *.suo
 *.tmp
 *.user
@@ -58,6 +57,9 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
+
+# Unity directory monitor sync temp files (created at project root)
+~UnityDirMonSyncFile~*
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -101,11 +103,30 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
-/Assets/\!SoStylized/
-/Assets/\!Toon Enchanted Meadow
-/Assets/_Material/
-/Assets/_MyObject/
-/Assets/Mesh Optimizer/
-/Assets/Polyart/
-/Assets/SkySeries Freebie/
-/Assets/StarterAssets/
+
+# ── Third-party / purchased Asset Store content ───────────────────────────────
+# These are commercial or downloaded assets. Each developer installs them locally.
+# The whole ThirdParty folder is excluded so large meshes, textures, and audio
+# files don't bloat the repo or violate asset store redistribution terms.
+/Assets/ThirdParty/
+/Assets/ThirdParty.meta
+/Assets/Project/Textures/
+/Assets/Project/Textures.meta
+/Assets/Project/Models/
+/Assets/Project/Models.meta
+/Assets/Project/Environment/
+/Assets/Project/Environment.meta
+/Assets/Project/Video/
+/Assets/Project/Video.meta
+/Assets/Project/Audio/
+/Assets/Project/Audio.meta
+
+# TextMesh Pro examples — large demo scenes and font atlases, not needed in source
+/Assets/TextMesh Pro/Examples & Extras/
+/Assets/TextMesh Pro/Examples & Extras.meta
+
+# ── Shiba Farm runtime data ───────────────────────────────────────────────────
+# Save files written at runtime — never commit player save data
+Assets/_Project/SaveData/
+.vscode
+.vscode

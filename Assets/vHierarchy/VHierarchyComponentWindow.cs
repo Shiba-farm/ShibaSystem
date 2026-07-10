@@ -23,7 +23,7 @@ namespace VHierarchy
 
         void OnGUI()
         {
-            if (!component) component = EditorUtility.InstanceIDToObject(componentIid) as Component;
+            if (!component) component = _EditorUtility_InstanceIDToObject(componentIid) as Component;
             if (!component) { Close(); return; }
 
             if (!editor) Init(component);

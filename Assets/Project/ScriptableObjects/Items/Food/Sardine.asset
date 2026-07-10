@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45b888c691fbaf646a779adadfa6a3e2, type: 3}
+  m_Name: Sardine
+  m_EditorClassIdentifier: Assembly-CSharp::FoodItemSO
+  itemName: Sardines
+  itemID: 29
+  icon: {fileID: 21300000, guid: a66adee478a93fd4c8fbd9a21b8b948d, type: 3}
+  isStackable: 1
+  maxStack: 99
+  equipmentPrefab: {fileID: 8734276304624649870, guid: 0c6edb7bd1890934dbc03c1f8951a65e,
+    type: 3}
+  worldItemPrefab: {fileID: 8734276304624649870, guid: 0088e384a4b8c1f4d8f2ebe7f8fc2cea,
+    type: 3}
+  holdType: 1
+  sellable: 1
+  sellPrice: 10
+  sellCategory: 3
+  category: 1
+  holdPositions: []
+  defaultHoldState: 0
+  energyRestore: 0
+  healthRestore: 0
+  energyCost: 0
+  staminaCost: 0
+  animationTriggerName: 

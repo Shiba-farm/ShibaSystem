@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301b467e6d361c34792e4029e86e37d8, type: 3}
+  m_Name: Boots
+  m_EditorClassIdentifier: Assembly-CSharp::WearableItemSO
+  itemName: Boots
+  itemID: 203
+  icon: {fileID: 536791977, guid: 232da167fec3ee44b93c731e11e34e67, type: 3}
+  isStackable: 0
+  maxStack: 99
+  equipmentPrefab: {fileID: 150298104457628303, guid: 02ebb6ca1c9df1444b447f07a1cc3291,
+    type: 3}
+  worldItemPrefab: {fileID: 150298104457628303, guid: 02ebb6ca1c9df1444b447f07a1cc3291,
+    type: 3}
+  holdType: 1
+  sellable: 1
+  sellPrice: 10
+  sellCategory: 3
+  category: 7
+  holdPositions:
+  - state: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+    rotationOffset: {x: 0, y: 0, z: 0}
+    localScale: {x: 1, y: 1, z: 1}
+  - state: 1
+    positionOffset: {x: 0, y: 0, z: 0}
+    rotationOffset: {x: 0, y: 0, z: 0}
+    localScale: {x: 1, y: 1, z: 1}
+  defaultHoldState: 0
+  slot: 3
+  defenseBonus: 12
+  speedBonus: 30
+  attackBonus: 5
+  visualPrefab: {fileID: 919132149155446097, guid: a6090cac8641b95478fa5a2c82736cfb,
+    type: 3}
+  visualPositionOffset: {x: 0.009, y: -0.062, z: 0.148}
+  visualRotationOffset: {x: 304.39648, y: 352.88562, z: 187.4308}
+  visualScale: {x: 1.9010493, y: 1.9558308, z: 1.5712603}

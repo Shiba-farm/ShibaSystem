@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0022e122eb350fc4196d0cfd93886ec4, type: 3}
+  m_Name: NPC_Buny
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDefinitionSO
+  npcId: 1
+  displayName: Buny
+  portrait: {fileID: 21300000, guid: 9bde7cb8cb8e70641973670d86e4c811, type: 3}
+  biography: The kind neighbor from the farm next door is always happy to help the
+    little Shiba.
+  maxHeartLevel: 6
+  favoriteGifts:
+  - {fileID: 11400000, guid: dc212a68ff3a55a4d82d0fe82b948858, type: 2}
+  lovedGifts:
+  - {fileID: 11400000, guid: 1a0e5ffe912021043b061e31ac4c6118, type: 2}

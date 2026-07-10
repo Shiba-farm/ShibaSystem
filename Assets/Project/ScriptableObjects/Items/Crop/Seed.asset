@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c673eaaa013c754fb43da48a0ad1d69, type: 3}
+  m_Name: Seed
+  m_EditorClassIdentifier: Assembly-CSharp::SeedItemSO
+  itemName: Seed
+  itemID: 24
+  icon: {fileID: 21300000, guid: 5acdd524fa1670e44ad0e33c8c7d604a, type: 3}
+  isStackable: 1
+  maxStack: 99
+  equipmentPrefab: {fileID: 2911813514542648740, guid: 74906b72c9ec8bd46a3371760ff95dae,
+    type: 3}
+  worldItemPrefab: {fileID: 2911813514542648740, guid: 4e62edcd3c955b84ba93c0a1ca97813c,
+    type: 3}
+  holdType: 1
+  sellable: 1
+  sellPrice: 10
+  sellCategory: 0
+  category: 5
+  holdPositions:
+  - state: 0
+    positionOffset: {x: 0.22, y: 0.12, z: 0.18}
+    rotationOffset: {x: 0, y: 0, z: 0}
+  defaultHoldState: 0
+  crop: {fileID: 11400000, guid: a2ae61deed2160d48b16afc251f2d876, type: 2}
+  energyCost: 0
+  staminaCost: 0
+  animationTriggerName: PlaceItem

@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7be2a4c9a1aaf54b9bf60014cd304cf, type: 3}
+  m_Name: Hoe
+  m_EditorClassIdentifier: Assembly-CSharp::ToolItemSO
+  itemName: Hoe
+  itemID: 23
+  icon: {fileID: 21300000, guid: 444934963c28be94c9d930bd54961177, type: 3}
+  isStackable: 1
+  maxStack: 99
+  equipmentPrefab: {fileID: 1677650628920329205, guid: 056ca1bee42342d43b51acd725545812,
+    type: 3}
+  worldItemPrefab: {fileID: 1677650628920329205, guid: 027094865a446174da6168b563c783a2,
+    type: 3}
+  holdType: 2
+  sellable: 1
+  sellPrice: 10
+  sellCategory: 3
+  category: 1
+  holdPositions:
+  - state: 0
+    positionOffset: {x: 0.57, y: 0.01, z: 0.06}
+    rotationOffset: {x: 179.9, y: -91.53, z: 6.85}
+    localScale: {x: 1, y: 1, z: 1}
+  - state: 1
+    positionOffset: {x: 0, y: 0, z: 0}
+    rotationOffset: {x: 0, y: 0, z: 0}
+    localScale: {x: 1, y: 1, z: 1}
+  defaultHoldState: 0
+  energyCost: 1
+  staminaCost: 1
+  hitRange: 2
+  damage: 10
+  toolTypeAction: 1
+  animationTriggerName: Dig

@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301b467e6d361c34792e4029e86e37d8, type: 3}
+  m_Name: Ring
+  m_EditorClassIdentifier: Assembly-CSharp::WearableItemSO
+  itemName: Ring
+  itemID: 201
+  icon: {fileID: -1248102687, guid: ac78df37dc42330408fa263374dab189, type: 3}
+  isStackable: 0
+  maxStack: 99
+  equipmentPrefab: {fileID: 3285729563146551907, guid: b38fda59079c78048899e9c7a066e86e,
+    type: 3}
+  worldItemPrefab: {fileID: 3285729563146551907, guid: b38fda59079c78048899e9c7a066e86e,
+    type: 3}
+  holdType: 1
+  sellable: 1
+  sellPrice: 10
+  sellCategory: 3
+  category: 7
+  holdPositions:
+  - state: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+    rotationOffset: {x: 0, y: 0, z: 0}
+    localScale: {x: 1, y: 1, z: 1}
+  - state: 1
+    positionOffset: {x: 0, y: 0, z: 0}
+    rotationOffset: {x: 0, y: 0, z: 0}
+    localScale: {x: 1, y: 1, z: 1}
+  defaultHoldState: 0
+  slot: 1
+  defenseBonus: 0
+  speedBonus: 0
+  visualPrefab: {fileID: 3285729563146551907, guid: b38fda59079c78048899e9c7a066e86e,
+    type: 3}
+  visualPositionOffset: {x: 0.037997, y: -0.0070189, z: 0.057788}
+  visualRotationOffset: {x: 69.83293, y: 180.00026, z: 180.00024}
+  visualScale: {x: 1.3734411, y: 1.3734411, z: 1.3734411}

@@ -1287,7 +1287,7 @@ namespace VHierarchy.Libs
         public struct GlobalID : System.IEquatable<GlobalID>
         {
             public Object GetObject() => GlobalObjectId.GlobalObjectIdentifierToObjectSlow(globalObjectId);
-            public int GetObjectInstanceId() => GlobalObjectId.GlobalObjectIdentifierToInstanceIDSlow(globalObjectId);
+            public int GetObjectInstanceId() => _GlobalObjectId_GlobalObjectIdentifierToInstanceIDSlow(globalObjectId);
 
 
             public int idType => globalObjectId.identifierType;
@@ -1340,7 +1340,7 @@ namespace VHierarchy.Libs
         {
             var unityGlobalIds = new GlobalObjectId[instanceIds.Count()];
 
-            GlobalObjectId.GetGlobalObjectIdsSlow(instanceIds.ToArray(), unityGlobalIds);
+            _GlobalObjectId_GetGlobalObjectIdsSlow(instanceIds.ToArray(), unityGlobalIds);
 
             var globalIds = unityGlobalIds.Select(r => new GlobalID(r.ToString()));
 
@@ -1365,7 +1365,7 @@ namespace VHierarchy.Libs
 
             var iids = new int[goids.Length];
 
-            GlobalObjectId.GlobalObjectIdentifiersToInstanceIDsSlow(goids, iids);
+            _GlobalObjectId_GlobalObjectIdentifiersToInstanceIDsSlow(goids, iids);
 
             return iids;
 
@@ -1424,7 +1424,11 @@ namespace VHierarchy.Libs
             }
             public static EditorWindow OpenColorPicker(System.Action<Color> colorChangedCallback, Color color, bool showAlpha = true, bool hdr = false)
             {
+#if UNITY_6000_3_OR_NEWER
+                typeof(Editor).Assembly.GetType("UnityEditor.ColorPicker").InvokeMethod("Show", colorChangedCallback, color, showAlpha, hdr, false);
+#else
                 typeof(Editor).Assembly.GetType("UnityEditor.ColorPicker").InvokeMethod("Show", colorChangedCallback, color, showAlpha, hdr);
+#endif
 
                 return typeof(Editor).Assembly.GetType("UnityEditor.ColorPicker").GetPropertyValue<EditorWindow>("instance");
 
@@ -1869,6 +1873,87 @@ namespace VHierarchy.Libs
 
 
 #endif
+
+        #endregion
+
+        #region Instance/Entity ID mess
+
+
+        static int _GlobalObjectId_GlobalObjectIdentifierToInstanceIDSlow(GlobalObjectId id)
+        {
+#if UNITY_6000_3_OR_NEWER
+            return GlobalObjectId.GlobalObjectIdentifierToEntityIdSlow(id);
+#else
+            return GlobalObjectId.GlobalObjectIdentifierToInstanceIDSlow(id);
+#endif
+
+        }
+
+        static void _GlobalObjectId_GlobalObjectIdentifiersToInstanceIDsSlow(GlobalObjectId[] identifiers, int[] outputInstanceIDs)
+        {
+#if UNITY_6000_3_OR_NEWER
+
+            var outputEntityIds = new EntityId[outputInstanceIDs.Length];
+
+            GlobalObjectId.GlobalObjectIdentifiersToEntityIdsSlow(identifiers, outputEntityIds);
+
+            for (int i = 0; i < outputEntityIds.Length; i++)
+                outputInstanceIDs[i] = (int)outputEntityIds[i];
+
+#else
+
+            GlobalObjectId.GlobalObjectIdentifiersToInstanceIDsSlow(identifiers, outputInstanceIDs);
+
+#endif
+
+        }
+
+        static void _GlobalObjectId_GetGlobalObjectIdsSlow(int[] ids, GlobalObjectId[] outputIdentifiers)
+        {
+#if UNITY_6000_3_OR_NEWER
+            GlobalObjectId.GetGlobalObjectIdsSlow(ids.Select(r => (EntityId)r).ToArray(), outputIdentifiers);
+#else
+            GlobalObjectId.GetGlobalObjectIdsSlow(ids, outputIdentifiers);
+#endif
+
+        }
+
+
+
+        public static Object _EditorUtility_InstanceIDToObject(int iid)
+        {
+#if UNITY_6000_3_OR_NEWER
+            return EditorUtility.EntityIdToObject(iid);
+#else
+            return EditorUtility.InstanceIDToObject(iid);
+#endif
+        }
+
+        public static string _AssetDatabase_GetAssetPath(int instanceID)
+        {
+#if UNITY_6000_3_OR_NEWER
+            return AssetDatabase.GetAssetPath((EntityId)instanceID);
+#else
+            return AssetDatabase.GetAssetPath(instanceID);
+#endif
+        }
+
+        public static int[] _Selection_instanceIDs
+        {
+            get
+            {
+#if UNITY_6000_3_OR_NEWER
+                return Selection.entityIds.Select(r => (int)r).ToArray();
+#else
+                return Selection.instanceIDs;
+#endif
+            }
+        }
+
+
+
+
+
 
         #endregion
 

@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36315b3ef553b404ba9431b87db290e7, type: 3}
+  m_Name: FishingRodSO
+  m_EditorClassIdentifier: Assembly-CSharp::FishingRodSO
+  itemName: Fishing rod
+  itemID: 27
+  icon: {fileID: 21300000, guid: 5e0f18e61965f8a4e84179ed6721a279, type: 3}
+  isStackable: 0
+  maxStack: 1
+  equipmentPrefab: {fileID: 5503143466729391652, guid: 2662da00eeb5fd542a0b1e5ee4b6ab81,
+    type: 3}
+  worldItemPrefab: {fileID: 5503143466729391652, guid: 5ac1b4433c36f8a4ca27a0ea8413e5f2,
+    type: 3}
+  holdType: 2
+  sellable: 1
+  sellPrice: 10
+  sellCategory: 3
+  category: 1
+  holdPositions:
+  - state: 0
+    positionOffset: {x: 1.473, y: -0.993, z: 0.04}
+    rotationOffset: {x: 329.46567, y: 71.18545, z: 198.94122}
+    scaleOffset: {x: 1, y: 1, z: 1}
+  - state: 1
+    positionOffset: {x: -0.04, y: 1.16, z: 1.36}
+    rotationOffset: {x: 321.16376, y: 276.68625, z: 289.15298}
+    scaleOffset: {x: 1, y: 1, z: 1}
+  defaultHoldState: 0
+  energyCost: 0
+  staminaCost: 0
+  hitRange: 2
+  damage: 10
+  toolTypeAction: 5
+  animationTriggerName: FishingStart
+  idleTriggerName: FishingIdle
+  pullTriggerName: FishingPull

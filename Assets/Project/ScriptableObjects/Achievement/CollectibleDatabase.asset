@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcfceb1f2362623428f67df229fcb9c2, type: 3}
+  m_Name: CollectibleDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::CollectibleDatabaseSO
+  allCollectibles:
+  - {fileID: 11400000, guid: e8722fe3b92ab044b8509f8d26cb2f9b, type: 2}
+  - {fileID: 11400000, guid: 56a2fcc322e2e4e42879a06da6e1e966, type: 2}
+  - {fileID: 11400000, guid: 79f46c5276a656d4dae313813e3ef1db, type: 2}
+  - {fileID: 11400000, guid: ddc0a55129789fc48b8c4c26ed97cd6d, type: 2}
+  - {fileID: 11400000, guid: a6ed8445b2e863346b89e3c1e779e895, type: 2}
+  - {fileID: 11400000, guid: 672d7d27d80fd2f469b91782e89418a4, type: 2}
+  - {fileID: 11400000, guid: 6ceec6eec5dc0cb4192a27e157e75907, type: 2}
+  - {fileID: 11400000, guid: b00ff936946306944b1072719641308a, type: 2}
+  - {fileID: 11400000, guid: d773c288b19a45b40b2187943a77a9ba, type: 2}

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26456f0eb1f93cf49bb0cf9e51b4b9f7, type: 3}
+  m_Name: Sardine
+  m_EditorClassIdentifier: Assembly-CSharp::FishSO
+  animalName: Sardines
+  icon: {fileID: 21300000, guid: a66adee478a93fd4c8fbd9a21b8b948d, type: 3}
+  killDropItems: []
+  baseHealth: 10
+  baseAttack: 5
+  moveSpeed: 2
+  dropItem: {fileID: 11400000, guid: 61dbe4aa642535e4dbf1dabeaab98d43, type: 2}
+  fishMoveSpeed: 120
+  moveUncertainty: 1
+  catchTimeRequired: 10

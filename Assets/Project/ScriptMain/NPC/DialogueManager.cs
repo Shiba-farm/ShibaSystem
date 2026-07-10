@@ -1,0 +1,141 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
+public class DialogueManager : MonoBehaviour
+{
+    public static DialogueManager Instance { get; private set; }
+
+    [Header("UI Components")]
+    public GameObject dialoguePanel;      // ��ǡ��ͧ��ͤ��������� (Panel)
+    public Image portraitImage;           // �ٻ NPC ��ҹ����
+    public TextMeshProUGUI nameText;      // ���� NPC
+    public TextMeshProUGUI dialogueText;  // ��ͤ����ٴ
+
+    [Header("Settings")]
+    public float typeSpeed = 0.02f;       // �������ǵ��˹ѧ������
+
+    private Queue<DialogueLine> sentences;
+    private bool isTyping = false;
+    private string currentFullText = "";
+    private CanvasGroup _canvasGroup; // InGameUIManager สั่ง alpha=0/interactable=false ไว้ตอน Awake ต้องเปิดคืนเองตอน StartDialogue
+
+    // ������͡�������Ҥ������ (Player �����Ѻ�����)
+    public bool IsDialogueActive { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this) { Debug.LogWarning($"[DialogueManager] พบ Instance ซ้ำบน '{gameObject.name}' — ลบ Component"); Destroy(this); return; }
+        Instance = this;
+
+        _canvasGroup = GetComponent<CanvasGroup>();
+        sentences = new Queue<DialogueLine>();
+        if (dialoguePanel) dialoguePanel.SetActive(false);
+        SetPanelVisible(false);
+    }
+
+    /// <summary>
+    /// InGameUIManager.InitializePanels() จะตั้ง CanvasGroup.alpha = 0 / interactable = false
+    /// ให้ทุก panel (รวมถึง Dialogue) ตอน Awake — ถ้าเราแค่ SetActive(true) เฉยๆ
+    /// GameObject จะ active จริงแต่มองไม่เห็นเพราะ alpha ยังเป็น 0 อยู่ ต้องเปิดคืนเองตรงนี้
+    /// </summary>
+    private void SetPanelVisible(bool visible)
+    {
+        if (_canvasGroup == null) return;
+        _canvasGroup.alpha = visible ? 1f : 0f;
+        _canvasGroup.interactable = visible;
+        _canvasGroup.blocksRaycasts = visible;
+    }
+
+    public void StartDialogue(DialogueSO dialogue)
+    {
+        StartDialogueInternal(dialogue.npcName, dialogue.lines);
+    }
+
+    /// <summary>
+    /// เริ่มบทพูดสั้นๆ แบบไดนามิก ไม่ต้องสร้าง DialogueSO asset ล่วงหน้า —
+    /// ใช้กับข้อความชั่วคราว เช่น NPC พูดขอบคุณตอนได้รับของขวัญ
+    /// </summary>
+    public void StartOneLiner(string speakerName, string text, Sprite portrait = null)
+    {
+        StartDialogueInternal(speakerName, new[] { new DialogueLine { text = text, portrait = portrait } });
+    }
+
+    private void StartDialogueInternal(string npcName, DialogueLine[] lines)
+    {
+        IsDialogueActive = true;
+        if (dialoguePanel) dialoguePanel.SetActive(true);
+        SetPanelVisible(true);
+
+        // ตั้งชื่อ NPC
+        if (nameText) nameText.text = npcName;
+
+        // เคลียร์คิวเก่า แล้วใส่คิวใหม่
+        sentences.Clear();
+        foreach (var line in lines)
+        {
+            sentences.Enqueue(line);
+        }
+
+        DisplayNextSentence();
+    }
+
+    public void DisplayNextSentence()
+    {
+        // ��ҡ��ѧ��������� ��顴������ʴ�����騺�ѹ��
+        if (isTyping)
+        {
+            StopAllCoroutines();
+            dialogueText.text = currentFullText;
+            isTyping = false;
+            return;
+        }
+
+        // ��һ���¤������� ��騺���ʹ���
+        if (sentences.Count == 0)
+        {
+            EndDialogue();
+            return;
+        }
+
+        DialogueLine line = sentences.Dequeue();
+
+        // 1. ����¹�ٻ Portrait
+        if (portraitImage != null)
+        {
+            if (line.portrait != null)
+            {
+                portraitImage.sprite = line.portrait;
+                portraitImage.gameObject.SetActive(true);
+            }
+            // ���������ٻ㹻���¤��� ������͹ �������ٻ������� (㹷�������͡���ٻ��������������)
+            // else portraitImage.gameObject.SetActive(false); 
+        }
+
+        // 2. ������ͤ��� (Typewriter Effect)
+        currentFullText = line.text;
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(line.text));
+    }
+
+    IEnumerator TypeSentence(string sentence)
+    {
+        isTyping = true;
+        dialogueText.text = "";
+        foreach (char letter in sentence.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(typeSpeed);
+        }
+        isTyping = false;
+    }
+
+    void EndDialogue()
+    {
+        IsDialogueActive = false;
+        if (dialoguePanel) dialoguePanel.SetActive(false);
+        SetPanelVisible(false);
+    }
+}

@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7be2a4c9a1aaf54b9bf60014cd304cf, type: 3}
+  m_Name: Sword
+  m_EditorClassIdentifier: Assembly-CSharp::ToolItemSO
+  itemName: Sword
+  itemID: 21
+  icon: {fileID: 1248858770, guid: c7230d7145f5f8d428b65f0bed3c4a07, type: 3}
+  isStackable: 1
+  maxStack: 99
+  equipmentPrefab: {fileID: 2085101214723571344, guid: 5e306fae2e0cd634fa76d035a2683b7b,
+    type: 3}
+  worldItemPrefab: {fileID: 2085101214723571344, guid: 5e306fae2e0cd634fa76d035a2683b7b,
+    type: 3}
+  holdType: 1
+  sellable: 1
+  sellPrice: 10
+  sellCategory: 3
+  category: 1
+  holdPositions:
+  - state: 0
+    positionOffset: {x: 0.423, y: -0.469, z: 0.228}
+    rotationOffset: {x: 16.08631, y: 315.89886, z: 212.7747}
+    localScale: {x: 0.17797, y: 0.17797, z: 0.17797}
+  - state: 1
+    positionOffset: {x: 0.17, y: -0.558, z: 0.171}
+    rotationOffset: {x: 351.8358, y: 112.866714, z: 161.66833}
+    localScale: {x: 0.16032, y: 0.16032, z: 0.16032}
+  defaultHoldState: 0
+  energyCost: 0
+  staminaCost: 0
+  hitRange: 2
+  damage: 10
+  toolTypeAction: 6
+  animationTriggerName: Attack

@@ -141,6 +141,8 @@ MonoBehaviour:
   startingDebt: 10000
   monthlyInterestRate: 0.05
   monthlyMinimumPayment: 500
+  timeSignal: {fileID: 11400000, guid: accb031eece68af44916f510ca7589a2, type: 2}
+  cyclePerDay: 1
 --- !u!114 &5632200643304866870
 MonoBehaviour:
   m_ObjectHideFlags: 0

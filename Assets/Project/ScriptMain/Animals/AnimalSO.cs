@@ -1,0 +1,25 @@
+using UnityEngine;
+
+/// <summary>
+/// Base ScriptableObject for any living creature in the world (animals, fish, etc.).
+/// Stores identity, loot, and base stats that all animal types share.
+///
+/// Subclass this for creature-category-specific data:
+///   FishSO  — adds fishing mini-game configuration
+/// </summary>
+[CreateAssetMenu(menuName = "Animals/Animal")]
+public class AnimalSO : ScriptableObject
+{
+    [Header("Identity")]
+    public string animalName;
+    public Sprite icon;
+
+    [Header("Loot (killed in world)")]
+    [Tooltip("Items dropped when this animal is killed in the overworld or dungeon.")]
+    public ItemSO[] killDropItems;
+
+    [Header("Base Stats")]
+    public int baseHealth = 10;
+    public int baseAttack = 5;
+    public float moveSpeed = 2f;
+}

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45b888c691fbaf646a779adadfa6a3e2, type: 3}
+  m_Name: Pepper
+  m_EditorClassIdentifier: Assembly-CSharp::FoodItemSO
+  itemName: Pepper
+  itemID: 22
+  icon: {fileID: 21300000, guid: 81c8797951d165e4ab37ac1c9a410701, type: 3}
+  isStackable: 1
+  maxStack: 99
+  equipmentPrefab: {fileID: 0}
+  worldItemPrefab: {fileID: 0}
+  holdType: 1
+  sellable: 1
+  sellPrice: 10
+  sellCategory: 3
+  category: 1
+  holdPositions: []
+  defaultHoldState: 0
+  energyRestore: 0
+  healthRestore: 0
+  energyCost: 0
+  staminaCost: 0
+  animationTriggerName: 

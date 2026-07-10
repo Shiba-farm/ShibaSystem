@@ -233,7 +233,7 @@ namespace VHierarchy
             var expandedChildren = new List<GameObject>();
 
             foreach (var iid in expandedIds)
-                if (EditorUtility.InstanceIDToObject(iid) is GameObject expandedGo)
+                if (_EditorUtility_InstanceIDToObject(iid) is GameObject expandedGo)
                     if (expandedGo.transform.parent)
                         expandedChildren.Add(expandedGo);
                     else
@@ -260,7 +260,7 @@ namespace VHierarchy
             {
                 var parentIds = new List<int>();
 
-                if (EditorUtility.InstanceIDToObject(id) is not GameObject go) return parentIds;
+                if (_EditorUtility_InstanceIDToObject(id) is not GameObject go) return parentIds;
 
 
                 while (go.transform.parent)
@@ -283,8 +283,8 @@ namespace VHierarchy
             itemsToCollapse.RemoveAll(r => targetItemParents.Contains(r));
             itemsToCollapse.RemoveAll(r => itemsToCollapse.Intersect(getParents(r)).Any());
 
-            if (EditorUtility.InstanceIDToObject(targetId) is GameObject)
-                itemsToCollapse.RemoveAll(r => EditorUtility.InstanceIDToObject(r) is not GameObject); // won't collapse scenes
+            if (_EditorUtility_InstanceIDToObject(targetId) is GameObject)
+                itemsToCollapse.RemoveAll(r => _EditorUtility_InstanceIDToObject(r) is not GameObject); // won't collapse scenes
 
 
 
@@ -315,8 +315,8 @@ namespace VHierarchy
 
             var sceneIds = Enumerable.Range(0, EditorSceneManager.sceneCount).Select(i => EditorSceneManager.GetSceneAt(i).handle).ToHashSet();
 
-            var toExpand_destroyed = toExpand.Where(id => !sceneIds.Contains(id) && Resources.InstanceIDToObject(id) as GameObject == null).ToHashSet();
-            var toCollapse_destroyed = toCollapse.Where(id => !sceneIds.Contains(id) && Resources.InstanceIDToObject(id) as GameObject == null).ToHashSet();
+            var toExpand_destroyed = toExpand.Where(id => !sceneIds.Contains(id) && _EditorUtility_InstanceIDToObject(id) as GameObject == null).ToHashSet();
+            var toCollapse_destroyed = toCollapse.Where(id => !sceneIds.Contains(id) && _EditorUtility_InstanceIDToObject(id) as GameObject == null).ToHashSet();
 
 
             foreach (var id in toExpand_destroyed)
@@ -338,7 +338,7 @@ namespace VHierarchy
 
             bool hasParentToCollapse(int id)
             {
-                var go = Resources.InstanceIDToObject(id) as GameObject;
+                var go = _EditorUtility_InstanceIDToObject(id) as GameObject;
 
                 if (!go) return false;
                 if (!go.transform.parent) return false;
@@ -352,7 +352,7 @@ namespace VHierarchy
             }
             bool areAllParentsExpanded(int id)
             {
-                var go = Resources.InstanceIDToObject(id) as GameObject;
+                var go = _EditorUtility_InstanceIDToObject(id) as GameObject;
 
                 if (!go) return true;
                 if (!go.transform.parent) return true;

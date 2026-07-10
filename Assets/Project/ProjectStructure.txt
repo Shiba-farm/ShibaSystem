@@ -1,0 +1,552 @@
+================================================================================
+  UNITYSHIBA - PROJECT FILE STRUCTURE
+================================================================================
+
+All game content lives under Assets/Project/. Everything outside that folder
+(third-party assets, plugins, packages) is considered external and should not
+be modified unless necessary.
+
+
+================================================================================
+  TOP-LEVEL LAYOUT
+================================================================================
+
+Assets/Project/
+    Animations/
+    Audio/
+    Editor/
+    Environment/
+    Materials/
+    Models/
+    Prefabs/
+    SaveData/
+    Scenes/
+    ScriptableObjects/
+    ScriptMain/
+    Shaders/
+    Textures/
+    UI/
+
+
+================================================================================
+  ANIMATIONS
+================================================================================
+
+Holds all Unity Animator Controllers, Animation Clips, and Avatar Masks.
+
+    Characters/
+        Animal/                 Idle, walk clips for farm animals
+        Enemies/
+            Slime/              Slime attack, hurt, death clips
+        NPC/                    NPC idle and talk animations
+        Player/                 Player locomotion, tool use, combat clips
+
+    Environment/
+        Dungeon/                Dungeon environment animations (doors, traps)
+        Farm/
+            Moon/               Moon cycle animation
+            Sun/                Sun arc animation for day/night
+
+    Interaction Object/         Animations for interactable world objects
+                                (chests, beds, workbench)
+
+    Items/
+        Base/                   Generic item animations
+        Crop/                   Crop growth stage transitions
+        Food/                   Food item animations
+        Other/                  Miscellaneous item animations
+        Tools/                  Tool swing/use animations (hoe, axe, etc.)
+
+
+================================================================================
+  AUDIO
+================================================================================
+
+All sound assets. Separated into music tracks and sound effects.
+
+    Music/      Background music tracks per scene/mood
+                (farm day, dungeon, main menu)
+
+    SFX/        One-shot sound effects
+                (footsteps, item pickup, tool use, UI clicks)
+
+
+================================================================================
+  EDITOR
+================================================================================
+
+Editor-only scripts. Excluded from builds automatically by Unity.
+
+    BuildWithShaderStrip.cs     Custom build pipeline that strips S_Rock shader
+                                variants to avoid the DX11 ps_4_0 sampler limit
+                                build error. Use Build > Build And Strip S_Rock
+                                from the menu instead of normal Build And Run.
+
+
+================================================================================
+  ENVIRONMENT
+================================================================================
+
+Scene-level environment data - lighting, terrain, shaders, post-processing.
+
+    Cubemaps/       Reflection cubemaps used by environment materials
+
+    Lightning/      Lighting data assets and baked lightmap settings
+
+    Navmesh/        NavMesh baked data for NPC and enemy pathfinding
+
+    Shader/
+        Water/      Custom water shader graphs
+
+    Terrain/
+        Data/       Unity terrain data assets (.asset files)
+        Layers/     Terrain layer assets (grass, dirt, sand textures)
+
+    Volumes/        URP post-processing Volume profiles
+                    (bloom, color grading, ambient occlusion, etc.)
+
+
+================================================================================
+  MATERIALS
+================================================================================
+
+All Material assets. Mirrors the same category structure as Models and Textures
+so every material is easy to locate by subject.
+
+    Characters/
+        Animal/         Animal character materials
+        Enemies/        Enemy materials
+        NPC/            NPC materials
+        Player/         Player character materials
+
+    CursurVisual/       Material for the farming tile cursor
+                        (green/red grid overlay used when holding hoe or seed)
+
+    Environment/
+        Dungeon/        Dungeon wall, floor, and prop materials
+        Farm/           Farm terrain, soil, and fence materials
+
+    Items/
+        Base/           Resource/base item materials
+        Crop/           Crop plant materials
+        Food/           Food item materials
+        Other/          Miscellaneous item materials
+        Tools/          Tool materials (hoe, axe, watering can)
+
+    Other/              Materials that don't fit another category
+
+    VFX/
+        Footsteps/
+            Materials/  Footstep decal materials
+            Meshes/     Footstep decal meshes
+            Prefabs/    Assembled footstep VFX prefabs
+
+
+================================================================================
+  MODELS
+================================================================================
+
+Raw 3D model files (.fbx, .obj). Same category tree as Materials and Textures.
+
+    Characters/
+        Animal/             Animal meshes
+        Enemies/
+            Slime/          Slime enemy mesh and rig
+        NPC/
+            Backup/         Older NPC model versions kept for reference
+        Player/             Player mesh and rig
+
+    Environment/
+        Dungeon/            Dungeon architecture meshes (walls, floors, pillars)
+        Farm/
+            Backup/         Older farm prop versions
+
+    Interaction Object/     Interactive world prop meshes
+                            (bed, workbench, sell box)
+
+    Items/
+        Base/               Raw resource meshes (stone, wood, ore)
+        Crop/               Crop plant meshes per growth stage
+        Food/               Food item meshes
+        Other/              Miscellaneous item meshes
+        Tools/
+            Backup/         Older tool model versions
+
+    Other/                  Miscellaneous models that don't fit another category
+
+
+================================================================================
+  PREFABS
+================================================================================
+
+Fully assembled, ready-to-use GameObjects. The most referenced folder during
+scene building.
+
+    Characters/
+        Animal/             Spawnable farm animals
+        Enemies/
+            Slime/          Slime enemy prefab with AI and health
+        NPC/                NPC characters with dialogue and interaction
+        Player/             Networked player prefab
+                            (PlayerItemUser, StatManager, InventoryData, etc.)
+
+    Environment/
+        Dungeon/            Dungeon room and prop prefabs
+        Farm/
+            Backup/         Older farm prefab versions
+            Decoration/     Decorative farm props (fences, signs, barrels)
+            Trees/          Choppable tree prefabs (ChoppableCut_Tree)
+
+    Interaction Object/     Interactable world objects
+                            (bed, workbench, sell box, chest)
+
+    Items/
+        EquipItem/          In-hand 3D visuals spawned by PlayerHeldItem
+            Base/
+            Crop/
+            Food/
+            Other/
+            Pickups/        Floating pickup item visuals
+            Tools/
+        WorldItem/          Items dropped or spawned in the world
+            Base/
+            Crop/
+            Food/
+            Other/
+            Pickups/
+            Tools/
+
+    Network/                NetworkManager, relay, and netcode infrastructure
+                            prefabs
+
+    Other/                  Miscellaneous prefabs (VFX, particles, utility)
+
+    UI/                     UI canvas prefabs for quick scene placement
+
+
+================================================================================
+  SAVEDATA
+================================================================================
+
+Runtime save files written by the game. Not source-controlled - generated at
+runtime by SaveLoadManager.
+
+    .json or binary save files per player/session
+
+
+================================================================================
+  SCENES
+================================================================================
+
+All Unity scene files (.unity), organized by game area.
+
+    Dungeon/        Procedurally generated dungeon scene
+
+    Farm/           Main farm / overworld scene
+
+    Main/
+        MainGame/   MainGame scene (index 0 in build - first scene loaded,
+                    boots straight into the game on launch)
+
+    UI/             Standalone UI scenes (main menu, loading screen)
+
+
+================================================================================
+  SCRIPTABLEOBJECTS
+================================================================================
+
+All ScriptableObject data assets (.asset files). Split into per-entity data and
+system-wide configuration.
+
+    Characters/
+        Animal/             Animal stat and behaviour data
+        Enemies/
+            Slime/          Slime config (damage, speed, drops)
+        NPC/                NPC dialogue and identity data
+        Player/             Player base stats (PlayerDataSO, PerkDataSO)
+
+    Crafting/               Crafting recipe ScriptableObjects
+
+    Items/
+        Base/               ItemSO assets for raw resources
+        Crop/               SeedItemSO and CropSO assets (Beet, Onion, etc.)
+        Food/               FoodItemSO assets
+        Other/              Miscellaneous ItemSO assets
+        Tools/              ToolItemSO assets (Hoe, Axe, etc.)
+
+    Signals/                ScriptableObject event signals shared across systems
+                            HeldItemSignal      - broadcasts held item changes
+                            WorldTimeSignal     - broadcasts game time each minute
+                            InventoryDataSignal - broadcasts inventory reference
+                            CurrencySignal      - broadcasts gold changes
+
+    System/
+        Crafting/
+            Recipe/         CraftingRecipeSO assets
+        DungeonConfig/      DungeonConfigSO and DungeonFloorData assets
+        FarmHelper/         FarmHelperSO placement configs
+        Fishing/            FishingZoneSO assets
+        Stat/               ItemStatDataSO assets
+
+
+================================================================================
+  SCRIPTMAIN
+================================================================================
+
+All custom game scripts. This is the main code folder for the project.
+Every system has its own subfolder.
+
+    AI/
+        Enemy and NPC AI behaviour scripts.
+
+    AnimationController/
+        AnimationEventRelay - bridges Animator events to game logic.
+        Key methods: OnActionImpact, OnActionAnimationFinished.
+
+    Bed & Summary/
+        Sleep and rest system. End-of-day summary UI showing earnings,
+        items gained/lost, and debt status.
+
+    Camera/
+        CameraManager, farm camera follow, Cinemachine helpers.
+
+    Crafting/
+        CraftingManager, CraftingRecipeSO, crafting main UI and recipe UI
+        item scripts.
+
+    Currency/
+        CurrencyData, CurrencySignal, CurrencyManager for gold tracking.
+
+    Debt/
+        DebtManager         - new networked debt system with interest,
+                              minimum payments, and punishment logic.
+        DebtPayUI           - payment UI panel.
+        PunishmentPanelUI   - punishment outcome display.
+        PunishmentInventoryMainUIs - item loss display.
+        NPCDebt             - debt collector NPC interaction.
+        LostItemRowUI       - individual lost item row in punishment panel.
+        DebtSummaryPanelUI  - debt overview.
+        DebtDetailPanelUI   - detailed breakdown panel.
+
+    Dungeon/
+        DungeonGenerator (BSP-based), DungeonManager, floor transitions,
+        ore nodes, enemy AI, DungeonConfigSO, ladder system.
+
+    Editor/
+        Editor-only utility scripts (build pipeline tools, custom inspectors).
+
+    Farming/
+        HoeTillingSystem        - spawns SoilTile on hoe impact.
+        TileCursor              - grid-snapped cursor shown when holding hoe.
+        SoilTile                - per-tile state (tilled, watered, crop, growth).
+        SoilGridSpawner         - pre-places soil tile grids in edit mode.
+        PlantingCursorController- seed placement cursor (green/red validity).
+        PlantCommand            - executes the plant action on a SoilTile.
+        TilledGroundSystem      - global registry of tilled and occupied cells.
+
+    Interaction & Movement/
+        PlayerController        - movement, camera, network transform.
+        PlayerItemUser          - tool use, animation trigger, impact routing.
+        PlayerHeldItem          - spawns 3D item visual in hand.
+        HeldItemSignal          - SO signal broadcasting current held item.
+        BedInteraction          - interact with bed to sleep/save.
+        WorkbenchInteraction    - interact with crafting workbench.
+        SellBox                 - sell items to shop.
+        InteractController      - raycast-based interact system.
+        PlayerMagnet            - pulls nearby world items toward player.
+
+    Inventory/
+        InventoryData           - networked inventory (NetworkList-backed).
+        InventoryDataRegistry   - static lookup for inventories by owner/ID.
+        InventoryDataSignal     - SO signal broadcasting InventoryData ref.
+        Slot UIs, drag-and-drop system, trash drop zone.
+
+    Item/
+        ItemSO                  - base class for all items.
+        ToolItemSO              - tools (hoe, axe, pickaxe).
+        SeedItemSO              - seeds with CropSO reference.
+        FoodItemSO              - food with health/energy restore.
+        ResourceItemSO          - raw resources.
+        WearableItemSO          - equippable gear.
+        IUsable                 - interface for usable items.
+        IEquippable             - interface for equippable items.
+        WorldItem               - dropped item in world with magnet support.
+        NetworkItemSpawner      - server-side item world spawn.
+
+    Manager/
+        GameDataManager         - central access to item databases and
+                                  difficulty settings.
+        GameSceneBootstrapper   - in-game scene setup on load.
+        Bootstrapper            - pre-game bootstrap (before main menu).
+        WorldTimeManager        - networked game clock (day/night cycle).
+        WorldTimeSignal         - SO signal firing every game minute.
+        InGameUIManager         - opens/closes exclusive UI panels.
+
+    Network/
+        ClientNetworkTransform  - smooth client-side position sync.
+        ClientNetworkAnimator   - client-side animator sync.
+
+    NPC/
+        NPC interaction controller and dialogue management scripts.
+
+    SaveLoad/
+        SaveLoadManager         - coordinates save and load across all systems.
+        ISaveStorage            - interface for storage backends.
+        LocalFileStorage        - saves to local disk.
+        SteamCloudStorage       - saves to Steam Cloud.
+
+    Selling/
+        ShopManager, SellBox, cart data (SharedCartData, CartDataSignal),
+        sell UI scripts for player and shop inventory.
+
+    Sound/
+        SoundtrackManager       - handles music transitions between scenes
+                                  and day/night phases.
+
+    Stat/
+        StatManager             - manages player stats (health, stamina, energy).
+        NetworkStat             - networked stat variable.
+        NetworkKnowledgeStat    - knowledge/skill stat tracking.
+        PlayerDataSO            - base stat configuration asset.
+        PerkDataSO              - perk definition asset.
+        ItemStatDataSO          - item stat modifier asset.
+
+    Time/
+        WorldTimeManager        - game clock (minutes, hours, days, months).
+        TimeOfDaySystem         - drives sky, lighting, and audio by time.
+
+    UI/
+        GeneralInfoPanel/       Floating context info panel.
+        MainMenu/               Main menu, settings, game mode selection,
+                                multiplayer option UIs.
+        Prompt/                 InteractPromptUI - contextual interact hints
+                                shown above interactable objects.
+        Plus general in-game UI scripts (PlayerUI, CircularProgress,
+        HoldButton, InGameUIManager).
+
+    VFX/
+        FootstepVFXController   - spawns footstep decal VFX based on
+                                  surface material under player.
+
+    World/
+        IDamageable             - interface for anything that can take damage.
+        RockObject              - breakable rock world object.
+
+
+================================================================================
+  SHADERS
+================================================================================
+
+Custom shader files and Shader Graph assets created specifically for this
+project. Third-party shaders live in their own external asset folders.
+
+    Project-specific .shadergraph and .hlsl files.
+
+
+================================================================================
+  TEXTURES
+================================================================================
+
+All texture image assets. Mirrors the same category structure as Models and
+Materials for easy cross-referencing.
+
+    Characters/
+        Animal/
+        Enemies/
+            Slime/
+        NPC/
+        Player/
+
+    Environment/
+        Dungeon/
+        Farm/
+
+    Interaction Object/
+
+    Items/
+        Base/
+        Crop/
+        Food/
+        Other/
+        Tools/
+
+    Other/
+
+    UI/             Textures used in UI elements
+                    (backgrounds, button frames, icon sheets)
+
+
+================================================================================
+  UI
+================================================================================
+
+UI-specific assets that are not scripts - fonts, icon sprites, layout sprites.
+
+    Fonts/          TMP font assets and font atlases
+
+    Icons/          Item icons, stat icons, and other in-game icon sprites
+
+    Other/          Miscellaneous UI assets
+                    (loading bars, decorative border elements)
+
+    Sprites/        UI sprite sheets and individual sprites
+        Characters/
+            Animal/
+            Enemies/
+                Slime/
+            NPC/
+            Player/     Player portrait and expression sprites
+
+
+================================================================================
+  NAMING CONVENTION
+================================================================================
+
+    Scripts             PascalCase              PlayerItemUser.cs
+    ScriptableObjects   PascalCase + suffix     BeetSeed_SO
+    Prefabs             PascalCase              Player_Network
+    Materials           M_ prefix               M_Player_Body
+    Textures            T_ prefix               T_Player_Diffuse
+    Animations          A_ prefix               A_Player_HoeSwing
+    Scenes              PascalCase              MainGame
+
+
+================================================================================
+  KEY SYSTEMS CROSS-REFERENCE
+================================================================================
+
+  FARMING
+    Scripts             Project/ScriptMain/Farming/
+    Data Assets         Project/ScriptableObjects/Items/Crop/
+    Prefabs             Project/Prefabs/Environment/Farm/
+
+  INVENTORY
+    Scripts             Project/ScriptMain/Inventory/
+    Signals             Project/ScriptableObjects/Signals/
+    UI Prefabs          Project/Prefabs/UI/
+
+  DEBT
+    Scripts             Project/ScriptMain/Debt/
+    NPC Prefab          Project/Prefabs/Characters/NPC/
+
+  DUNGEON
+    Scripts             Project/ScriptMain/Dungeon/
+    Config Assets       Project/ScriptableObjects/System/DungeonConfig/
+    Prefabs             Project/Prefabs/Environment/Dungeon/
+
+  CRAFTING
+    Scripts             Project/ScriptMain/Crafting/
+    Recipe Assets       Project/ScriptableObjects/System/Crafting/Recipe/
+    UI Prefabs          Project/Prefabs/UI/
+
+  TIME SYSTEM
+    Scripts             Project/ScriptMain/Time/
+    Signal Asset        Project/ScriptableObjects/Signals/WorldTimeSignal
+
+  ITEMS
+    Scripts             Project/ScriptMain/Item/
+    Data Assets         Project/ScriptableObjects/Items/
+    Equip Prefabs       Project/Prefabs/Items/EquipItem/
+    World Prefabs       Project/Prefabs/Items/WorldItem/
+
+================================================================================

@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61290d425f1c94a8cbfb56f754ca6757, type: 3}
   m_Name: vHierarchy Palette
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: VHierarchy::VHierarchy.VHierarchyPalette
   colors:
   - {r: 0.16, g: 0.16, b: 0.16, a: 1}
   - {r: 0.609, g: 0.231, b: 0.23100014, a: 0.1}
@@ -77,14 +77,5 @@ MonoBehaviour:
     - PreMatQuad
     - Favorite
     - Settings Icon
-    customIcons: []
-    enabled: 1
-  - builtinIcons: []
-    customIcons:
-    - 
-    - Light Icon
-    - align_vertically_top
-    enabled: 1
-  - builtinIcons: []
     customIcons: []
     enabled: 1

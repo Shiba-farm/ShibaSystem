@@ -148,6 +148,8 @@ namespace VHierarchy
             if (doNavbarFirst)
                 navbarGui();
 
+            GUILayout.Space(0); // to fix GameAnalytics accessing lastRect for some reason
+
             defaultGuiWithOffset();
             shadow();
 
@@ -320,14 +322,22 @@ namespace VHierarchy
                 if (!guis_byWindow.ContainsKey(window)) return;
 
 
+#if UNITY_6000_3_OR_NEWER
+                Object getObject(int id) => EditorUtility.EntityIdToObject(instanceId);
+                int getSceneId(Scene scene) => scene.handle.GetMemberValue<EntityId>("m_Value");
+#else
+                Object getObject(int id) => EditorUtility.InstanceIDToObject(instanceId);
+                int getSceneId(Scene scene) => scene.GetHashCode();
+#endif
+
 
                 var gui = guis_byWindow[window];
 
-                if (EditorUtility.InstanceIDToObject(instanceId) is GameObject go)
+                if (getObject(instanceId) is GameObject go)
                     gui.RowGUI_GameObject(rowRect, go);
                 else
                     for (int i = 0; i < EditorSceneManager.sceneCount; i++)
-                        if (EditorSceneManager.GetSceneAt(i).GetHashCode() == instanceId)
+                        if (getSceneId(EditorSceneManager.GetSceneAt(i)) == instanceId)
                             gui.RowGUI_Scene(rowRect, EditorSceneManager.GetSceneAt(i));
 
             }
@@ -425,6 +435,21 @@ namespace VHierarchy
 
         public static void SetIcon(GameObject gameObject, string iconName, bool recursive = false)
         {
+            if (!data)
+                data = AssetDatabase.LoadAssetAtPath<VHierarchyData>(ProjectPrefs.GetString("vHierarchy-lastKnownDataPath"));
+
+            if (!data)
+                data = AssetDatabase.FindAssets("t:VHierarchyData").Select(guid => AssetDatabase.LoadAssetAtPath<VHierarchyData>(guid.ToPath())).FirstOrDefault();
+
+            if (!data)
+            {
+                data = ScriptableObject.CreateInstance<VHierarchyData>();
+
+                AssetDatabase.CreateAsset(data, GetScriptPath("VHierarchy").GetParentPath().CombinePath("vHierarchy Data.asset"));
+            }
+
+
+
             goDataCache.Clear();
 
             var goData = GetGameObjectData(gameObject, createDataIfDoesntExist: true);
@@ -437,9 +462,29 @@ namespace VHierarchy
 
             EditorApplication.RepaintHierarchyWindow();
 
+
+
+            data.Dirty();
+
         }
         public static void SetColor(GameObject gameObject, int colorIndex, bool recursive = false)
         {
+            if (!data)
+                data = AssetDatabase.LoadAssetAtPath<VHierarchyData>(ProjectPrefs.GetString("vHierarchy-lastKnownDataPath"));
+
+            if (!data)
+                data = AssetDatabase.FindAssets("t:VHierarchyData").Select(guid => AssetDatabase.LoadAssetAtPath<VHierarchyData>(guid.ToPath())).FirstOrDefault();
+
+            if (!data)
+            {
+                data = ScriptableObject.CreateInstance<VHierarchyData>();
+
+                AssetDatabase.CreateAsset(data, GetScriptPath("VHierarchy").GetParentPath().CombinePath("vHierarchy Data.asset"));
+            }
+
+
+
+
             goDataCache.Clear();
 
             var goData = GetGameObjectData(gameObject, createDataIfDoesntExist: true);
@@ -451,6 +496,10 @@ namespace VHierarchy
             goInfoCache.Clear();
 
             EditorApplication.RepaintHierarchyWindow();
+
+
+
+            data.Dirty();
 
         }
 
@@ -1814,7 +1863,7 @@ namespace VHierarchy
 
 
 
-        public const string version = "2.1.5";
+        public const string version = "2.1.9";
 
     }
 

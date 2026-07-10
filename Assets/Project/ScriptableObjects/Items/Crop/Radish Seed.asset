@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c673eaaa013c754fb43da48a0ad1d69, type: 3}
+  m_Name: Radish Seed
+  m_EditorClassIdentifier: Assembly-CSharp::SeedItemSO
+  itemName: Seed
+  itemID: 24
+  icon: {fileID: 21300000, guid: 4d89d33f6aeeb8142aaa33d6529301d6, type: 3}
+  isStackable: 1
+  maxStack: 99
+  equipmentPrefab: {fileID: 2911813514542648740, guid: 74906b72c9ec8bd46a3371760ff95dae,
+    type: 3}
+  worldItemPrefab: {fileID: 2911813514542648740, guid: 4e62edcd3c955b84ba93c0a1ca97813c,
+    type: 3}
+  holdType: 1
+  sellable: 1
+  sellPrice: 10
+  sellCategory: 0
+  category: 5
+  holdPositions:
+  - state: 0
+    positionOffset: {x: 0.22, y: 0.12, z: 0.18}
+    rotationOffset: {x: 0, y: 0, z: 0}
+  defaultHoldState: 0
+  energyCost: 0
+  staminaCost: 0
+  animationTriggerName: PlaceItem
+  stages:
+  - visualPrefab: {fileID: 2911813514542648740, guid: 74906b72c9ec8bd46a3371760ff95dae,
+      type: 3}
+    daysToGrow: 1
+    requiresWater: 1
+  - visualPrefab: {fileID: 1374382541584146920, guid: bacfd653f4bb5314eabc93f2c36acf7d,
+      type: 3}
+    daysToGrow: 1
+    requiresWater: 1
+  droughtTolerance: 2
+  harvestItem: {fileID: 11400000, guid: 35c3b1504eebd874998c768aceaf126e, type: 2}
+  yieldRange: {x: 1, y: 1}
+  destroyOnHarvest: 1
