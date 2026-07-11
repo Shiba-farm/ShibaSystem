@@ -18,6 +18,9 @@ GameObject:
   - component: {fileID: 5632200643304866870}
   - component: {fileID: 4067220148699271884}
   - component: {fileID: 7928447655744500993}
+  - component: {fileID: 2892530926891428454}
+  - component: {fileID: 4330129823469094205}
+  - component: {fileID: 19237055610988029}
   m_Layer: 0
   m_Name: InGameNetworkManager
   m_TagString: Untagged
@@ -58,6 +61,7 @@ MonoBehaviour:
   Ownership: 1
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
+  <InScenePlaced>k__BackingField: 0
   ActiveSceneSynchronization: 0
   SceneMigrationSynchronization: 0
   SpawnWithObservers: 1
@@ -105,8 +109,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WorldTimeManager
   ShowTopMostFoldoutHeaderGroup: 1
   timeSignal: {fileID: 11400000, guid: accb031eece68af44916f510ca7589a2, type: 2}
-  startHour: 16
-  realSecondsPerGameMinute: 1
+  startHour: 8
+  realSecondsPerGameMinute: 0.2
   dawnStart: 0.2
   dayStart: 0.3
   duskStart: 0.7
@@ -161,6 +165,12 @@ MonoBehaviour:
   prefabOverrides:
   - itemID: 5
     prefab: {fileID: 865091189374435511, guid: 3d128b847798ca342b93a4f43ccae3e5, type: 3}
+  - itemID: 11
+    prefab: {fileID: -3104048164142059424, guid: c11bf4f9eb8b1b14eaffca48c9a98d55,
+      type: 3}
+  - itemID: 10
+    prefab: {fileID: -3069597470023906906, guid: bf3706967493b2444b7a0fcd00ec0cdf,
+      type: 3}
 --- !u!114 &4067220148699271884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,3 +198,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneTransitionManager
   ShowTopMostFoldoutHeaderGroup: 1
+--- !u!114 &2892530926891428454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520117834135268845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee5e0bd253bd8d48a4c8a98c8a45734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FarmingServerManager
+  ShowTopMostFoldoutHeaderGroup: 1
+  tilledDirtPrefab: {fileID: -8412170763073304747, guid: 9d2085782bda9004ebdb707c4ec53747,
+    type: 3}
+  wetDirtPrefab: {fileID: 7061430321515732417, guid: 8bc3beec01c2ea447977e36b95673573,
+    type: 3}
+  seedHeightOffset: 0.5
+  cellSize: 2
+  maxCells: 4
+--- !u!114 &4330129823469094205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520117834135268845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e2603b0fb6872b4081e06ea7298c37a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SleepManager
+  ShowTopMostFoldoutHeaderGroup: 1
+--- !u!114 &19237055610988029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520117834135268845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eea22258d192fc4a974245afc205645, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FishingServerManager
+  ShowTopMostFoldoutHeaderGroup: 1
+  minBiteTime: 3
+  maxBiteTime: 10
+  fishEscapeTime: 5
+  pullAnimDuration: 1.5
+  catchableItemIds: 

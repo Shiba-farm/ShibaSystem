@@ -279,9 +279,13 @@ public class PlayerItemUser : NetworkBehaviour
 
         if (_timeoutCoroutine != null) { StopCoroutine(_timeoutCoroutine); _timeoutCoroutine = null; }
 
+        // Always release the cursor lock — applies to hoe, watering can, seeds, fishing rod, etc.
+        FarmTileCursor.Instance?.Unlock();
+
         if (heldItem.Current is FishingRodSO)
         {
-            FarmTileCursor.Instance?.Unlock();
+            // Keep _isActing true while waiting for a bite.
+            // InputLocked and _isActing are cleared later by OnFishingEnded().
             FishingServerManager.Instance?.StartFishingServerRpc();
             return;
         }

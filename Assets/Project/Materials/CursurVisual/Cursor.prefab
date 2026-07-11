@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2039320347997863242}
   - component: {fileID: 8045159558268782417}
   - component: {fileID: 5454636322773647300}
-  - component: {fileID: 7251329639687255754}
+  - component: {fileID: 3064498070513475931}
   m_Layer: 0
   m_Name: Cursor
   m_TagString: Untagged
@@ -91,7 +91,7 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7251329639687255754
+--- !u!114 &3064498070513475931
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,12 +100,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7500542907449254513}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a6371b9f6331334e8cb67f71134fa95, type: 3}
+  m_Script: {fileID: 11500000, guid: be798622e57cffe4489f8b1da836ffe2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlantingCursorController
+  m_EditorClassIdentifier: Assembly-CSharp::FarmTileCursor
   heldItemSignal: {fileID: 11400000, guid: 19d3e26402093ca489169cd0296af2ea, type: 2}
-  inventorySignal: {fileID: 11400000, guid: b7c48f141fdc7104aa58577fb184ded6, type: 2}
-  terrainLayer:
+  terrainMask:
     serializedVersion: 2
     m_Bits: 256
-  yOffset: 0.1
+  cellSize: 3
+  maxCells: 4
+  yOffset: 0.02

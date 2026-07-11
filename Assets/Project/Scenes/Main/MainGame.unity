@@ -592,17 +592,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 12342993}
-  groundParent: {fileID: 884984185}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &12342995
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1170,17 +1159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 21340913}
-  groundParent: {fileID: 749539251}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &21340915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1353,17 +1331,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 23754928}
-  groundParent: {fileID: 1696236907}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &23754930
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1530,17 +1497,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 26787355}
-  groundParent: {fileID: 1573254863}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &26787357
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2797,17 +2753,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 62760648}
-  groundParent: {fileID: 856856306}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &62760650
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2964,17 +2909,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 66907412}
-  groundParent: {fileID: 891472306}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &66907414
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3042,17 +2976,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 67842985}
-  groundParent: {fileID: 852797226}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &67842987
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4531,6 +4454,7 @@ MonoBehaviour:
   skyExposureNight: 0.6
   nightStart: 0.8
   dawnStart: 0.2
+  transitionDuration: 0.05
 --- !u!4 &103655048
 Transform:
   m_ObjectHideFlags: 0
@@ -4682,17 +4606,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 109051133}
-  groundParent: {fileID: 2145520975}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &109051135
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4885,17 +4798,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 118274737}
-  groundParent: {fileID: 1950412813}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &118274739
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5259,17 +5161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 138177654}
-  groundParent: {fileID: 1569827829}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &138177656
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5502,17 +5393,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 149452632}
-  groundParent: {fileID: 2003683833}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &149452634
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5580,17 +5460,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 151744179}
-  groundParent: {fileID: 1259630084}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &151744181
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5822,17 +5691,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 159884818}
-  groundParent: {fileID: 1117660123}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &159884820
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6088,17 +5946,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 164291012}
-  groundParent: {fileID: 1252542845}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &164291014
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6153,7 +6000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 938e4af5a038d5649894cd84a3fa07c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
-  virtualCamera: {fileID: 650863737}
+  virtualCameras: []
 --- !u!20 &164300662
 Camera:
   m_ObjectHideFlags: 0
@@ -6871,17 +6718,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 180976684}
-  groundParent: {fileID: 1211803686}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &180976686
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6949,17 +6785,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 181086459}
-  groundParent: {fileID: 880836648}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &181086461
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13539,6 +13364,7 @@ MonoBehaviour:
   connectionSignal: {fileID: 11400000, guid: 8f3de600bb1b2404eb673db630bede51, type: 2}
   inventoryID: 2
   needMockData: 0
+  mockItems: []
   InventoryItems:
     UpdateTraits:
       MinSecondsBetweenUpdates: 0
@@ -13855,17 +13681,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 198994743}
-  groundParent: {fileID: 56496614}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &198994745
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14383,17 +14198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 206010454}
-  groundParent: {fileID: 1695262645}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &206010456
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15319,17 +15123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 221157963}
-  groundParent: {fileID: 2087237215}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &221157965
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15614,17 +15407,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 229544013}
-  groundParent: {fileID: 1224634051}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &229544015
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15692,17 +15474,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 230292632}
-  groundParent: {fileID: 1843484613}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &230292634
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15770,17 +15541,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 232061816}
-  groundParent: {fileID: 1014319847}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &232061818
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16021,17 +15781,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 236264404}
-  groundParent: {fileID: 1594671304}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &236264406
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16204,17 +15953,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 239463280}
-  groundParent: {fileID: 1453080126}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &239463282
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16966,17 +16704,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 262124266}
-  groundParent: {fileID: 1517579387}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &262124268
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17217,17 +16944,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 263068313}
-  groundParent: {fileID: 1990927054}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &263068315
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17295,17 +17011,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 263472984}
-  groundParent: {fileID: 768484429}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &263472986
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17373,17 +17078,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 266442626}
-  groundParent: {fileID: 2052532049}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &266442628
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17482,17 +17176,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 268549051}
-  groundParent: {fileID: 245590889}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &268549053
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17560,17 +17243,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 271157316}
-  groundParent: {fileID: 164242684}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &271157318
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22844,17 +22516,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 297069489}
-  groundParent: {fileID: 1930368604}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &297069491
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22953,17 +22614,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 298454926}
-  groundParent: {fileID: 1404535084}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &298454928
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23276,17 +22926,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 303243210}
-  groundParent: {fileID: 1986945128}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &303243212
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23600,17 +23239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 307647284}
-  groundParent: {fileID: 1607945974}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &307647286
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23709,17 +23337,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 309184838}
-  groundParent: {fileID: 1085921675}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &309184840
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23787,17 +23404,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 311710062}
-  groundParent: {fileID: 303240990}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &311710064
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24138,17 +23744,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 321629040}
-  groundParent: {fileID: 1062591576}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &321629042
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24785,17 +24380,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 338513044}
-  groundParent: {fileID: 1216030918}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &338513046
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25698,17 +25282,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 366880755}
-  groundParent: {fileID: 1107856607}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &366880757
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25850,17 +25423,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 370899703}
-  groundParent: {fileID: 1214157304}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &370899705
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25928,17 +25490,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 371315756}
-  groundParent: {fileID: 1852067432}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &371315758
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26887,17 +26438,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 400874083}
-  groundParent: {fileID: 913618018}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &400874085
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27121,17 +26661,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 403901916}
-  groundParent: {fileID: 477556966}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &403901918
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27510,17 +27039,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 417471874}
-  groundParent: {fileID: 239097906}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &417471876
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27619,7 +27137,6 @@ Terrain:
   m_AllowAutoConnect: 1
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
-  m_EnableHeightmapLODFrustumCulling: 1
   m_TreeMotionVectorModeOverride: 3
 --- !u!4 &421624723
 Transform:
@@ -27713,17 +27230,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 425246090}
-  groundParent: {fileID: 244722189}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &425246092
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27991,17 +27497,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 434168320}
-  groundParent: {fileID: 448667831}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &434168322
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28100,17 +27595,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 436325628}
-  groundParent: {fileID: 1683381208}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &436325630
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28870,17 +28354,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 469724788}
-  groundParent: {fileID: 1544453972}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &469724790
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29680,7 +29153,7 @@ LODGroup:
   m_PrefabInstance: {fileID: 18067217}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499239309}
-  serializedVersion: 3
+  serializedVersion: 2
   m_LocalReferencePoint: {x: -0.0021303892, y: 0.24939066, z: -0.0033848286}
   m_Size: 1.3100781
   m_FadeMode: 1
@@ -29700,7 +29173,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 373272979}
   m_Enabled: 1
-  m_GlobalIlluminationLOD: 0
 --- !u!1 &505389104
 GameObject:
   m_ObjectHideFlags: 0
@@ -30389,17 +29861,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 522264329}
-  groundParent: {fileID: 570198445}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &522264331
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59300,17 +58761,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 553422533}
-  groundParent: {fileID: 263008867}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &553422535
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60039,17 +59489,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 582979393}
-  groundParent: {fileID: 2119680503}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &582979395
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60638,17 +60077,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 597140860}
-  groundParent: {fileID: 1050719524}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &597140862
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60863,17 +60291,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 604448162}
-  groundParent: {fileID: 781373103}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &604448164
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61030,17 +60447,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 605822507}
-  groundParent: {fileID: 318961125}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &605822509
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61192,17 +60598,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 619643323}
-  groundParent: {fileID: 1352572981}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &619643325
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61558,17 +60953,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 635836419}
-  groundParent: {fileID: 372981861}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &635836421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62376,17 +61760,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 657659628}
-  groundParent: {fileID: 1230375577}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &657659630
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62937,17 +62310,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 666910471}
-  groundParent: {fileID: 1357668776}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &666910473
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63845,17 +63207,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 689013626}
-  groundParent: {fileID: 1767368830}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &689013628
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -64068,17 +63419,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 697022276}
-  groundParent: {fileID: 266796784}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &697022278
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65083,17 +64423,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 717531930}
-  groundParent: {fileID: 574792902}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &717531932
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65634,7 +64963,7 @@ LODGroup:
   m_PrefabInstance: {fileID: 734503475}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 629120763}
-  serializedVersion: 3
+  serializedVersion: 2
   m_LocalReferencePoint: {x: -0.025627136, y: 9.081172, z: -0.2026825}
   m_Size: 20.793264
   m_FadeMode: 0
@@ -65658,7 +64987,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 1465175060}
   m_Enabled: 1
-  m_GlobalIlluminationLOD: 0
 --- !u!1001 &736730309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66146,17 +65474,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 749486886}
-  groundParent: {fileID: 297237843}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &749486888
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66502,17 +65819,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 765014028}
-  groundParent: {fileID: 1827676571}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &765014030
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66731,17 +66037,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 770773888}
-  groundParent: {fileID: 306895764}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &770773890
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66809,17 +66104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 775471014}
-  groundParent: {fileID: 139833291}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &775471016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67107,17 +66391,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 785375486}
-  groundParent: {fileID: 1793326038}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &785375488
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67185,17 +66458,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 792034559}
-  groundParent: {fileID: 26205995}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &792034561
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67325,17 +66587,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 796090625}
-  groundParent: {fileID: 1632493206}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &796090627
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67602,17 +66853,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 808096144}
-  groundParent: {fileID: 372552769}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &808096146
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68378,17 +67618,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 823954568}
-  groundParent: {fileID: 1388049618}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &823954570
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68456,17 +67685,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 824233273}
-  groundParent: {fileID: 1560209947}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &824233275
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69073,17 +68291,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 832686350}
-  groundParent: {fileID: 1598822250}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &832686352
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69388,17 +68595,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 842629637}
-  groundParent: {fileID: 883072778}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &842629639
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69519,17 +68715,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 847462488}
-  groundParent: {fileID: 171945715}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &847462490
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70832,17 +70017,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 868656051}
-  groundParent: {fileID: 1537790880}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &868656053
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71734,17 +70908,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 890358085}
-  groundParent: {fileID: 1290814523}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &890358087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72037,17 +71200,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 911546907}
-  groundParent: {fileID: 969339481}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &911546909
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72115,17 +71267,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 911667288}
-  groundParent: {fileID: 1116581071}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &911667290
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72388,17 +71529,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 915563162}
-  groundParent: {fileID: 86484361}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &915563164
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73251,17 +72381,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 934555657}
-  groundParent: {fileID: 1545234874}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &934555659
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74308,17 +73427,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 959694134}
-  groundParent: {fileID: 969832963}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &959694136
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74877,17 +73985,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 969576227}
-  groundParent: {fileID: 659670041}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &969576229
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74986,17 +74083,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 971166593}
-  groundParent: {fileID: 1535771896}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &971166595
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75138,17 +74224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 974520637}
-  groundParent: {fileID: 595109700}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &974520639
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75219,7 +74294,7 @@ LODGroup:
   m_PrefabInstance: {fileID: 969401686}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 975569086}
-  serializedVersion: 3
+  serializedVersion: 2
   m_LocalReferencePoint: {x: 0.000000059604645, y: 6.0363293, z: -0.0000009536743}
   m_Size: 12.072659
   m_FadeMode: 1
@@ -75239,7 +74314,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 672548965}
   m_Enabled: 1
-  m_GlobalIlluminationLOD: 0
 --- !u!1 &977565638
 GameObject:
   m_ObjectHideFlags: 0
@@ -75286,17 +74360,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 977565639}
-  groundParent: {fileID: 1975551991}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &977565641
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75489,17 +74552,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 979467818}
-  groundParent: {fileID: 1755110550}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &979467820
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75887,17 +74939,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 993055436}
-  groundParent: {fileID: 872743665}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &993055438
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75996,17 +75037,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 995072280}
-  groundParent: {fileID: 983171676}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &995072282
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -76054,7 +75084,7 @@ LODGroup:
   m_PrefabInstance: {fileID: 520219739}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003866355}
-  serializedVersion: 3
+  serializedVersion: 2
   m_LocalReferencePoint: {x: -0.025627136, y: 9.081172, z: -0.2026825}
   m_Size: 20.793264
   m_FadeMode: 0
@@ -76078,7 +75108,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 717649747}
   m_Enabled: 1
-  m_GlobalIlluminationLOD: 0
 --- !u!1 &1007029237
 GameObject:
   m_ObjectHideFlags: 0
@@ -76357,17 +75386,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1007388258}
-  groundParent: {fileID: 287892973}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1007388260
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -76601,7 +75619,7 @@ LODGroup:
   m_PrefabInstance: {fileID: 425738783}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1010095354}
-  serializedVersion: 3
+  serializedVersion: 2
   m_LocalReferencePoint: {x: 0.00000023841858, y: -0.00000011920929, z: 0.00005853176}
   m_Size: 7.383539
   m_FadeMode: 1
@@ -76621,7 +75639,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 806670308}
   m_Enabled: 1
-  m_GlobalIlluminationLOD: 0
 --- !u!1001 &1011217084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77232,17 +76249,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1037451005}
-  groundParent: {fileID: 186628118}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1037451007
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -77400,17 +76406,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1040877034}
-  groundParent: {fileID: 1514717639}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1040877036
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -84987,17 +83982,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1072229051}
-  groundParent: {fileID: 959780126}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1072229053
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -85778,17 +84762,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1101940102}
-  groundParent: {fileID: 424488651}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1101940104
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -86365,17 +85338,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1121471474}
-  groundParent: {fileID: 794078168}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1121471476
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -86621,17 +85583,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1127674660}
-  groundParent: {fileID: 37823106}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1127674662
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -86699,17 +85650,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1129899824}
-  groundParent: {fileID: 1072444317}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1129899826
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -86777,17 +85717,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1139185588}
-  groundParent: {fileID: 187926724}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1139185590
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -87080,17 +86009,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1152179869}
-  groundParent: {fileID: 778249077}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1152179871
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -87635,21 +86553,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1239c3f0ba76a3840bcb5c97c154dc65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rows: 9
-  cols: 20
-  rowSpacing: 3
-  colSpacing: 3
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 256
-  raycastHeight: 5
-  soilTilePrefab: {fileID: 6294254351990838812, guid: 9d5058fa129db104c9a86f740bb9c623,
-    type: 3}
-  setLayerToSoil: 1
-  soilLayerName: Soil
-  autoPlant: 0
-  plantThisCrop: {fileID: 0}
-  waterOnPlant: 0
 --- !u!4 &1177432304
 Transform:
   m_ObjectHideFlags: 0
@@ -88182,17 +87085,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1188471617}
-  groundParent: {fileID: 1715055488}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1188471619
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -88411,17 +87303,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1193147007}
-  groundParent: {fileID: 308755027}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1193147009
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -88943,17 +87824,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1198137606}
-  groundParent: {fileID: 986178150}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1198137608
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -89115,17 +87985,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1200524294}
-  groundParent: {fileID: 168257964}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1200524296
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -89729,17 +88588,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1210887467}
-  groundParent: {fileID: 1829735609}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1210887469
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -89838,17 +88686,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1213943768}
-  groundParent: {fileID: 211122736}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1213943770
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -90091,17 +88928,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1219897925}
-  groundParent: {fileID: 888011390}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1219897927
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -90855,17 +89681,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1238616672}
-  groundParent: {fileID: 652892164}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1238616674
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -90987,7 +89802,7 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241662308}
   m_Enabled: 1
-  serializedVersion: 13
+  serializedVersion: 12
   m_Type: 1
   m_Color: {r: 1, g: 0.9384453, b: 0.70782095, a: 1}
   m_Intensity: 1.0909642
@@ -91039,7 +89854,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
-  m_ShapeRadius: 0
+  m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_LightUnit: 1
   m_LuxAtDistance: 1
@@ -91254,17 +90069,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1242277552}
-  groundParent: {fileID: 1260314802}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1242277554
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -91660,12 +90464,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9833ef3a7d5df5d488db3ef4b60c14a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HoeTillingSystem
-  soilTilePrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  soilContainer: {fileID: 1189481454}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!4 &1257711792
 Transform:
   m_ObjectHideFlags: 0
@@ -92101,17 +90899,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1264741158}
-  groundParent: {fileID: 1408925182}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1264741160
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -92790,17 +91577,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1283944954}
-  groundParent: {fileID: 824660258}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1283944956
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -93687,17 +92463,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1301828696}
-  groundParent: {fileID: 1500130710}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1301828698
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -93836,7 +92601,7 @@ LODGroup:
   m_PrefabInstance: {fileID: 1302931457}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396675605}
-  serializedVersion: 3
+  serializedVersion: 2
   m_LocalReferencePoint: {x: 0.00000023841858, y: 6.2468023, z: 0}
   m_Size: 12.493605
   m_FadeMode: 1
@@ -93856,7 +92621,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 279311633}
   m_Enabled: 1
-  m_GlobalIlluminationLOD: 0
 --- !u!1001 &1303045857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93992,17 +92756,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1303159812}
-  groundParent: {fileID: 1026774525}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1303159814
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -95088,17 +93841,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1333853258}
-  groundParent: {fileID: 1500814444}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1333853260
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -95255,17 +93997,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1338550061}
-  groundParent: {fileID: 907902292}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1338550063
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -95333,17 +94064,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1342296154}
-  groundParent: {fileID: 1976459125}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1342296156
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -96189,17 +94909,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1364409690}
-  groundParent: {fileID: 252622842}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1364409692
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -96369,17 +95078,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1370352407}
-  groundParent: {fileID: 795851156}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1370352409
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -96839,17 +95537,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1380121332}
-  groundParent: {fileID: 2062261250}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1380121334
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -96917,17 +95604,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1380942471}
-  groundParent: {fileID: 17884839}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1380942473
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -97063,17 +95739,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1387002896}
-  groundParent: {fileID: 1489788297}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1387002898
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -97172,17 +95837,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1389454822}
-  groundParent: {fileID: 1837572346}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1389454824
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -97586,17 +96240,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1391850669}
-  groundParent: {fileID: 1723523611}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1391850671
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -97718,17 +96361,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1397216473}
-  groundParent: {fileID: 1141181608}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1397216475
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -98847,17 +97479,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1430022259}
-  groundParent: {fileID: 1972817095}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1430022261
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -99097,17 +97718,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1436733547}
-  groundParent: {fileID: 302382594}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1436733549
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -99833,17 +98443,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1462213174}
-  groundParent: {fileID: 92998345}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1462213176
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -100362,17 +98961,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1480844408}
-  groundParent: {fileID: 271755998}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1480844410
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -100771,17 +99359,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1493116257}
-  groundParent: {fileID: 1384389084}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1493116259
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -100849,17 +99426,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1495452974}
-  groundParent: {fileID: 1034390749}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1495452976
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -101263,17 +99829,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1502667124}
-  groundParent: {fileID: 118152361}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1502667126
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -101341,17 +99896,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1503408922}
-  groundParent: {fileID: 715344303}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1503408924
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -102062,17 +100606,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1529152336}
-  groundParent: {fileID: 2060516689}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1529152338
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -102427,17 +100960,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1554352465}
-  groundParent: {fileID: 877187381}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1554352467
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -102956,7 +101478,7 @@ LODGroup:
   m_PrefabInstance: {fileID: 77567045}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565221155}
-  serializedVersion: 3
+  serializedVersion: 2
   m_LocalReferencePoint: {x: 0.0048090816, y: 0.5518913, z: 0.007585123}
   m_Size: 1.1039302
   m_FadeMode: 1
@@ -102976,7 +101498,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 1585607739}
   m_Enabled: 1
-  m_GlobalIlluminationLOD: 0
 --- !u!1001 &1568945110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -103219,7 +101740,7 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1570806025}
   m_Enabled: 1
-  serializedVersion: 13
+  serializedVersion: 12
   m_Type: 1
   m_Color: {r: 0.44113728, g: 0.5340157, b: 0.69817257, a: 1}
   m_Intensity: 1.2792712
@@ -103271,7 +101792,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
-  m_ShapeRadius: 0
+  m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_LightUnit: 1
   m_LuxAtDistance: 1
@@ -103366,17 +101887,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1571058436}
-  groundParent: {fileID: 1036521024}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1571058438
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -105889,17 +104399,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1619267663}
-  groundParent: {fileID: 515084000}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1619267665
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -106113,17 +104612,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1622640559}
-  groundParent: {fileID: 246788431}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1622640561
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -106333,17 +104821,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1631008464}
-  groundParent: {fileID: 1465170593}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1631008466
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -106715,17 +105192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1638167420}
-  groundParent: {fileID: 1075570309}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1638167422
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -106793,17 +105259,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1640315654}
-  groundParent: {fileID: 1383386788}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1640315656
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -108875,17 +107330,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1673181789}
-  groundParent: {fileID: 2102084372}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1673181791
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -109922,17 +108366,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1711166843}
-  groundParent: {fileID: 1579084821}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1711166845
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -110011,7 +108444,7 @@ LODGroup:
   m_PrefabInstance: {fileID: 623352574}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716579228}
-  serializedVersion: 3
+  serializedVersion: 2
   m_LocalReferencePoint: {x: 2.7247982, y: 0.03457284, z: -2.724859}
   m_Size: 5.5617213
   m_FadeMode: 1
@@ -110031,7 +108464,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 859264558}
   m_Enabled: 1
-  m_GlobalIlluminationLOD: 0
 --- !u!1001 &1718323759
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -110152,17 +108584,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1718685276}
-  groundParent: {fileID: 1798818999}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1718685278
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -111971,17 +110392,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1765864983}
-  groundParent: {fileID: 1883422013}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1765864985
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -112168,17 +110578,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1767624603}
-  groundParent: {fileID: 1484199293}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1767624605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -112335,17 +110734,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1770795209}
-  groundParent: {fileID: 1104282883}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1770795211
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -112540,17 +110928,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1774969815}
-  groundParent: {fileID: 673275106}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1774969817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -112618,17 +110995,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1777200656}
-  groundParent: {fileID: 2086592399}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1777200658
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -112925,17 +111291,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1783458599}
-  groundParent: {fileID: 923179038}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1783458601
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -113146,17 +111501,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1786345749}
-  groundParent: {fileID: 21885581}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1786345751
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -113599,17 +111943,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1796228791}
-  groundParent: {fileID: 434812825}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1796228793
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -113782,17 +112115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1801964327}
-  groundParent: {fileID: 91848154}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1801964329
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -113860,17 +112182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1806765752}
-  groundParent: {fileID: 541847496}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1806765754
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -114557,6 +112868,7 @@ MonoBehaviour:
   skyExposureNight: 0.6
   nightStart: 0.8
   dawnStart: 0.2
+  transitionDuration: 0.05
 --- !u!4 &1814911062
 Transform:
   m_ObjectHideFlags: 0
@@ -115314,24 +113626,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3494dbc8b56f74f97f48421ef875fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 164300662}
-  player: {fileID: 0}
-  cursorVisual: {fileID: 1975843725}
-  heldItemSignal: {fileID: 11400000, guid: 19d3e26402093ca489169cd0296af2ea, type: 2}
-  soilMask:
-    serializedVersion: 2
-    m_Bits: 64
-  treeMask:
-    serializedVersion: 2
-    m_Bits: 128
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 256
-  interactRange: 5
-  visualOffset: {x: 0, y: 0.05, z: 0}
-  snapToGrid: 1
-  gridSize: 1
-  showDebugRay: 1
 --- !u!4 &1835592133
 Transform:
   m_ObjectHideFlags: 0
@@ -115467,17 +113761,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1837565198}
-  groundParent: {fileID: 595382061}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1837565200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -115576,17 +113859,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1838172354}
-  groundParent: {fileID: 443542221}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1838172356
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -115886,17 +114158,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1842488134}
-  groundParent: {fileID: 1888721543}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1842488136
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -116410,17 +114671,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1850993822}
-  groundParent: {fileID: 1148631080}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1850993824
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -117062,17 +115312,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1859435694}
-  groundParent: {fileID: 1231672025}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1859435696
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -117750,17 +115989,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1886061484}
-  groundParent: {fileID: 129838675}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1886061486
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -117939,17 +116167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1888900342}
-  groundParent: {fileID: 1193544085}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1888900344
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -118324,17 +116541,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1904259676}
-  groundParent: {fileID: 438138144}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1904259678
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -118500,7 +116706,7 @@ LODGroup:
   m_PrefabInstance: {fileID: 92173983}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905066228}
-  serializedVersion: 3
+  serializedVersion: 2
   m_LocalReferencePoint: {x: -0.10768366, y: 2.4866126, z: 0.0016571879}
   m_Size: 6.726828
   m_FadeMode: 1
@@ -118521,7 +116727,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 1199835696}
   m_Enabled: 1
-  m_GlobalIlluminationLOD: 0
 --- !u!1 &1905705997
 GameObject:
   m_ObjectHideFlags: 0
@@ -118568,17 +116773,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1905705998}
-  groundParent: {fileID: 1967162584}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1905706000
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -119688,7 +117882,7 @@ LODGroup:
   m_PrefabInstance: {fileID: 1928840752}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687326643}
-  serializedVersion: 3
+  serializedVersion: 2
   m_LocalReferencePoint: {x: -0.025627136, y: 9.081172, z: -0.2026825}
   m_Size: 20.793264
   m_FadeMode: 0
@@ -119712,7 +117906,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 1633234350}
   m_Enabled: 1
-  m_GlobalIlluminationLOD: 0
 --- !u!1 &1928883364
 GameObject:
   m_ObjectHideFlags: 0
@@ -119759,17 +117952,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1928883365}
-  groundParent: {fileID: 1511957396}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1928883367
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -120286,17 +118468,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1954555095}
-  groundParent: {fileID: 859866249}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1954555097
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -120696,17 +118867,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1965457827}
-  groundParent: {fileID: 31661939}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1965457829
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -121087,17 +119247,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1974478500}
-  groundParent: {fileID: 1120824016}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1974478502
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -121639,17 +119788,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 1990061398}
-  groundParent: {fileID: 924897412}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &1990061400
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -122053,17 +120191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 2000765832}
-  groundParent: {fileID: 738157972}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &2000765834
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -122489,17 +120616,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 2010788400}
-  groundParent: {fileID: 62675562}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &2010788402
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -122567,17 +120683,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 2011190392}
-  groundParent: {fileID: 1189523716}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &2011190394
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -122645,17 +120750,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 2012423166}
-  groundParent: {fileID: 1607927993}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &2012423168
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -122723,17 +120817,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 2012524103}
-  groundParent: {fileID: 777193509}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &2012524105
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -122899,17 +120982,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 2013990951}
-  groundParent: {fileID: 616365923}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &2013990953
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -123075,17 +121147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 2020359933}
-  groundParent: {fileID: 818343450}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &2020359935
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -123340,17 +121401,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 2026169123}
-  groundParent: {fileID: 219664579}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &2026169125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -123591,17 +121641,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 2031399599}
-  groundParent: {fileID: 1308918764}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &2031399601
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -123777,7 +121816,7 @@ LODGroup:
   m_PrefabInstance: {fileID: 125310768}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2046698593}
-  serializedVersion: 3
+  serializedVersion: 2
   m_LocalReferencePoint: {x: 3.9989996, y: 0.014946461, z: -0.00077438354}
   m_Size: 16.001549
   m_FadeMode: 1
@@ -123797,7 +121836,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 1159332882}
   m_Enabled: 1
-  m_GlobalIlluminationLOD: 0
 --- !u!1 &2051131557
 GameObject:
   m_ObjectHideFlags: 0
@@ -123928,17 +121966,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 2055700326}
-  groundParent: {fileID: 1425181904}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &2055700328
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -124157,17 +122184,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 2067893267}
-  groundParent: {fileID: 2003594718}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &2067893269
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -124806,17 +122822,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 2089411061}
-  groundParent: {fileID: 587975493}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &2089411063
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -125354,7 +123359,7 @@ LODGroup:
   m_PrefabInstance: {fileID: 2101078209}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1020871563}
-  serializedVersion: 3
+  serializedVersion: 2
   m_LocalReferencePoint: {x: 0, y: 2.506203, z: 0}
   m_Size: 5.012406
   m_FadeMode: 1
@@ -125374,7 +123379,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 1236192446}
   m_Enabled: 1
-  m_GlobalIlluminationLOD: 0
 --- !u!1 &2102084371
 GameObject:
   m_ObjectHideFlags: 0
@@ -126168,17 +124172,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 2133473219}
-  groundParent: {fileID: 1518693793}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &2133473221
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -126246,17 +124239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 2135310431}
-  groundParent: {fileID: 559746747}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &2135310433
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -126890,17 +124872,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b7b9d67e2846847bde5c704f40a79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTilled: 0
-  isWatered: 0
-  crop: {fileID: 0}
-  stageIndex: 0
-  stageTimer: 0
-  cropParent: {fileID: 2145923451}
-  groundParent: {fileID: 994149751}
-  groundDryPrefab: {fileID: 2144836476330039534, guid: 9d2085782bda9004ebdb707c4ec53747,
-    type: 3}
-  groundWetPrefab: {fileID: 2144836476330039534, guid: 8bc3beec01c2ea447977e36b95673573,
-    type: 3}
 --- !u!65 &2145923453
 BoxCollider:
   m_ObjectHideFlags: 0

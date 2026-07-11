@@ -89,7 +89,7 @@ public class InGameUIManager : MonoBehaviour
     private void HandleInventoryToggle()
     {
         if (IsCriticalPanelOpen) return;
-        OpenExclusivePanel(InGamePanel.Menu);
+        OpenExclusivePanel(InGamePanel.Inventory);
     }
 
     // ── Init ─────────────────────────────────────────────────────────────────
