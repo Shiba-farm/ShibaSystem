@@ -32,6 +32,8 @@ public class InteractController : MonoBehaviour
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, interactRange, interactLayer);
 
+        Debug.Log($"DetectClosest: Found {colliders.Length} colliders in range.");
+
         IInteractable closestInteractable = null;
         Transform closestTransform = null;
         float minDistance = float.MaxValue;

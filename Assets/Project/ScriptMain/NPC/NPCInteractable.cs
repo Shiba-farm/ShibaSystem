@@ -51,6 +51,16 @@ public class NPCInteractable : MonoBehaviour
              "(เข้าระยะที่ interactRadius ปกติ แต่ต้องออกไปไกลกว่า interactRadius + ค่านี้ ถึงจะนับว่าออกจากระยะ)")]
     public float rangeHysteresis = 0.5f;
 
+    [Header("Special System (Optional 3rd interaction)")]
+    [Tooltip("เปิดใช้ถ้า NPC คนนี้มีระบบพิเศษให้ผู้เล่นเข้าถึงจากบทสนทนา นอกเหนือจากคุย/ให้ของขวัญ " +
+             "เช่น NPC เป็นพ่อค้า → เปิดระบบร้านค้า NPC ทั่วไปที่ไม่มีระบบพิเศษ ปล่อยติ๊กนี้ว่างไว้")]
+    [SerializeField] private bool hasSpecialSystem;
+    [Tooltip("Panel ที่จะเปิดเมื่อผู้เล่นกดปุ่มตัวเลือกที่ 3 ใน DialogueManager (มีผลเฉพาะตอนติ๊ก Has Special System ไว้)")]
+    [SerializeField] private InGamePanel specialSystemPanel;
+
+    /// <summary>Panel พิเศษของ NPC คนนี้ (ถ้ามี) — ส่งให้ DialogueManager ตอนเริ่มบทสนทนา เพื่อโชว์ปุ่มตัวเลือกที่ 3</summary>
+    public InGamePanel? SpecialSystemPanel => hasSpecialSystem ? specialSystemPanel : (InGamePanel?)null;
+
     /// <summary>Npc Id ของ NPC คนนี้ — ใช้โดยระบบคลิกเมาส์/hover ภายนอก</summary>
     public int NpcId => npcDefinition != null ? npcDefinition.npcId : -1;
 
@@ -113,8 +123,9 @@ public class NPCInteractable : MonoBehaviour
         {
             FacePlayer();
 
-            // เริ่ม Dialogue
-            DialogueManager.Instance.StartDialogue(dialogueData);
+            // เริ่ม Dialogue — ส่ง specialSystemPanel ไปด้วย เผื่อ NPC นี้มีระบบพิเศษ (เช่น ร้านค้า)
+            // ให้ DialogueManager โชว์ปุ่มตัวเลือกที่ 3
+            DialogueManager.Instance.StartDialogue(dialogueData, SpecialSystemPanel);
 
             // บันทึกการพบใน RelationshipManager (ครั้งแรกเท่านั้น)
             TryRegisterMeet();

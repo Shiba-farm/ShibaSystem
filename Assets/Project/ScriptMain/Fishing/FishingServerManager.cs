@@ -34,7 +34,8 @@ public class FishingServerManager : NetworkBehaviour
     [Header("Mini-game Feel")]
     [Tooltip("Rightward pull strength sent to FishingMiniGameUI while the player holds click.\n" +
              "TODO: replace with a per-player lookup from the Knowledge stat.")]
-    [SerializeField] private float defaultPullStrength = 600f;
+    [SerializeField] private float defaultPullStrength = 0.02f;
+    [SerializeField] private float defaultHookPower = 0.3f;
 
     // Server-only: one session per fishing player
     private readonly Dictionary<ulong, FishingSession> _sessions = new();
@@ -131,7 +132,9 @@ public class FishingServerManager : NetworkBehaviour
             fish.fishMoveSpeed,
             fish.moveUncertainty,
             fish.catchTimeRequired,
+            fish.timeBeforeFlee,
             defaultPullStrength,
+            defaultHookPower,
             RpcTarget.Single(clientId, RpcTargetUse.Temp));
 
         Debug.Log($"[FishingServerManager] Fish biting for client {clientId} — fish: {fish.animalName}.");
@@ -222,12 +225,14 @@ public class FishingServerManager : NetworkBehaviour
         float fishMoveSpeed,
         float moveUncertainty,
         float catchTimeRequired,
+        float timeBeforeFlee,
         float pullStrength,
+        float hookPower,
         RpcParams rpcParams = default)
     {
         // InGameUIManager owns panel visibility and the critical-panel flag.
         // It will call FishingMiniGameUI.Open() internally after fading the panel in.
-        InGameUIManager.Instance?.OpenFishingPanel(fishMoveSpeed, moveUncertainty, catchTimeRequired, pullStrength);
+        InGameUIManager.Instance?.OpenFishingPanel(fishMoveSpeed, moveUncertainty, catchTimeRequired, timeBeforeFlee, pullStrength, hookPower);
     }
 
     // ── Player-initiated cancel (swap tool, press Cancel key, etc.) ───────────

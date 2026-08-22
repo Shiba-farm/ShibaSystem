@@ -17,6 +17,7 @@ public enum InGamePanel
     DayBanner,
     Menu,       // หน้าต่างเมนูรวม (Inventory/Quest/Relationships/Map/Skills/Achievements)
     Fishing,    // mini-game panel — managed via OpenFishingPanel / CloseFishingPanel
+    LiveStock,
     Waiting,    // "Waiting for other players to sleep" panel
 }
 
@@ -62,8 +63,8 @@ public class InGameUIManager : MonoBehaviour
         {
             InputHandler.Singleton.OnPauseTriggered     -= HandlePauseToggle;
             InputHandler.Singleton.OnPauseTriggered     += HandlePauseToggle;
-            InputHandler.Singleton.OnInventoryTriggered -= HandleInventoryToggle;
-            InputHandler.Singleton.OnInventoryTriggered += HandleInventoryToggle;
+            InputHandler.Singleton.OnTabTriggered -= HandleTabToggle;
+            InputHandler.Singleton.OnTabTriggered += HandleTabToggle;
         }
 
         // ตั้ง state เริ่มต้นที่แน่นอน — ป้องกัน InputLocked ค้างจาก session ก่อนหน้า (bug #2)
@@ -75,7 +76,7 @@ public class InGameUIManager : MonoBehaviour
         if (InputHandler.Singleton != null)
         {
             InputHandler.Singleton.OnPauseTriggered     -= HandlePauseToggle;
-            InputHandler.Singleton.OnInventoryTriggered -= HandleInventoryToggle;
+            InputHandler.Singleton.OnTabTriggered -= HandleTabToggle;
         }
     }
 
@@ -86,10 +87,10 @@ public class InGameUIManager : MonoBehaviour
         OpenExclusivePanel(InGamePanel.Pause);
     }
 
-    private void HandleInventoryToggle()
+    private void HandleTabToggle()
     {
         if (IsCriticalPanelOpen) return;
-        OpenExclusivePanel(InGamePanel.Inventory);
+        OpenExclusivePanel(InGamePanel.Menu);
     }
 
     // ── Init ─────────────────────────────────────────────────────────────────
@@ -167,12 +168,12 @@ public class InGameUIManager : MonoBehaviour
                     SetPlayerControl(false);
                 }
             }
-            else if (panel.panelObject.activeSelf)
-            {
-                // ปิด panel อื่นที่เปิดอยู่
-                StartCoroutine(FadeCanvas(panel.canvasGroup, 1f, 0f, FADE_DURATION, () =>
-                    panel.panelObject.SetActive(false)));
-            }
+            // else if (panel.panelObject.activeSelf)
+            // {
+            //     // ปิด panel อื่นที่เปิดอยู่
+            //     StartCoroutine(FadeCanvas(panel.canvasGroup, 1f, 0f, FADE_DURATION, () =>
+            //         panel.panelObject.SetActive(false)));
+            // }
         }
     }
 
@@ -248,7 +249,7 @@ public class InGameUIManager : MonoBehaviour
     /// Closes any other open panel first.
     /// Sets IsCriticalPanelOpen so Pause, Inventory, and fishing-cancel are blocked.
     /// </summary>
-    public void OpenFishingPanel(float fishMoveSpeed, float uncertainty, float catchTime, float pullStrength)
+    public void OpenFishingPanel(float fishMoveSpeed, float uncertainty, float catchTime, float timeBeforeFlee, float pullStrength, float hookPower)
     {
         if (fishingMiniGamePanel == null)
         {
@@ -278,7 +279,7 @@ public class InGameUIManager : MonoBehaviour
         }
 
         IsCriticalPanelOpen = true;
-        fishingMiniGamePanel.Open(fishMoveSpeed, uncertainty, catchTime, pullStrength);
+        fishingMiniGamePanel.Open(fishMoveSpeed, uncertainty, catchTime, timeBeforeFlee, pullStrength, hookPower);
     }
 
     /// <summary>

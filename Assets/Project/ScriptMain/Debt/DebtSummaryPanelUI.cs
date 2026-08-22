@@ -1,6 +1,4 @@
-using Sirenix.Utilities;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -69,7 +67,7 @@ public class DebtSummaryPanelUI : MonoBehaviour
             var row = Instantiate(lostItemPrefab, lostItemContainer);
             row.GetComponent<LostItemRowUI>().Setup(item.icon, amount);
         }
-        if (!punishmentResult.LostItems.IsNullOrEmpty()) lostTextHeader.gameObject.SetActive(true);
+        if (punishmentResult.HasLostItems) lostTextHeader.gameObject.SetActive(true);
     }
 
     private void OnAccept()

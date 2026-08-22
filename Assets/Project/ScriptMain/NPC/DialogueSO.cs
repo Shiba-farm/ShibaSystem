@@ -1,11 +1,9 @@
 using UnityEngine;
-using Sirenix.OdinInspector; // ∂È“¡’ Odin ∂È“‰¡Ë¡’„ÀÈ≈∫ÕÕ°‰¥È§√—∫
 
 [System.Serializable]
 public struct DialogueLine
 {
-    [Tooltip("√ŸªÕ“√¡≥Ï¢Õß NPC „πª√–‚¬§π’È")]
-    [PreviewField(60), TableColumnWidth(80, Resizable = false)]
+    [Tooltip("‡∏£‡∏π‡∏õ‡∏≠‡∏≤‡∏£‡∏°‡∏ì‡πå‡∏Ç‡∏≠‡∏á NPC ‡πÉ‡∏ô‡∏õ‡∏£‡∏∞‡πÇ‡∏¢‡∏Ñ‡∏ô‡∏µ‡πâ")]
     public Sprite portrait;
 
     [TextArea(3, 5)]
@@ -19,6 +17,5 @@ public class DialogueSO : ScriptableObject
     public string npcName;
 
     [Header("Conversation")]
-    [TableList(ShowIndexLabels = true)]
     public DialogueLine[] lines;
 }

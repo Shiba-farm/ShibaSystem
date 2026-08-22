@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
   npcName: Bear_kid
   lines:
-  - portrait: {fileID: 763095342, guid: e0a4c571a5c08684a9d70012259131cf, type: 3}
+  - portrait: {fileID: 763095342, guid: cdb3a9f7fc94a324ea24c24cbb5d2706, type: 3}
     text: Hello
-  - portrait: {fileID: 763095342, guid: e0a4c571a5c08684a9d70012259131cf, type: 3}
+  - portrait: {fileID: 763095342, guid: cdb3a9f7fc94a324ea24c24cbb5d2706, type: 3}
     text: Test Test

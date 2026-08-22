@@ -33,4 +33,5 @@ public class FishSO : AnimalSO
     [Header("Mini-game — Catch Threshold")]
     [Tooltip("Total seconds the catch zone must overlap the fish to win.")]
     public float catchTimeRequired = 2f;
+    public float timeBeforeFlee = 10f;
 }

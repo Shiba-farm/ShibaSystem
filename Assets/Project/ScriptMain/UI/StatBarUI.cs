@@ -52,7 +52,6 @@ public class StatBarUI : MonoBehaviour
 
     private void OnStatsChanged(NetworkListEvent<NetworkStat> changeEvent)
     {
-        Debug.Log("Stats changed, refreshing UI...");
         RefreshAll();
     }
 

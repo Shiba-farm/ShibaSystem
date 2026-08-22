@@ -21,4 +21,5 @@ MonoBehaviour:
   dropItem: {fileID: 11400000, guid: 61dbe4aa642535e4dbf1dabeaab98d43, type: 2}
   fishMoveSpeed: 120
   moveUncertainty: 1
-  catchTimeRequired: 10
+  catchTimeRequired: 3
+  timeBeforeFlee: 25

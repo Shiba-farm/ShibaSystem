@@ -22,7 +22,7 @@ public class InputHandler : MonoBehaviour
     // --- OBSERVER (Pulse Events) ---
     public event Action OnJumpTriggered;
     public event Action OnInteractTriggered;
-    public event Action OnInventoryTriggered;
+    public event Action OnTabTriggered;
     public event Action<bool> OnSprintToggled;
     public event Action<int> OnNumkeyTriggered;
     public event Action OnPauseTriggered;
@@ -75,7 +75,7 @@ public class InputHandler : MonoBehaviour
 
         _controls.Key.Inventory.performed += ctx =>
         {
-            OnInventoryTriggered?.Invoke();
+            OnTabTriggered?.Invoke();
         };
         _controls.Key.Pause.performed += ctx =>
         {

@@ -1,32 +1,26 @@
 using UnityEngine;
-using Sirenix.OdinInspector;
 
 [CreateAssetMenu(menuName = "Farm/Crop")]
-public class CropSO : SerializedScriptableObject
+public class CropSO : ScriptableObject
 {
-    [BoxGroup("Info"), LabelWidth(80)]
+    [Header("Info")]
     public string cropName;
 
-    [BoxGroup("Info"), PreviewField(64), HideLabel]
     public Sprite icon;
 
-    [BoxGroup("Growth"), TableList]
-    [InfoBox("��Ҵ�ͧ growthPrefabs ��� stageDurations �����ҡѹ")]
+    [Header("Growth")]
+    // growthPrefabs and stageDurations must be the same length (stage[i] uses growthPrefabs[i]).
     public GameObject[] growthPrefabs;
 
-    [BoxGroup("Growth")]
     [Tooltip("เวลาแต่ละ stage เป็น 'ชั่วโมงในเกม' (เช่น 6 = 6 ชม.ในเกม, 24 = 1 วันในเกม)")]
     public float[] stageDurations;
 
-    [BoxGroup("Growth")]
     public bool requiresWaterEachStage = true;
 
-    [BoxGroup("Harvest"), InlineEditor]
+    [Header("Harvest")]
     public ItemSO harvestItem;
 
-    [BoxGroup("Harvest"), LabelWidth(80)]
     public Vector2Int yieldRange = new Vector2Int(1, 1);
 
-    [BoxGroup("Harvest")]
     public bool destroyOnHarvest = true;
 }

@@ -1,21 +1,18 @@
 using UnityEngine;
-using Sirenix.OdinInspector;
 
 /// <summary>
 /// Emergency tool to debug and force-test the farming system without needing items.
 /// </summary>
 public class FarmingEmergencyTool : MonoBehaviour
 {
-    [Title("Debug Targets")]
+    [Header("Debug Targets")]
     // public PlantingCursorController cursorController;
     public TilledGroundSystem groundSystem;
     public HeldItemSignal heldItemSignal;
 
-    [Title("Test Item (Optional)")]
+    [Header("Test Item (Optional)")]
     public ItemSO testSeedItem;
 
-    [Title("Manual Controls")]
-    [Button(ButtonSizes.Medium, Name = "Force Show Cursor (Ignore Category)")]
     public void ForceShowCursor()
     {
         // if (cursorController == null) cursorController = FindObjectOfType<PlantingCursorController>();
@@ -27,7 +24,6 @@ public class FarmingEmergencyTool : MonoBehaviour
         Debug.Log("[EmergencyTool] Cursor Forced Active. Move your mouse over the terrain.");
     }
 
-    [Button(ButtonSizes.Medium, Name = "Simulate Holding Test Seed")]
     public void SimulateHoldingSeed()
     {
         if (heldItemSignal == null || testSeedItem == null) 
@@ -39,7 +35,6 @@ public class FarmingEmergencyTool : MonoBehaviour
         Debug.Log($"[EmergencyTool] Simulated holding: {testSeedItem.itemName}");
     }
 
-    [Button(ButtonSizes.Medium, Name = "Add Tilled Cell at Current Mouse Position")]
     public void TillAtMouse()
     {
         if (Camera.main == null || groundSystem == null) return;
@@ -52,7 +47,6 @@ public class FarmingEmergencyTool : MonoBehaviour
         }
     }
 
-    [Button(ButtonSizes.Small)]
     public void CheckSystemStatus()
     {
         Debug.Log("--- Farming System Status ---");

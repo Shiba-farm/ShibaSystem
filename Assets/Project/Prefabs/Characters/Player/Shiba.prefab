@@ -1328,7 +1328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 2793554976
+  GlobalObjectIdHash: 1184210214
   InScenePlacedSourceGlobalObjectIdHash: 2793554976
   DeferredDespawnTick: 0
   Ownership: 1
@@ -1672,7 +1672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MyGame.Dungeon.DungeonLightingController
   ShowTopMostFoldoutHeaderGroup: 1
-  worldLayerName: WorldLayer
+  worldLayerName: Default
   dungeonLayerName: DungeonLayer
   dungeonAmbientColor: {r: 0, g: 0, b: 0, a: 1}
   modelRoot: {fileID: 5405762969034221957}
@@ -2707,6 +2707,8 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: 733a6afa521814e4b9c365c17fbd896e, type: 2}
     amount: 1
   - item: {fileID: 11400000, guid: dc8f4cf890828644b93a2a40e04c0631, type: 2}
+    amount: 4
+  - item: {fileID: 11400000, guid: 63ee4602e1b9ed2449b54a76a0081424, type: 2}
     amount: 4
   InventoryItems:
     UpdateTraits:

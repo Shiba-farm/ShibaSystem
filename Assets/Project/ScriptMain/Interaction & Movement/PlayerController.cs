@@ -74,8 +74,8 @@ public class PlayerController : NetworkSaveableBehaviour
             // Register with CameraManager so it can subscribe to our state changes (fishing, etc.)
             CameraManager.Instance?.RegisterLocalPlayer(this);
 
-            InputHandler.Singleton.OnInteractTriggered -= OnPlayerInteract;
-            InputHandler.Singleton.OnInteractTriggered += OnPlayerInteract;
+            // InputHandler.Singleton.OnInteractTriggered -= OnPlayerInteract;
+            // InputHandler.Singleton.OnInteractTriggered += OnPlayerInteract;
 
             var hotbar = FindFirstObjectByType<HotbarUIController>();
             hotbar?.SetOwnerClientId(OwnerClientId);
@@ -94,8 +94,8 @@ public class PlayerController : NetworkSaveableBehaviour
         if (IsOwner)
         {
             CameraManager.Instance?.UnregisterLocalPlayer(this);
-            if (InputHandler.Singleton != null)
-                InputHandler.Singleton.OnInteractTriggered -= OnPlayerInteract;
+            // if (InputHandler.Singleton != null)
+            //     InputHandler.Singleton.OnInteractTriggered -= OnPlayerInteract;
         }
         if (IsServer)
             SaveLoadManager.Instance?.Unregister(this);
@@ -187,13 +187,13 @@ public class PlayerController : NetworkSaveableBehaviour
     }
 
     /// <summary>New Input System fires this → NPCInteractable subscribes ด้วย event นี้</summary>
-    public static event System.Action OnInteractPressed;
+    // public static event System.Action OnInteractPressed;
 
-    private void OnPlayerInteract()
-    {
-        Debug.Log("Interact!!");
-        OnInteractPressed?.Invoke();
-    }
+    // private void OnPlayerInteract()
+    // {
+    //     Debug.Log("Interact!!");
+    //     OnInteractPressed?.Invoke();
+    // }
 
     private void StartActionTrigger(string triggerName) { isBusyAction = true; animator.ResetTrigger(triggerName); animator.SetTrigger(triggerName); }
     public void FaceTo(Vector3 worldPos) { Vector3 dir = worldPos - transform.position; dir.y = 0f; if (dir.sqrMagnitude < 0.001f) return; transform.rotation = Quaternion.LookRotation(dir.normalized); }

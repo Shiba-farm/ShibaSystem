@@ -17,10 +17,17 @@ public class DialogueManager : MonoBehaviour
     [Header("Settings")]
     public float typeSpeed = 0.02f;       // �������ǵ��˹ѧ������
 
+    [Header("Special System Button (Optional)")]
+    [Tooltip("ปุ่มตัวเลือกที่ 3 ในกล่องสนทนา — โผล่เฉพาะตอน NPC ที่กำลังคุยด้วยมี specialSystemPanel " +
+             "กำหนดไว้ (เช่น NPC พ่อค้า → ปุ่ม \"ซื้อของ\") กดแล้วจะปิด dialogue แล้วเปิด panel นั้นแทน " +
+             "ถ้าไม่ผูกไว้ ฟีเจอร์นี้จะถูกข้ามไปเฉยๆ ไม่กระทบ NPC ที่ไม่มีระบบพิเศษ")]
+    [SerializeField] private Button specialSystemButton;
+
     private Queue<DialogueLine> sentences;
     private bool isTyping = false;
     private string currentFullText = "";
     private CanvasGroup _canvasGroup; // InGameUIManager สั่ง alpha=0/interactable=false ไว้ตอน Awake ต้องเปิดคืนเองตอน StartDialogue
+    private InGamePanel? _currentSpecialSystem; // panel พิเศษของ NPC ที่กำลังคุยด้วยอยู่ตอนนี้ (ถ้ามี)
 
     // ������͡�������Ҥ������ (Player �����Ѻ�����)
     public bool IsDialogueActive { get; private set; }
@@ -34,6 +41,12 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<DialogueLine>();
         if (dialoguePanel) dialoguePanel.SetActive(false);
         SetPanelVisible(false);
+
+        if (specialSystemButton)
+        {
+            specialSystemButton.onClick.AddListener(OnSpecialSystemButtonClicked);
+            specialSystemButton.gameObject.SetActive(false);
+        }
     }
 
     /// <summary>
@@ -49,25 +62,33 @@ public class DialogueManager : MonoBehaviour
         _canvasGroup.blocksRaycasts = visible;
     }
 
-    public void StartDialogue(DialogueSO dialogue)
+    /// <summary>
+    /// เริ่มบทสนทนาปกติ — ผูก specialSystem (optional) ถ้า NPC คนนี้มีระบบพิเศษ (เช่น ร้านค้า)
+    /// ให้โชว์ปุ่มตัวเลือกที่ 3 ในกล่องสนทนา
+    /// </summary>
+    public void StartDialogue(DialogueSO dialogue, InGamePanel? specialSystem = null)
     {
-        StartDialogueInternal(dialogue.npcName, dialogue.lines);
+        StartDialogueInternal(dialogue.npcName, dialogue.lines, specialSystem);
     }
 
     /// <summary>
     /// เริ่มบทพูดสั้นๆ แบบไดนามิก ไม่ต้องสร้าง DialogueSO asset ล่วงหน้า —
-    /// ใช้กับข้อความชั่วคราว เช่น NPC พูดขอบคุณตอนได้รับของขวัญ
+    /// ใช้กับข้อความชั่วคราว เช่น NPC พูดขอบคุณตอนได้รับของขวัญ (ไม่มีปุ่มระบบพิเศษ)
     /// </summary>
     public void StartOneLiner(string speakerName, string text, Sprite portrait = null)
     {
-        StartDialogueInternal(speakerName, new[] { new DialogueLine { text = text, portrait = portrait } });
+        StartDialogueInternal(speakerName, new[] { new DialogueLine { text = text, portrait = portrait } }, null);
     }
 
-    private void StartDialogueInternal(string npcName, DialogueLine[] lines)
+    private void StartDialogueInternal(string npcName, DialogueLine[] lines, InGamePanel? specialSystem)
     {
         IsDialogueActive = true;
         if (dialoguePanel) dialoguePanel.SetActive(true);
         SetPanelVisible(true);
+
+        // ปุ่มตัวเลือกที่ 3 (optional) — โผล่เฉพาะตอน NPC นี้มี specialSystem กำหนดไว้
+        _currentSpecialSystem = specialSystem;
+        if (specialSystemButton) specialSystemButton.gameObject.SetActive(specialSystem.HasValue);
 
         // ตั้งชื่อ NPC
         if (nameText) nameText.text = npcName;
@@ -84,7 +105,6 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        // ��ҡ��ѧ��������� ��顴������ʴ�����騺�ѹ��
         if (isTyping)
         {
             StopAllCoroutines();
@@ -93,7 +113,6 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        // ��һ���¤������� ��騺���ʹ���
         if (sentences.Count == 0)
         {
             EndDialogue();
@@ -137,5 +156,25 @@ public class DialogueManager : MonoBehaviour
         IsDialogueActive = false;
         if (dialoguePanel) dialoguePanel.SetActive(false);
         SetPanelVisible(false);
+
+        _currentSpecialSystem = null;
+        if (specialSystemButton) specialSystemButton.gameObject.SetActive(false);
+    }
+
+    /// <summary>
+    /// เรียกตอนผู้เล่นกดปุ่มตัวเลือกที่ 3 (ผูกไว้ผ่าน specialSystemButton.onClick ใน Awake) —
+    /// ปิด dialogue แล้วเปิด panel ระบบพิเศษของ NPC ที่กำลังคุยด้วยแทน (เช่น หน้าร้านค้า)
+    /// </summary>
+    private void OnSpecialSystemButtonClicked()
+    {
+        if (!_currentSpecialSystem.HasValue) return;
+        InGamePanel target = _currentSpecialSystem.Value;
+
+        EndDialogue();
+
+        if (InGameUIManager.Instance != null)
+            InGameUIManager.Instance.OpenExclusivePanel(target);
+        else
+            Debug.LogWarning("[DialogueManager] InGameUIManager.Instance เป็น null — เปิด special system panel ไม่ได้");
     }
 }

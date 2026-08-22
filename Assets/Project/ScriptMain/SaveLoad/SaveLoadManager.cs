@@ -113,7 +113,6 @@ public class SaveLoadManager : NetworkBehaviour
 
     public void Unregister(ISaveable saveable)
     {
-        Debug.Log($"[SaveLoad] Unregister called: {saveable.GetType().Name}");
         _playerSaveables.Remove(saveable);
         _worldSaveables.Remove(saveable);
         _pendingRegistrations.Remove(saveable);

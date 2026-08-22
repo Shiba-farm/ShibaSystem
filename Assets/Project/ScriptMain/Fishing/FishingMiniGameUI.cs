@@ -17,45 +17,49 @@ public class FishingMiniGameUI : MonoBehaviour
     // ── Bar endpoints ─────────────────────────────────────────────────────────
 
     [Header("Bar")]
-    [SerializeField] private Transform leftPivot;
-    [SerializeField] private Transform rightPivot;
+    [SerializeField] private Transform _leftPivot;
+    [SerializeField] private Transform _rightPivot;
+    [SerializeField] private RectTransform _barRect;
 
     // ── Fish ──────────────────────────────────────────────────────────────────
 
     [Header("Fish")]
-    [SerializeField] private Transform fish;
-    [SerializeField] private float     timerMultiplicator = 3f;   // max seconds between destination picks
-    [SerializeField] private float     smoothMotion       = 1f;   // SmoothDamp time
+    [SerializeField] private Transform _fish;
+    [SerializeField] private float _timerMultiplicator = 3f;   // max seconds between destination picks
+    [SerializeField] private float _smoothMotion = 1f;   // SmoothDamp time
 
     // ── Hook (catch zone) ─────────────────────────────────────────────────────
 
     [Header("Hook / Catch Zone")]
-    [SerializeField] private RectTransform hookRect;              // the sliding catch zone
+    [SerializeField] private RectTransform _hookRect;              // the sliding catch zone
     /// <summary>Fraction of bar width the hook covers (0–1). Used by Resize().</summary>
-    [SerializeField] [Range(0.05f, 0.5f)] private float hookSize = 0.15f;
+    [SerializeField][Range(0.05f, 1f)] private float _hookSize = 0.15f;
 
     [Header("Hook Physics")]
-    [SerializeField] private float hookPullPower    = 0.01f;     // velocity added per second while clicking
-    [SerializeField] private float hookGravityPower = 0.005f;    // velocity removed per second always
-    [SerializeField] private float maxHookVelocity  = 0.015f;    // hard cap — prevents runaway buildup
+    [SerializeField] private float _hookPullPower = 0.01f;     // velocity added per second while clicking
+    [SerializeField] private float _hookGravityPower = 0.005f;    // velocity removed per second always
+    [SerializeField] private float _maxHookVelocity = 0.015f;    // hard cap — prevents runaway buildup
 
     // ── Progress ──────────────────────────────────────────────────────────────
 
     [Header("Progress")]
     [SerializeField] private Slider progressSlider;              // min 0, max 1
-    [SerializeField] private float  hookPower              = 0.3f;  // progress gain rate while aligned
-    [SerializeField] private float  hookProgressDegradation = 0.1f; // progress loss rate while misaligned
-    [SerializeField] private float  failDuration           = 10f;   // seconds misaligned before Lose()
+    [SerializeField] private Slider timerSlider;              // min 0, max 1
+    [SerializeField] private float _hookPower = 0.3f;  // progress gain rate while aligned
+    [SerializeField] private float _hookProgressDegradation = 0.1f; // progress loss rate while misaligned
+    // [SerializeField] private float _failDuration = 10f;   // seconds misaligned before Lose()
 
     // ── Private state ─────────────────────────────────────────────────────────
 
-    private bool  _isActive;
+    private bool _isActive;
 
     // fish
     private float _fishPosition;
     private float _fishDestination;
     private float _fishSpeed;
     private float _fishTimer;
+    private float _fishcatchTimeRequired;
+    private float _fishUncertainty;
 
     // hook
     private float _hookPosition;    // normalised 0–1 along bar
@@ -63,7 +67,9 @@ public class FishingMiniGameUI : MonoBehaviour
 
     // progress
     private float _hookProgress;
-    private float _failTimer;
+    // private float _failTimer;
+    private float _normalizedHalfSize;
+    private float _fishFleeTime;
 
     // ── Unity lifecycle ───────────────────────────────────────────────────────
 
@@ -83,13 +89,19 @@ public class FishingMiniGameUI : MonoBehaviour
 
     // ── Public API (InGameUIManager) ──────────────────────────────────────────
 
-    public void Open(float fishMoveSpeed, float fishUncertainty, float catchTimeRequired, float pullStrength)
+    public void Open(float fishMoveSpeed, float fishUncertainty, float catchTimeRequired, float timeBeforeFlee, float pullStrength, float hookPower)
     {
         // Reset fish
-        _fishPosition    = 0.5f;
+        _fishPosition = 0.5f;
         _fishDestination = 0.5f;
-        _fishSpeed       = 0f;
-        _fishTimer       = 0f;
+        _fishSpeed = fishMoveSpeed;
+        _fishTimer = 0;
+
+        _fishcatchTimeRequired = catchTimeRequired;
+        _fishUncertainty = fishUncertainty;
+
+        _hookPullPower = pullStrength;
+        _hookPower = hookPower;
 
         // Reset hook
         _hookPosition = 0.5f;
@@ -97,10 +109,18 @@ public class FishingMiniGameUI : MonoBehaviour
 
         // Reset progress
         _hookProgress = 0f;
-        _failTimer    = failDuration;
+        // _failTimer = _failDuration;
+
+        _fishFleeTime = timeBeforeFlee;
 
         if (progressSlider != null)
             progressSlider.value = 0f;
+
+        if (timerSlider != null)
+        {
+            timerSlider.maxValue = _fishFleeTime;
+            timerSlider.value = _fishFleeTime;
+        }
 
         Resize();
         _isActive = true;
@@ -113,6 +133,9 @@ public class FishingMiniGameUI : MonoBehaviour
 
         if (progressSlider != null)
             progressSlider.value = 0f;
+
+        if (timerSlider != null)
+            timerSlider.value = 0f;
     }
 
     // ── Game loop ─────────────────────────────────────────────────────────────
@@ -133,34 +156,37 @@ public class FishingMiniGameUI : MonoBehaviour
         _fishTimer -= Time.deltaTime;
         if (_fishTimer <= 0f)
         {
-            _fishTimer       = Random.value * timerMultiplicator;
+            _fishTimer = Random.value * _timerMultiplicator * Random.Range(1f - _fishUncertainty, 1f + _fishUncertainty);
             _fishDestination = Random.value;
         }
 
-        _fishPosition = Mathf.SmoothDamp(_fishPosition, _fishDestination, ref _fishSpeed, smoothMotion);
-        fish.position = Vector3.Lerp(leftPivot.position, rightPivot.position, _fishPosition);
+        _fishPosition = Mathf.SmoothDamp(_fishPosition, _fishDestination, ref _fishSpeed, _smoothMotion);
+        _fish.position = Vector3.Lerp(_leftPivot.position, _rightPivot.position, _fishPosition);
     }
 
     // ── Hook (catch zone) movement ────────────────────────────────────────────
 
     private void MoveHook()
     {
+        _hookVelocity -= _hookGravityPower * Time.deltaTime;
         // Accumulate velocity
         if (InputHandler.Singleton != null && InputHandler.Singleton.IsLeftClickHeld)
-            _hookVelocity += hookPullPower * Time.deltaTime;
-
-        _hookVelocity -= hookGravityPower * Time.deltaTime;
+        {
+            _hookVelocity += _hookPullPower * Time.deltaTime;
+        }
 
         // ── KEY FIX: hard cap prevents runaway buildup from holding too long ──
-        _hookVelocity = Mathf.Clamp(_hookVelocity, -maxHookVelocity, maxHookVelocity);
+        _hookVelocity = Mathf.Clamp(_hookVelocity, -_maxHookVelocity, _maxHookVelocity);
+
+        Debug.Log($"[FishingMiniGameUI] Hook pos: {_hookPosition:F3}, vel: {_hookVelocity:F3}, progress: {_hookProgress:F3}");
 
         // Zero velocity when pressing against a wall (consistent boundary: hookSize / 2)
-        float halfSize = hookSize * 0.5f;
-        if (_hookPosition <= halfSize       && _hookVelocity < 0f) _hookVelocity = 0f;
-        if (_hookPosition >= 1f - halfSize  && _hookVelocity > 0f) _hookVelocity = 0f;
+        float halfSize = _normalizedHalfSize;
+        if (_hookPosition <= halfSize && _hookVelocity < 0f) _hookVelocity = 0f;
+        if (_hookPosition >= 1f - halfSize && _hookVelocity > 0f) _hookVelocity = 0f;
 
         _hookPosition = Mathf.Clamp(_hookPosition + _hookVelocity, halfSize, 1f - halfSize);
-        hookRect.position = Vector3.Lerp(leftPivot.position, rightPivot.position, _hookPosition);
+        _hookRect.position = Vector3.Lerp(_leftPivot.position, _rightPivot.position, _hookPosition);
     }
 
     private void OnMouseReleased()
@@ -173,35 +199,39 @@ public class FishingMiniGameUI : MonoBehaviour
 
     private void UpdateProgress()
     {
-        float halfSize = hookSize * 0.5f;
+        float halfSize = _hookSize * 0.5f;
         float min = _hookPosition - halfSize;
         float max = _hookPosition + halfSize;
-        bool  aligned = min < _fishPosition && _fishPosition < max;
+        bool aligned = min < _fishPosition && _fishPosition < max;
+
+        _fishFleeTime -= Time.deltaTime;
 
         if (aligned)
         {
-            _hookProgress += hookPower * Time.deltaTime;
-            _failTimer    =  failDuration;   // reset fail timer while catching
+            _hookProgress += _hookPower * Time.deltaTime;
+            // _failTimer = _failDuration;   // reset fail timer while catching
         }
         else
         {
-            _hookProgress -= hookProgressDegradation * Time.deltaTime;
-            _failTimer    -= Time.deltaTime;
+            _hookProgress -= _hookProgressDegradation * Time.deltaTime;
+            // _failTimer -= Time.deltaTime;
 
-            if (_failTimer <= 0f)
-            {
-                Lose();
-                return;
-            }
         }
 
-        _hookProgress = Mathf.Clamp01(_hookProgress);
+        if (_fishFleeTime <= 0f)
+        {
+            Lose();
+            return;
+        }
+        _hookProgress = Mathf.Clamp(_hookProgress, 0f, _fishcatchTimeRequired);
 
         // ── Slider: just set value directly (min 0 / max 1) ──
         if (progressSlider != null)
-            progressSlider.value = _hookProgress;
+            progressSlider.value = _hookProgress / _fishcatchTimeRequired;
+        if (timerSlider != null)
+            timerSlider.value = _fishFleeTime;
 
-        if (_hookProgress >= 1f)
+        if (_hookProgress >= _fishcatchTimeRequired)
             Win();
     }
 
@@ -215,12 +245,24 @@ public class FishingMiniGameUI : MonoBehaviour
     /// </summary>
     private void Resize()
     {
-        if (hookRect == null || leftPivot == null || rightPivot == null) return;
+        if (_hookRect == null || _leftPivot == null || _rightPivot == null) return;
 
-        float barLength = Vector3.Distance(leftPivot.position, rightPivot.position);
-        Vector2 size = hookRect.sizeDelta;
-        size.x = barLength * hookSize;
-        hookRect.sizeDelta = size;
+        float barLength = _barRect.rect.width;
+        if (barLength <= 0f) return;
+
+        // Clamp hookSize itself to a sane range so it can never produce
+        // an inverted or degenerate clamp range.
+        _hookSize = Mathf.Clamp(_hookSize, 0.05f, 1f);
+
+        Vector2 size = _hookRect.sizeDelta;
+        size.x = barLength * _hookSize;
+        _hookRect.sizeDelta = size;
+
+        // Derive the normalized half-size from the ACTUAL rendered rect width,
+        // in the same space the position math uses (barLength), instead of
+        // trusting hookSize's fraction to already match reality.
+        float actualWidth = _hookRect.rect.width; // post-layout real width
+        _normalizedHalfSize = (actualWidth / barLength) * 0.5f;
     }
 
     // ── Win / Lose ────────────────────────────────────────────────────────────
@@ -245,4 +287,5 @@ public class FishingMiniGameUI : MonoBehaviour
         // Tell server to end the session and transition phase → None.
         FishingServerManager.Instance?.SubmitFishingResultServerRpc(false);
     }
+
 }

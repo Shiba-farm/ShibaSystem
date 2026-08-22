@@ -10,6 +10,7 @@ public class WorkbenchInteraction : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        Debug.Log("WorkbenchInteraction: Interact() called");
         InGameUIManager.Instance.OpenExclusivePanel(InGamePanel.Crafting);
     }
 }
