@@ -14,10 +14,6 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Animals/Fish")]
 public class FishSO : AnimalSO
 {
-    [Header("Inventory Drop")]
-    [Tooltip("ItemSO that is added to the player's inventory on a successful catch.")]
-    public ItemSO dropItem;
-
     [Header("Mini-game — Fish Behaviour")]
     [Tooltip("How fast the fish icon moves horizontally across the bar (units per second).")]
     public float fishMoveSpeed = 120f;

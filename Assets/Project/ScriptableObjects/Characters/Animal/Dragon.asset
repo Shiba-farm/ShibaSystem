@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1247f0c32c0114d4bb05cb48f0a6e95c, type: 3}
+  m_Name: Dragon
+  m_EditorClassIdentifier: Assembly-CSharp::AnimalSO
+  animalId: 8
+  animalName: Dragon
+  icon: {fileID: 21300000, guid: 340825cd294c0914389d4c9b948aa313, type: 3}
+  killDropItems:
+  - {fileID: 11400000, guid: fa1a7f6649dd8af48994590cb19335bd, type: 2}
+  - {fileID: 11400000, guid: 644a99173688cc44cb97751d7039f560, type: 2}
+  baseHealth: 500
+  baseAttack: 55
+  moveSpeed: 18
+  type: 3
+  price: 100000

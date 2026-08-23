@@ -10,6 +10,21 @@ public class EntityDatabase : ScriptableObject
     private Dictionary<AnimalStockType, List<AnimalSO>> animalTypeLookup = new Dictionary<AnimalStockType, List<AnimalSO>>();
     private bool isInitialized = false;
 
+    /// <summary>
+    /// ScriptableObject assets stay loaded in memory across Play Mode sessions in the Editor
+    /// (this is normal Unity behaviour, and is even more likely to bite when Domain/Scene
+    /// Reload is disabled under Project Settings > Editor > Enter Play Mode Settings) — so
+    /// once Initialize() has run, isInitialized just stays true forever, even after allAnimals
+    /// changes (e.g. you add more animals to a category between test runs). The other guards
+    /// below only re-Initialize when a dictionary is completely empty, which doesn't catch
+    /// "non-empty but stale". OnEnable fires whenever this asset is (re)loaded, so force a
+    /// fresh rebuild on next access rather than trusting whatever ran before.
+    /// </summary>
+    private void OnEnable()
+    {
+        isInitialized = false;
+    }
+
     public void Initialize()
     {
         animalLookup.Clear();
@@ -87,5 +102,13 @@ public class EntityDatabase : ScriptableObject
 
         Debug.LogWarning($"No animals found for type {type} in database!");
         return new List<AnimalSO>();
+    }
+
+    public List<AnimalSO> GetAllAnimals()
+    {
+        if (!isInitialized || allAnimals.Count == 0)
+            Initialize();
+
+        return new List<AnimalSO>(allAnimals);
     }
 }

@@ -1328,7 +1328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 1184210214
+  GlobalObjectIdHash: 2793554976
   InScenePlacedSourceGlobalObjectIdHash: 2793554976
   DeferredDespawnTick: 0
   Ownership: 1
@@ -2700,8 +2700,6 @@ MonoBehaviour:
   inventoryID: 1
   needMockData: 1
   mockItems:
-  - item: {fileID: 11400000, guid: bb1e259b1e2e37747a49e769ad013523, type: 2}
-    amount: 1
   - item: {fileID: 11400000, guid: 0473388489b79504c895715f9db724d6, type: 2}
     amount: 1
   - item: {fileID: 11400000, guid: 733a6afa521814e4b9c365c17fbd896e, type: 2}

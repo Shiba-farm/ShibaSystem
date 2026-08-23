@@ -110,6 +110,8 @@ public class NPCMouseInteractionUI : MonoBehaviour
         UpdateCursor(hoverTarget != null);
         UpdatePrompt(hoverTarget);
         HandleClicks(hoverTarget);
+        if (Time.frameCount % 30 == 0) // throttle so it doesn't spam every frame
+            Debug.Log($"[NPC DEBUG] overUI={overUI} cam={(cam != null ? cam.name : "NULL")} hoverTarget={(hoverTarget != null ? hoverTarget.name : "null")}");
     }
 
     private void UpdateCursor(bool showCustom)

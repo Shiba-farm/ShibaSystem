@@ -192,9 +192,9 @@ public class FishingServerManager : NetworkBehaviour
 
     private void GiveFishToPlayer(ulong clientId, FishSO fish)
     {
-        if (fish == null || fish.dropItem == null)
+        if (fish == null || fish.killDropItems == null || fish.killDropItems.Length == 0)
         {
-            Debug.LogWarning($"[FishingServerManager] FishSO or its dropItem is null — nothing added to inventory.");
+            Debug.LogWarning($"[FishingServerManager] FishSO or its dropItems is null/empty — nothing added to inventory.");
             return;
         }
 
@@ -207,8 +207,7 @@ public class FishingServerManager : NetworkBehaviour
 
         // Add to the first available inventory (same approach as FarmingServerManager harvest)
         InventoryData inventory = InventoryDataRegistry.GetByOwnerAndID(clientId, 0);
-        inventory.AddItem(fish.dropItem.itemID, 1);
-        Debug.Log($"[FishingServerManager] Added '{fish.animalName}' (itemID {fish.dropItem.itemID}) to client {clientId}'s inventory.");
+        foreach(ItemSO item in fish.killDropItems) inventory.AddItem(item.itemID, 1);
     }
 
     // ── Targeted ClientRpc — owner only ──────────────────────────────────────

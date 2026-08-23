@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 2892530926891428454}
   - component: {fileID: 4330129823469094205}
   - component: {fileID: 19237055610988029}
+  - component: {fileID: 934894240418227275}
+  - component: {fileID: 796561448598390900}
   m_Layer: 0
   m_Name: InGameNetworkManager
   m_TagString: Untagged
@@ -61,7 +63,6 @@ MonoBehaviour:
   Ownership: 1
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
-  <InScenePlaced>k__BackingField: 0
   ActiveSceneSynchronization: 0
   SceneMigrationSynchronization: 0
   SpawnWithObservers: 1
@@ -115,6 +116,9 @@ MonoBehaviour:
   dayStart: 0.3
   duskStart: 0.7
   nightStart: 0.8
+  useDebugTime: 0
+  debugHour: 8
+  debugMinute: 0
 --- !u!114 &3203660628047513135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,12 +215,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FarmingServerManager
   ShowTopMostFoldoutHeaderGroup: 1
-  tilledDirtPrefab: {fileID: -8412170763073304747, guid: 9d2085782bda9004ebdb707c4ec53747,
+  tilledDirtPrefab: {fileID: 5276023057767958410, guid: bfebd32407fd74a43af4b562918941bd,
     type: 3}
   wetDirtPrefab: {fileID: 7061430321515732417, guid: 8bc3beec01c2ea447977e36b95673573,
     type: 3}
   seedHeightOffset: 0.5
-  cellSize: 2
+  cellSize: 3
   maxCells: 4
 --- !u!114 &4330129823469094205
 MonoBehaviour:
@@ -244,8 +248,67 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishingServerManager
   ShowTopMostFoldoutHeaderGroup: 1
-  minBiteTime: 3
-  maxBiteTime: 10
-  fishEscapeTime: 5
+  minBiteTime: 1
+  maxBiteTime: 1
   pullAnimDuration: 1.5
-  catchableItemIds: 
+  catchableFish:
+  - {fileID: 11400000, guid: f43ac625b9376664db89a4bc4b5581b1, type: 2}
+  defaultPullStrength: 0.02
+  defaultHookPower: 0.3
+--- !u!114 &934894240418227275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520117834135268845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187aede952a9ec34e8aa348bf0902a13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimalStockServerManager
+  ShowTopMostFoldoutHeaderGroup: 1
+  entityDatabase: {fileID: 11400000, guid: b39e6598df12d4e46a92f217d2655b1d, type: 2}
+--- !u!114 &796561448598390900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520117834135268845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a7d4d1b112a7c46b5baf40568771eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LivestockSpawnManager
+  ShowTopMostFoldoutHeaderGroup: 1
+  defaultLivestockPrefab: {fileID: 7165166152302533011, guid: 20d9ff1d924d0db4bb69175678b0c48f,
+    type: 3}
+  prefabOverrides:
+  - animalId: 1
+    prefab: {fileID: 7165166152302533011, guid: 20d9ff1d924d0db4bb69175678b0c48f,
+      type: 3}
+  - animalId: 2
+    prefab: {fileID: 7165166152302533011, guid: 20d9ff1d924d0db4bb69175678b0c48f,
+      type: 3}
+  - animalId: 3
+    prefab: {fileID: 7165166152302533011, guid: 20d9ff1d924d0db4bb69175678b0c48f,
+      type: 3}
+  - animalId: 4
+    prefab: {fileID: 7165166152302533011, guid: 20d9ff1d924d0db4bb69175678b0c48f,
+      type: 3}
+  - animalId: 5
+    prefab: {fileID: 7165166152302533011, guid: 20d9ff1d924d0db4bb69175678b0c48f,
+      type: 3}
+  - animalId: 6
+    prefab: {fileID: 7165166152302533011, guid: 20d9ff1d924d0db4bb69175678b0c48f,
+      type: 3}
+  - animalId: 7
+    prefab: {fileID: 7165166152302533011, guid: 20d9ff1d924d0db4bb69175678b0c48f,
+      type: 3}
+  - animalId: 8
+    prefab: {fileID: 7165166152302533011, guid: 20d9ff1d924d0db4bb69175678b0c48f,
+      type: 3}
+  spawnDistance: 2
+  ropeItem: {fileID: 0}
+  ropeInventoryID: 0

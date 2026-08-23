@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45b888c691fbaf646a779adadfa6a3e2, type: 3}
+  m_Name: SO_Tuna
+  m_EditorClassIdentifier: Assembly-CSharp::FoodItemSO
+  itemName: Tuna meat
+  itemID: 30
+  icon: {fileID: 21300000, guid: 22a6e031fa7a7234299b3be9f5473819, type: 3}
+  isStackable: 1
+  maxStack: 99
+  equipmentPrefab: {fileID: 7904660860425807985, guid: e8a5d27cd97121547ae914e31d56b313,
+    type: 3}
+  worldItemPrefab: {fileID: 7904660860425807985, guid: e724f0af403e9744daaea32b5e9a03fe,
+    type: 3}
+  holdType: 1
+  sellable: 1
+  sellPrice: 1000
+  sellCategory: 1
+  category: 2
+  holdPositions: []
+  defaultHoldState: 0
+  energyRestore: 80
+  healthRestore: 15
+  energyCost: 0
+  staminaCost: 0
+  animationTriggerName: 

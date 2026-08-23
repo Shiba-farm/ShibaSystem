@@ -38,6 +38,7 @@ public class LivestockSpawnManager : NetworkBehaviour
     [SerializeField] private ItemSO ropeItem;
     [Tooltip("Inventory ID ที่จะใส่เชือกเข้าไป — 0 = กระเป๋าหลัก (ตามธรรมเนียมเดิมในโปรเจกต์นี้)")]
     [SerializeField] private int ropeInventoryID = 0;
+    [SerializeField] private float fromGroundOffset = 0.3f;
 
     private Dictionary<int, GameObject> _prefabLookup;
 
@@ -76,7 +77,7 @@ public class LivestockSpawnManager : NetworkBehaviour
             return null;
         }
 
-        Vector3 spawnPos = playerTransform.position + playerTransform.forward * spawnDistance;
+        Vector3 spawnPos = playerTransform.position + playerTransform.forward * spawnDistance + Vector3.up * fromGroundOffset;
         var obj = Instantiate(prefab, spawnPos, Quaternion.identity);
         var netObj = obj.GetComponent<NetworkObject>();
         if (netObj != null) netObj.Spawn();

@@ -9,25 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79cfb68f21602e44daa4e394bb48e58d, type: 3}
-  m_Name: tuna
-  m_EditorClassIdentifier: 
-  itemName: tuna
+  m_Script: {fileID: 11500000, guid: 26456f0eb1f93cf49bb0cf9e51b4b9f7, type: 3}
+  m_Name: Tuna
+  m_EditorClassIdentifier: Assembly-CSharp::FishSO
+  animalId: 5
+  animalName: Tuna
   icon: {fileID: 21300000, guid: 22a6e031fa7a7234299b3be9f5473819, type: 3}
-  equipmentPrefab: {fileID: 0}
-  actionVFX: {fileID: 0}
-  actionSFX: {fileID: 0}
-  sfxDuration: 0
-  pitchRandomMultiplier: 1
-  energyCost: 0
-  isStackable: 1
-  maxStack: 99
-  category: 2
-  toolAction: 0
-  seedCrop: {fileID: 0}
-  farmHelperData: {fileID: 0}
-  placeablePrefab: {fileID: 0}
-  placementCheckSize: {x: 0, y: 0, z: 0}
-  sellable: 1
-  sellPrice: 10
-  sellCategory: 1
+  killDropItems:
+  - {fileID: 11400000, guid: 6929341120c90da4d99e8e5c8788df2b, type: 2}
+  baseHealth: 50
+  baseAttack: 8
+  moveSpeed: 12
+  type: 1
+  price: 1500
+  fishMoveSpeed: 120
+  moveUncertainty: 1
+  catchTimeRequired: 2
+  timeBeforeFlee: 10

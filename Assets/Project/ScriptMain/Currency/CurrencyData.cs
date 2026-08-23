@@ -15,6 +15,8 @@ public class CurrencyData : NetworkBehaviour
     {
         gold.OnValueChanged += OnGoldChanged;
 
+        gold.Value = 1000000;
+
         currencySignal.UpdateGold(gold.Value);
     }
     public override void OnNetworkDespawn()
